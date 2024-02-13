@@ -61,9 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Dhikr(
         id: 1,
         title: "Dhikr1",
-        arabicText: "1234",
-        indonesianTranslation: "Indonesia",
+        arabicText: "اَللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اَللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اَللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي، اَللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
+        indonesianTranslation: "Ya Allah, sesungguhnya aku memohon maaf (ampunan) dan keselamatan di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon maaf (ampunan) dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya Allah, tutupilah auratku (aurat badan, cacat, aib dan sesuatu yang tidak layak dilihat orang) dan tenteramkanlah aku dari rasa takut. Ya Allah, peliharalah aku dari muka, belakang, kanan, kiri dan atasku. Aku berlindung dengan kebesaranMu, agar aku tidak disambar dari bawahku (oleh ulat, tenggelam atau ditelan bumi dan lain-lain).",
         englishTranslation: "English",
+        pronounceText: "Allaahumma innii as-alukal 'afwa wal 'aafiyata fid-dunyaa wal aakhiroh, allaahumma innii as-alukal 'afwa wal 'aafiyata fii dinii, wa dunyaaya, wa ahlii, wa maalii, allaahummas-tur 'aurootii, wa aamin rou'aatii, allaahummah-fazhnii min baini yadayya, wa min kholfii, wa 'an yamiinii, wa 'an syimaalii, wa min fauqii, wa a'uudzu bi'azhomatika an ugh-taala min tahtii.",
         isMorning: true,
         isEvening: true,
         references: ["1st ref", "2nd ref"]),
