@@ -1,4 +1,4 @@
-import 'package:dhikr_app/model/Dhikr.dart';
+import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
