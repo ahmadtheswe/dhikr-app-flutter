@@ -1,5 +1,4 @@
 import 'package:dhikr_app/models/dhikr_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DhikrPage extends StatelessWidget {
@@ -18,11 +17,25 @@ class DhikrPage extends StatelessWidget {
           _arabicText(dhikr.arabicText),
           if (dhikr.pronounceText != null) _latinText(dhikr.pronounceText!),
           _latinText(dhikr.indonesianTranslation),
+          SingleChildScrollView(
+            child: Column(
+              children: dhikr.references.map((ref) {
+                return Container(
+                  margin: const EdgeInsets.all(10),
+                  child: Text(
+                    ref,
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
         ],
       ),
     );
   }
-  
+
   _arabicText(String text) {
     return Container(
         margin: const EdgeInsets.all(10),
@@ -33,10 +46,9 @@ class DhikrPage extends StatelessWidget {
             textAlign: TextAlign.justify,
             style: const TextStyle(fontSize: 25),
           ),
-        )
-    );
+        ));
   }
-  
+
   _latinText(String text) {
     return Container(
         margin: const EdgeInsets.all(10),
@@ -47,7 +59,6 @@ class DhikrPage extends StatelessWidget {
             textAlign: TextAlign.justify,
             style: const TextStyle(fontSize: 17),
           ),
-        )
-    );
+        ));
   }
 }
