@@ -27,7 +27,7 @@ class _HomePage extends State<HomePage> {
   }
 
   Future<List<Dhikr>> loadDhikr() async {
-    String jsonString = await rootBundle.loadString('lib/assets/morning.json');
+    String jsonString = await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = [];
     for (var i in jsonResponse) {

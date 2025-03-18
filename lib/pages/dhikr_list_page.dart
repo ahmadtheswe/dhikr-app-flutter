@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 
 class DhikrListPage extends StatefulWidget {
   const DhikrListPage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -27,7 +28,7 @@ class _DhikrListPage extends State<DhikrListPage> {
   }
 
   Future<List<Dhikr>> loadDhikr() async {
-    String jsonString = await rootBundle.loadString('lib/assets/morning.json');
+    String jsonString = await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = [];
     for (var i in jsonResponse) {
@@ -48,17 +49,32 @@ class _DhikrListPage extends State<DhikrListPage> {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DhikrPage(dhikr: dhikr[index],)));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DhikrPage(
+                              dhikr: dhikr[index],
+                            )));
               },
               child: Container(
                 height: 65,
                 margin: const EdgeInsets.all(10),
-                color: Colors.cyanAccent,
-                child: Center(
-                  child: Text(
-                    dhikr[index].title,
-                    style: const TextStyle(fontSize: 18),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      dhikr[index].title,
+                      style: const TextStyle(fontSize: 18),
+                    ),
                   ),
                 ),
               ),
