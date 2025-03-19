@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
+import 'package:dhikr_app/static/languages.dart';
+import 'package:dhikr_app/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,7 +30,10 @@ class _DhikrListPage extends State<DhikrListPage> {
   }
 
   Future<List<Dhikr>> loadDhikr() async {
-    String jsonString = await rootBundle.loadString('lib/assets/morning_id.json');
+    String? language = await UserPreferences.getLanguage();
+    String jsonString = language == Languages.ENGLISH
+        ? await rootBundle.loadString('lib/assets/morning_en.json')
+        : await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = [];
     for (var i in jsonResponse) {
