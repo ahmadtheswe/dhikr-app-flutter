@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
+import 'package:dhikr_app/pages/settings_page.dart';
 import 'package:dhikr_app/static/languages.dart';
 import 'package:dhikr_app/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,17 @@ class _DhikrListPage extends State<DhikrListPage> {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.more_vert),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              },
+            ),
+          ],
         ),
         body: ListView.builder(
           itemCount: dhikr.length,
