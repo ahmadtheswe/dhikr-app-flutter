@@ -4,14 +4,14 @@ import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
 import 'package:dhikr_app/pages/settings_page.dart';
 import 'package:dhikr_app/static/languages.dart';
-import 'package:dhikr_app/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
+import '../service/language_service.dart';
 
 class DhikrListPage extends StatefulWidget {
-  const DhikrListPage({super.key, required this.title});
-
-  final String title;
+  const DhikrListPage({super.key});
 
   @override
   State<DhikrListPage> createState() => _DhikrListPage();
@@ -21,34 +21,33 @@ class _DhikrListPage extends State<DhikrListPage> {
   List<Dhikr> dhikr = [];
 
   @override
-  void initState() {
-    super.initState();
-    loadDhikr().then((value) {
-      setState(() {
-        dhikr = value;
-      });
-    });
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    loadDhikr();
   }
 
-  Future<List<Dhikr>> loadDhikr() async {
-    String? language = await UserPreferences.getLanguage();
+  Future<void> loadDhikr() async {
+    final languageService = context.watch<LanguageService>(); // Listen for language changes
+    String? language = languageService.currentLanguage;
     String jsonString = language == Languages.ENGLISH
         ? await rootBundle.loadString('lib/assets/morning_en.json')
         : await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
-    List<Dhikr> dhikrs = [];
-    for (var i in jsonResponse) {
-      dhikrs.add(Dhikr.fromJson(i));
-    }
-    return dhikrs;
+    List<Dhikr> dhikrs = (jsonResponse as List<dynamic>).map((item) => Dhikr.fromJson(item)).toList();
+
+    setState(() {
+      dhikr = dhikrs;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    final languageService = Provider.of<LanguageService>(context);
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
+          title: Text(languageService.getText('listPageTitle')),
           actions: [
             IconButton(
               icon: const Icon(Icons.more_vert),
@@ -72,6 +71,7 @@ class _DhikrListPage extends State<DhikrListPage> {
                         builder: (context) => DhikrPage(
                               dhikr: dhikr[index],
                             )));
+                // loadDhikr(); // Reload data after returning from settings
               },
               child: Container(
                 height: 65,
