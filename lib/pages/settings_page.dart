@@ -1,11 +1,12 @@
+import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
 
 class SettingsPage extends StatelessWidget {
-
   const SettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
@@ -21,14 +22,14 @@ class SettingsPage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () async {
-                await languageService.setLanguage('id');
+                await languageService.setLanguage(Languages.INDONESIAN);
               },
               child: const Text('Bahasa Indonesia'),
             ),
             const SizedBox(height: 20), // Add some space between the buttons
             ElevatedButton(
               onPressed: () async {
-                await languageService.setLanguage('en');
+                await languageService.setLanguage(Languages.ENGLISH);
               },
               child: const Text('English'),
             ),

@@ -1,11 +1,11 @@
 import 'package:dhikr_app/pages/dhikr_list_page.dart';
+import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
 
 class SelectLanguagePage extends StatelessWidget {
-
   const SelectLanguagePage({super.key});
 
   @override
@@ -19,11 +19,10 @@ class SelectLanguagePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () async {
-                await languageService.setLanguage('id');
+                await languageService.setLanguage(Languages.INDONESIAN);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => DhikrListPage()),
+                  MaterialPageRoute(builder: (context) => const DhikrListPage()),
                 );
               },
               child: const Text('Bahasa Indonesia'),
@@ -31,11 +30,10 @@ class SelectLanguagePage extends StatelessWidget {
             const SizedBox(height: 20), // Add some space between the buttons
             ElevatedButton(
               onPressed: () async {
-                await languageService.setLanguage('en');
+                await languageService.setLanguage(Languages.ENGLISH);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => DhikrListPage()),
+                  MaterialPageRoute(builder: (context) => const DhikrListPage()),
                 );
               },
               child: const Text('English'),

@@ -29,9 +29,7 @@ class _DhikrListPage extends State<DhikrListPage> {
   Future<void> loadDhikr() async {
     final languageService = context.watch<LanguageService>(); // Listen for language changes
     String? language = languageService.currentLanguage;
-    String jsonString = language == Languages.ENGLISH
-        ? await rootBundle.loadString('lib/assets/morning_en.json')
-        : await rootBundle.loadString('lib/assets/morning_id.json');
+    String jsonString = language == Languages.ENGLISH ? await rootBundle.loadString('lib/assets/morning_en.json') : await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = (jsonResponse as List<dynamic>).map((item) => Dhikr.fromJson(item)).toList();
 

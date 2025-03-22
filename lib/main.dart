@@ -34,9 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: languageService.currentLanguage != null
-          ? const DhikrListPage()
-          : const SelectLanguagePage(),
+      home: languageService.currentLanguage != null ? const DhikrListPage() : const SelectLanguagePage(),
     );
   }
 }
