@@ -13,29 +13,42 @@ class SettingsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(languageService.getText('settings')),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () async {
-                await languageService.setLanguage(Languages.INDONESIAN);
-              },
-              child: const Text('Bahasa Indonesia'),
-            ),
-            const SizedBox(height: 20), // Add some space between the buttons
-            ElevatedButton(
-              onPressed: () async {
-                await languageService.setLanguage(Languages.ENGLISH);
-              },
-              child: const Text('English'),
-            ),
+            _createElevatedButton(Languages.INDONESIAN_TITLE, Languages.INDONESIAN_CODE, context, languageService, 'icons/flags/png100px/id.png'),
+            const SizedBox(height: 20,),
+            _createElevatedButton(Languages.ENGLISH_TITLE, Languages.ENGLISH_CODE, context, languageService, 'icons/flags/png100px/gb.png'),
           ],
         ),
       ),
     );
+  }
+
+  Widget _createElevatedButton(String languageTitle, String languageCode, BuildContext context, LanguageService languageService, String icon) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
+        onPressed: () async {
+          await languageService.setLanguage(languageCode);
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(languageTitle),
+            const SizedBox(width: 10),
+            ClipOval(
+              child: Image.asset(
+                icon,
+                package: 'country_icons',
+                width: 40,
+                height: 40,
+                fit: BoxFit.cover,
+              ),
+            )
+          ],
+        ));
   }
 }

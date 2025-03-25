@@ -5,12 +5,22 @@ import 'package:provider/provider.dart';
 import '../service/language_service.dart';
 import '../static/dhikr_time.dart';
 
-class SelectDhikrTimePage extends StatelessWidget {
+class SelectDhikrTimePage extends StatefulWidget {
   const SelectDhikrTimePage({super.key});
 
   @override
+  State<SelectDhikrTimePage> createState() => _SelectDhikrTimePage();
+}
+
+class _SelectDhikrTimePage extends State<SelectDhikrTimePage> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final languageService = Provider.of<LanguageService>(context, listen: false);
+    final languageService = Provider.of<LanguageService>(context);
 
     return Scaffold(
       body: Center(
@@ -23,11 +33,11 @@ class SelectDhikrTimePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DhikrListPage(
-                        dhikrTime: DhikrTime.MORNING,
-                      )),
+                            dhikrTime: DhikrTime.MORNING,
+                          )),
                 );
               },
-              child: Text(languageService.getText("morning")),
+              child: Text(languageService.getText(DhikrTime.MORNING)),
             ),
             const SizedBox(height: 20), // Add some space between the buttons
             ElevatedButton(
@@ -36,11 +46,11 @@ class SelectDhikrTimePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DhikrListPage(
-                        dhikrTime: DhikrTime.EVENING,
-                      )),
+                            dhikrTime: DhikrTime.EVENING,
+                          )),
                 );
               },
-              child: Text(languageService.getText("evening")),
+              child: Text(languageService.getText(DhikrTime.EVENING)),
             ),
           ],
         ),

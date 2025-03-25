@@ -32,7 +32,7 @@ class _DhikrListPage extends State<DhikrListPage> {
   Future<void> loadDhikr() async {
     final languageService = context.watch<LanguageService>(); // Listen for language changes
     String? language = languageService.currentLanguage;
-    String jsonString = language == Languages.ENGLISH ? await rootBundle.loadString('lib/assets/morning_en.json') : await rootBundle.loadString('lib/assets/morning_id.json');
+    String jsonString = language == Languages.ENGLISH_CODE ? await rootBundle.loadString('lib/assets/morning_en.json') : await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = (jsonResponse as List<dynamic>)
         .map((item) => Dhikr.fromJson(item))
@@ -50,8 +50,7 @@ class _DhikrListPage extends State<DhikrListPage> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(languageService.getText('listPageTitle')),
+          title: Text(languageService.getText(widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening')),
           actions: [
             IconButton(
               icon: const Icon(Icons.more_vert),
