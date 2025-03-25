@@ -15,22 +15,16 @@ class DhikrPage extends StatelessWidget {
       body: ListView(
         children: [
           _arabicText(dhikr.arabicText),
-          if (dhikr.pronounceText != null) _latinText(dhikr.pronounceText!),
+          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+          if (dhikr.pronounceText != null) ...[
+            _latinText(dhikr.pronounceText!),
+            const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+          ],
           _latinText(dhikr.indonesianTranslation),
-          SingleChildScrollView(
-            child: Column(
-              children: dhikr.references.map((ref) {
-                return Container(
-                  margin: const EdgeInsets.all(10),
-                  child: Text(
-                    ref,
-                    textAlign: TextAlign.justify,
-                    style: const TextStyle(fontSize: 15),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
+          if (dhikr.references.isNotEmpty) ...[
+            const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+            _referenceText(dhikr.references),
+          ]
         ],
       ),
     );
@@ -38,6 +32,7 @@ class DhikrPage extends StatelessWidget {
 
   _arabicText(String text) {
     return Container(
+        padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
         child: Directionality(
           textDirection: TextDirection.rtl,
@@ -51,6 +46,7 @@ class DhikrPage extends StatelessWidget {
 
   _latinText(String text) {
     return Container(
+        padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
         child: Directionality(
           textDirection: TextDirection.ltr,
@@ -60,5 +56,43 @@ class DhikrPage extends StatelessWidget {
             style: const TextStyle(fontSize: 17),
           ),
         ));
+  }
+
+  _referenceText(List<String> texts) {
+    if (texts.length == 1) {
+      return Container(
+        padding: const EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10),
+        child: Text(
+          texts[0],
+          textAlign: TextAlign.justify,
+          style: const TextStyle(fontSize: 15),
+        ),
+      );
+    } else {
+      return SingleChildScrollView(
+        child: Column(
+          children: texts.map((ref) {
+            return Container(
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('\u2022 ', style: TextStyle(fontSize: 15)),
+                  Expanded(
+                    child: Text(
+                      ref,
+                      textAlign: TextAlign.justify,
+                      style: const TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }).toList(),
+        ),
+      );
+    }
   }
 }

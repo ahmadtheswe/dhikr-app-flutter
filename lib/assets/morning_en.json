@@ -10,7 +10,7 @@
     "references": []
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Dhikr 2",
     "arabicText": "اللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ الْحَىُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى السَّمَاوَاتِ وَمَا فِى الْأَرْضِ ۗ مَن ذَا الَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُۥ حِفْظُهُمَا ۚ وَهُوَ الْعَلِىُّ الْعَظِيمُ ﴿٢٥٥﴾",
     "indonesianTranslation": "Allah—there is no deity worthy of worship except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what is behind them, and they encompass nothing of His knowledge except what He wills. His Throne extends over the heavens and the earth, and their preservation does not burden Him. And He is the Most High, the Most Great. (Al-Baqarah [2]: 255)",
@@ -19,5 +19,32 @@
     "references": [
       "\"Whoever recites this statement in the morning will be protected from (the harm of) jinn until the evening. And whoever recites it in the evening will be protected from (the harm of) jinn until the morning.\" (Narrated by Al-Hakim 1/562. Al-Albani classified this hadith as authentic in *Sahih At-Targhib wat Tarhib* 1/273 and attributed it to An-Nasa'i and Ath-Thabrani, stating that Ath-Thabrani's chain of narration is good)."
     ]
+  },
+  {
+    "id": 3,
+    "title": "Dhikr 3 (Al-Ikhlas)",
+    "arabicText": "قُلْ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ ﴿٤﴾",
+    "indonesianTranslation": "(1) Say, ˹O Prophet,˺ \"He is Allah—One ˹and Indivisible˺; (2) Allah—the Sustainer ˹needed by all˺. (3) He has never had offspring, nor was He born. (4) And there is none comparable to Him.\" (Al-Ikhlas [112])",
+    "isMorning": true,
+    "isEvening": true,
+    "references": []
+  },
+  {
+    "id": 4,
+    "title": "Dzikr 3 (Al-Falaq)",
+    "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَْ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدٌِۢ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾",
+    "indonesianTranslation": "(1) Say, ˹O Prophet,˺ \"I seek refuge in the Lord of the daybreak (2) from the evil of whatever He has created, (3) and from the evil of the night when it grows dark, (4) and from the evil of those ˹witches casting spells by˺ blowing onto knots, (5) and from the evil of an envier when they envy.\" (Al-Falaq [113])",
+    "isMorning": true,
+    "isEvening": true,
+    "references": []
+  },
+  {
+    "id": 5,
+    "title": "Dzikr 5 (Al-Nas)",
+    "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَـٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿٤﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿٥﴾ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ﴿٦﴾",
+    "indonesianTranslation": "(1) Say, ˹O Prophet,˺ \"I seek refuge in the Lord of humankind, (2) the Master of humankind, (3) the God of humankind, (4) from the evil of the lurking whisperer— (5) who whispers into the hearts of humankind— (6) from among jinn and humankind.\" (Al-Nas [114])",
+    "isMorning": true,
+    "isEvening": true,
+    "references": []
   }
 ]
