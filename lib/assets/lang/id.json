@@ -3,5 +3,7 @@
   "settings": "Pengaturan",
   "change_language": "Ubah Bahasa",
   "dark_mode": "Mode Gelap",
-  "listPageTitle": "Daftar Dzikr"
+  "listPageTitle": "Daftar Dzikr",
+  "morning": "Dzikr Pagi",
+  "evening": "Dzikr Petang"
 }

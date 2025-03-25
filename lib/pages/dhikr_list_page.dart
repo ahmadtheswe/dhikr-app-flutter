@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
 import 'package:dhikr_app/pages/settings_page.dart';
+import 'package:dhikr_app/static/dhikr_time.dart';
 import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,7 +12,9 @@ import 'package:provider/provider.dart';
 import '../service/language_service.dart';
 
 class DhikrListPage extends StatefulWidget {
-  const DhikrListPage({super.key});
+  final String dhikrTime;
+
+  const DhikrListPage({super.key, required this.dhikrTime});
 
   @override
   State<DhikrListPage> createState() => _DhikrListPage();
@@ -31,7 +34,10 @@ class _DhikrListPage extends State<DhikrListPage> {
     String? language = languageService.currentLanguage;
     String jsonString = language == Languages.ENGLISH ? await rootBundle.loadString('lib/assets/morning_en.json') : await rootBundle.loadString('lib/assets/morning_id.json');
     final jsonResponse = json.decode(jsonString);
-    List<Dhikr> dhikrs = (jsonResponse as List<dynamic>).map((item) => Dhikr.fromJson(item)).toList();
+    List<Dhikr> dhikrs = (jsonResponse as List<dynamic>)
+        .map((item) => Dhikr.fromJson(item))
+        .where((element) => widget.dhikrTime == DhikrTime.MORNING ? element.isMorning : element.isEvening)
+        .toList();
 
     setState(() {
       dhikr = dhikrs;

@@ -1,12 +1,12 @@
-import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
+import 'package:dhikr_app/pages/dhikr_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
-import '../static/languages.dart';
+import '../static/dhikr_time.dart';
 
-class SelectLanguagePage extends StatelessWidget {
-  const SelectLanguagePage({super.key});
+class SelectDhikrTimePage extends StatelessWidget {
+  const SelectDhikrTimePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,25 +18,29 @@ class SelectLanguagePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () async {
-                await languageService.setLanguage(Languages.INDONESIAN);
+              onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SelectDhikrTimePage()),
+                  MaterialPageRoute(
+                      builder: (context) => const DhikrListPage(
+                        dhikrTime: DhikrTime.MORNING,
+                      )),
                 );
               },
-              child: const Text('Bahasa Indonesia'),
+              child: Text(languageService.getText("morning")),
             ),
             const SizedBox(height: 20), // Add some space between the buttons
             ElevatedButton(
-              onPressed: () async {
-                await languageService.setLanguage(Languages.ENGLISH);
+              onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SelectDhikrTimePage()),
+                  MaterialPageRoute(
+                      builder: (context) => const DhikrListPage(
+                        dhikrTime: DhikrTime.EVENING,
+                      )),
                 );
               },
-              child: const Text('English'),
+              child: Text(languageService.getText("evening")),
             ),
           ],
         ),
