@@ -20,7 +20,7 @@ class LanguageService extends ChangeNotifier {
   }
 
   Future<void> _loadLocalizedStrings(String langCode) async {
-    String jsonString = await rootBundle.loadString('lib/assets/lang/$langCode.json');
+    String jsonString = await rootBundle.loadString('assets/lang/$langCode.json');
     _localizedStrings = json.decode(jsonString);
   }
 

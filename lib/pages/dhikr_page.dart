@@ -39,7 +39,10 @@ class DhikrPage extends StatelessWidget {
           child: Text(
             text,
             textAlign: TextAlign.justify,
-            style: const TextStyle(fontSize: 25),
+            style: const TextStyle(
+              fontSize: 25,
+              fontFamily: 'Amiri',
+            ),
           ),
         ));
   }
