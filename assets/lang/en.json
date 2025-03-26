@@ -1,8 +1,8 @@
 {
   "language": "English",
   "settings": "Settings",
-  "change_language": "Change Language",
-  "dark_mode": "Dark Mode",
+  "changeLanguage": "Change Language",
+  "darkMode": "Dark Mode",
   "listPageTitle": "List of Dhikrs",
   "morning": "Morning Dhikr",
   "evening": "Evening Dhikr"

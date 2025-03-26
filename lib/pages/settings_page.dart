@@ -17,10 +17,15 @@ class SettingsPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              margin: const EdgeInsets.only(bottom: 20),
+              child: Text(languageService.getText('changeLanguage'), style: const TextStyle(fontSize: 20,)),
+            ),
             _createElevatedButton(Languages.INDONESIAN_TITLE, Languages.INDONESIAN_CODE, context, languageService, 'icons/flags/png100px/id.png'),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             _createElevatedButton(Languages.ENGLISH_TITLE, Languages.ENGLISH_CODE, context, languageService, 'icons/flags/png100px/gb.png'),
           ],
         ),

@@ -27,34 +27,27 @@ class _SelectDhikrTimePage extends State<SelectDhikrTimePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DhikrListPage(
-                            dhikrTime: DhikrTime.MORNING,
-                          )),
-                );
-              },
-              child: Text(languageService.getText(DhikrTime.MORNING)),
-            ),
-            const SizedBox(height: 20), // Add some space between the buttons
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DhikrListPage(
-                            dhikrTime: DhikrTime.EVENING,
-                          )),
-                );
-              },
-              child: Text(languageService.getText(DhikrTime.EVENING)),
-            ),
+            _createElevatedButton(DhikrTime.MORNING, languageService),// Add some space between the buttons
+            const SizedBox(height: 20),
+            _createElevatedButton(DhikrTime.EVENING, languageService),// Add some space between the buttons
           ],
         ),
       ),
     );
+  }
+
+  Widget _createElevatedButton(String dhikrTime, LanguageService languageService) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
+        onPressed: () async {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DhikrListPage(
+                      dhikrTime: dhikrTime,
+                    )),
+          );
+        },
+        child: Text(languageService.getText(dhikrTime)));
   }
 }

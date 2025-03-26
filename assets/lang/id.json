@@ -1,8 +1,8 @@
 {
   "language": "Bahasa Indonesia",
   "settings": "Pengaturan",
-  "change_language": "Ubah Bahasa",
-  "dark_mode": "Mode Gelap",
+  "changeLanguage": "Ubah Bahasa",
+  "darkMode": "Mode Gelap",
   "listPageTitle": "Daftar Dzikr",
   "morning": "Dzikr Pagi",
   "evening": "Dzikr Petang"
