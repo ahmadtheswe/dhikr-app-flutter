@@ -5,5 +5,9 @@
   "darkMode": "Mode Gelap",
   "listPageTitle": "Daftar Dzikr",
   "morning": "Dzikr Pagi",
-  "evening": "Dzikr Petang"
+  "evening": "Dzikr Petang",
+  "previous": "Sebelumnya",
+  "next": "Selanjutnya",
+  "first": "Pertama",
+  "last": "Terakhir"
 }

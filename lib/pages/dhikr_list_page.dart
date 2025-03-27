@@ -72,7 +72,8 @@ class _DhikrListPage extends State<DhikrListPage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => DhikrPage(
-                              dhikr: dhikr[index],
+                              dhikrList: dhikr,
+                              initialIndex: index,
                             )));
                 // loadDhikr(); // Reload data after returning from settings
               },

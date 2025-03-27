@@ -5,5 +5,9 @@
   "darkMode": "Dark Mode",
   "listPageTitle": "List of Dhikrs",
   "morning": "Morning Dhikr",
-  "evening": "Evening Dhikr"
+  "evening": "Evening Dhikr",
+  "previous": "Previous",
+  "next": "Next",
+  "first": "First",
+  "last": "Last"
 }

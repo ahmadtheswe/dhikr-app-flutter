@@ -1,13 +1,53 @@
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class DhikrPage extends StatelessWidget {
-  const DhikrPage({super.key, required this.dhikr});
+import '../service/language_service.dart';
 
-  final Dhikr dhikr;
+class DhikrPage extends StatefulWidget {
+  const DhikrPage({super.key, required this.dhikrList, required this.initialIndex});
+
+  final List<Dhikr> dhikrList;
+  final int initialIndex;
+
+  @override
+  State<DhikrPage> createState() => _DhikrPage();
+}
+
+class _DhikrPage extends State<DhikrPage> {
+  late int currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    currentIndex = widget.initialIndex;
+  }
+
+  void _goToFirst() {
+    setState(() => currentIndex = 0);
+  }
+
+  void _goToPrevious() {
+    if (currentIndex > 0) {
+      setState(() => currentIndex--);
+    }
+  }
+
+  void _goToNext() {
+    if (currentIndex < widget.dhikrList.length - 1) {
+      setState(() => currentIndex++);
+    }
+  }
+
+  void _goToLast() {
+    setState(() => currentIndex = widget.dhikrList.length - 1);
+  }
 
   @override
   Widget build(BuildContext context) {
+    final languageService = Provider.of<LanguageService>(context);
+    final Dhikr dhikr = widget.dhikrList[currentIndex];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(dhikr.title),
@@ -27,6 +67,7 @@ class DhikrPage extends StatelessWidget {
           ]
         ],
       ),
+      bottomNavigationBar: _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
     );
   }
 
@@ -97,5 +138,40 @@ class DhikrPage extends StatelessWidget {
         ),
       );
     }
+  }
+
+  _buttonAppBar(LanguageService languageService, int currentIndex, int length) {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.keyboard_double_arrow_left),
+              onPressed: currentIndex > 1 ? _goToFirst : null,
+              tooltip: languageService.getText('first'),
+            ),
+            IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: currentIndex > 1 ? _goToPrevious : null,
+              tooltip: languageService.getText('previous'),
+            ),
+            Text('$currentIndex/$length'),
+            IconButton(
+              icon: const Icon(Icons.arrow_forward),
+              onPressed: currentIndex < widget.dhikrList.length ? _goToNext : null,
+              tooltip: languageService.getText('next'),
+            ),
+            IconButton(
+              icon: const Icon(Icons.keyboard_double_arrow_right),
+              onPressed: currentIndex < widget.dhikrList.length ? _goToLast : null,
+              tooltip: languageService.getText('last'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
