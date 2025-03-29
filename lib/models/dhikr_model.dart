@@ -5,6 +5,7 @@ class Dhikr {
   String? pronounceText;
   String indonesianTranslation;
   String? englishTranslation;
+  bool isShowBismillah;
   bool isMorning;
   bool isEvening;
   List<String> references;
@@ -16,6 +17,7 @@ class Dhikr {
     this.pronounceText,
     required this.indonesianTranslation,
     this.englishTranslation,
+    required this.isShowBismillah,
     required this.isMorning,
     required this.isEvening,
     required this.references,
@@ -28,6 +30,7 @@ class Dhikr {
       arabicText: json['arabicText'],
       indonesianTranslation: json['indonesianTranslation'],
       englishTranslation: json['englishTranslation'],
+      isShowBismillah: json['isShowBismillah'],
       isMorning: json['isMorning'],
       isEvening: json['isEvening'],
       references: List<String>.from(json['references']),

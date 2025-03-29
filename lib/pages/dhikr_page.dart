@@ -1,4 +1,5 @@
 import 'package:dhikr_app/models/dhikr_model.dart';
+import 'package:dhikr_app/static/bismillah.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -54,6 +55,9 @@ class _DhikrPage extends State<DhikrPage> {
       ),
       body: ListView(
         children: [
+          if(dhikr.isShowBismillah) ...[
+            _bismillahText(Bismillah.BISMILAH),
+          ],
           _arabicText(dhikr.arabicText),
           const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
           if (dhikr.pronounceText != null) ...[
@@ -71,6 +75,24 @@ class _DhikrPage extends State<DhikrPage> {
     );
   }
 
+  _bismillahText(String text) {
+    return Container(
+        padding: const EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 25,
+              fontFamily: 'Amiri',
+              height: 2,
+            ),
+          ),
+        ));
+  }
+
   _arabicText(String text) {
     return Container(
         padding: const EdgeInsets.all(10.0),
@@ -83,6 +105,7 @@ class _DhikrPage extends State<DhikrPage> {
             style: const TextStyle(
               fontSize: 25,
               fontFamily: 'Amiri',
+              height: 2,
             ),
           ),
         ));
