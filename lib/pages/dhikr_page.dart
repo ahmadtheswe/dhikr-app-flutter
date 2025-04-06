@@ -54,24 +54,33 @@ class _DhikrPage extends State<DhikrPage> {
       appBar: AppBar(
         title: Text(dhikr.title),
       ),
-      body: ListView(
-        children: [
-          if (dhikr.isShowBismillah) ...[
-            _bismillahText(Bismillah.BISMILAH),
-          ],
-          _arabicText(dhikr.arabicText),
-          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
-          if (dhikr.pronounceText != null) ...[
-            _latinText(dhikr.pronounceText!),
+      body: GestureDetector(
+        onHorizontalDragEnd: (details) {
+          if (details.primaryVelocity! < 0) {
+            _goToNext();
+          } else if (details.primaryVelocity! > 0) {
+            _goToPrevious();
+          }
+        },
+        child: ListView(
+          children: [
+            if (dhikr.isShowBismillah) ...[
+              _bismillahText(Bismillah.BISMILAH),
+            ],
+            _arabicText(dhikr.arabicText),
             const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+            if (dhikr.pronounceText != null) ...[
+              _latinText(dhikr.pronounceText!),
+              const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+            ],
+            _latinText(dhikr.translation),
+            if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, languageService)],
+            if (dhikr.references.isNotEmpty) ...[
+              const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
+              _referenceText(dhikr.references),
+            ]
           ],
-          _latinText(dhikr.translation),
-          if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, languageService)],
-          if (dhikr.references.isNotEmpty) ...[
-            const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
-            _referenceText(dhikr.references),
-          ]
-        ],
+        ),
       ),
       bottomNavigationBar: _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
     );
@@ -145,7 +154,7 @@ class _DhikrPage extends State<DhikrPage> {
     if (texts.length == 1) {
       return Container(
         padding: const EdgeInsets.all(10.0),
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Text(
           texts[0],
           textAlign: TextAlign.justify,
@@ -158,7 +167,7 @@ class _DhikrPage extends State<DhikrPage> {
           children: texts.map((ref) {
             return Container(
               padding: const EdgeInsets.all(10.0),
-              margin: const EdgeInsets.all(10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

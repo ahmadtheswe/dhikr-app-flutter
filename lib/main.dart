@@ -1,4 +1,3 @@
-import 'package:dhikr_app/pages/dhikr_list_page.dart';
 import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
 import 'package:dhikr_app/service/language_service.dart';

@@ -1,5 +1,4 @@
 import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
-import 'package:country_icons/country_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

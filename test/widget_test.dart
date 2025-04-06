@@ -1,30 +1,43 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:dhikr_app/main.dart';
+import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
+import 'package:dhikr_app/pages/select_language_page.dart';
+import 'package:dhikr_app/service/language_service.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('MyApp shows SelectDhikrTimePage when language is set', (WidgetTester tester) async {
+    // Arrange
+    final languageService = LanguageService();
+    await languageService.setLanguage('en');
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Act
+    await tester.pumpWidget(ChangeNotifierProvider<LanguageService>(
+      create: (context) => languageService,
+      child: MyApp(
+        languageService: languageService,
+      ),
+    ));
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Assert
+    expect(find.byType(SelectDhikrTimePage), findsOneWidget);
+    expect(find.byType(SelectLanguagePage), findsNothing);
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('MyApp shows SelectLanguagePage when language is not set', (WidgetTester tester) async {
+    // Arrange
+    final languageService = LanguageService();
+
+    // Act
+    await tester.pumpWidget(ChangeNotifierProvider<LanguageService>(
+      create: (context) => languageService,
+      child: MyApp(
+        languageService: languageService,
+      ),
+    ));
+
+    // Assert
+    expect(find.byType(SelectDhikrTimePage), findsNothing);
+    expect(find.byType(SelectLanguagePage), findsOneWidget);
   });
 }
