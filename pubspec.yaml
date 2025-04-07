@@ -46,4 +46,4 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/logo/dhikr-app-logo.png"
   adaptive_icon_foreground: "assets/logo/dhikr-app-logo-foreground.png"
-  adaptive_icon_background: "#ffffff"
+  adaptive_icon_background: "#008000"

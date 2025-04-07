@@ -3,23 +3,19 @@
     "id": 1,
     "title": "Dhikr 1 (Ta'awwudz)",
     "arabicText": "أَعُوْذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ",
-    "translation": "I seek refuge in Allah from the temptation of the accursed devil.",
+    "translation": "I seek refuge with Allah from the accursed devil.",
     "pronounceText": "A'uudzu billaahi minasy-syaithoonir-rojiim.",
     "isShowBismillah": false,
-    "isMorning": true,
-    "isEvening": true,
     "references": []
   },
   {
     "id": 2,
-    "title": "Dhikr 2 (Ayatul Kursi)",
+    "title": "Dhikr 2 (Ayat al-Kursi)",
     "arabicText": "اللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ الْحَىُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى السَّمَاوَاتِ وَمَا فِى الْأَرْضِ ۗ مَن ذَا الَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُۥ حِفْظُهُمَا ۚ وَهُوَ الْعَلِىُّ الْعَظِيمُ ﴿٢٥٥﴾",
-    "translation": "Allah—there is no deity worthy of worship except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what is behind them, and they encompass nothing of His knowledge except what He wills. His Throne extends over the heavens and the earth, and their preservation does not burden Him. And He is the Most High, the Most Great. (Al-Baqarah [2]: 255)",
+    "translation": "Allah – there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great. (Al-Baqarah [2]: 255)",
     "isShowBismillah": false,
-    "isMorning": true,
-    "isEvening": true,
     "references": [
-      "\"Whoever recites this statement in the morning will be protected from (the harm of) jinn until the evening. And whoever recites it in the evening will be protected from (the harm of) jinn until the morning.\" (Narrated by Al-Hakim 1/562. Al-Albani classified this hadith as authentic in *Sahih At-Targhib wat Tarhib* 1/273 and attributed it to An-Nasa'i and Ath-Thabrani, stating that Ath-Thabrani's chain of narration is good)."
+      "Whoever recites this verse in the morning will be protected from the (disturbance of) jinn until the evening. And whoever recites it in the evening will be protected from the (disturbance of) jinn until the morning.\" (Reported by Al-Hakim 1/562. Al-Albani considered the hadith authentic in Sahih At-Targhib wa At-Tarhib 1/273, and attributed it to An-Nasa'i and At-Tabarani. He said the isnad (chain of narration) of At-Tabarani is good)."
     ],
     "readTime": 1
   },
@@ -27,33 +23,215 @@
     "id": 3,
     "title": "Dhikr 3 (Al-Ikhlas)",
     "arabicText": "قُلْ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ ﴿٤﴾",
-    "translation": "(1) Say, ˹O Prophet,˺ \"He is Allah—One ˹and Indivisible˺; (2) Allah—the Sustainer ˹needed by all˺. (3) He has never had offspring, nor was He born. (4) And there is none comparable to Him.\" (Al-Ikhlas [112])",
+    "translation": "(1) Say: \"He is Allah, the One and Only; (2) Allah, the Eternal, Absolute; (3) He neither begets nor is born, (4) And there is none comparable to Him.\" (Al-Ikhlas [112])",
     "isShowBismillah": true,
-    "isMorning": true,
-    "isEvening": true,
-    "references": [],
+    "references": [
+      "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
+    ],
     "readTime": 3
   },
   {
     "id": 4,
-    "title": "Dhikr 3 (Al-Falaq)",
+    "title": "Dhikr 4 (Al-Falaq)",
     "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾",
-    "translation": "(1) Say, ˹O Prophet,˺ \"I seek refuge in the Lord of the daybreak (2) from the evil of whatever He has created, (3) and from the evil of the night when it grows dark, (4) and from the evil of those ˹witches casting spells by˺ blowing onto knots, (5) and from the evil of an envier when they envy.\" (Al-Falaq [113])",
+    "translation": "(1) Say: \"I seek refuge with (Allah), the Lord of daybreak, (2) from the evil of what He has created, (3) and from the evil of darkness when it settles, (4) and from the evil of those who blow on knots (witchcraft), (5) and from the evil of an envier when he envies.\" (Al-Falaq [113])",
     "isShowBismillah": true,
-    "isMorning": true,
-    "isEvening": true,
-    "references": [],
+    "references": [
+      "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
+    ],
     "readTime": 3
   },
   {
     "id": 5,
     "title": "Dhikr 5 (Al-Nas)",
     "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَـٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿٤﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿٥﴾ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ﴿٦﴾",
-    "translation": "(1) Say, ˹O Prophet,˺ \"I seek refuge in the Lord of humankind, (2) the Master of humankind, (3) the God of humankind, (4) from the evil of the lurking whisperer— (5) who whispers into the hearts of humankind— (6) from among jinn and humankind.\" (Al-Nas [114])",
+    "translation": "(1) Say: \"I seek refuge with (Allah), the Lord of mankind, (2) The King of mankind, (3) The God of mankind, (4) From the evil of the whisperer who withdraws, (5) Who whispers in the breasts of mankind, (6) Among jinn and among mankind.\" (Al-Naas [114])",
     "isShowBismillah": true,
-    "isMorning": true,
-    "isEvening": true,
-    "references": [],
+    "references": [
+      "Whoever recites these three surahs every morning and evening, they will suffice him against everything (meaning protecting him from all kinds of harm). (Narrated by Abu Dawud no. 5082, Sahih Abu Dawud no. 4241, An-Nasa’i VIII 250, At-Tirmidhi no. 3575. At-Tirmidhi said: 'This hadith is hasan sahih.' Also narrated by Ahmad V/312, from Abdullah bin Khubaib (may Allah be pleased with him). Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, hasan sahih)."
+    ],
     "readTime": 3
+  },
+  {
+    "id": 6,
+    "title": "Dhikr 6",
+    "arabicText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ.رَبِّ أَسْأَلُكَ خَيْرَ مَا فِيْ هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوْذُ بِكَ مِنْ شَرِّ مَا فِيْ هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوْذُ بِكَ مِنَ الْكَسَلِ وَسُوْءِ الْكِبَرِ، رَبِّ أَعُوْذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ.",
+    "translation": "We have entered the morning, and the dominion belongs to Allah. All praise is due to Allah. There is no god worthy of worship except Allah alone, without any partner. To Him belongs the dominion and to Him belongs all praise, and He has power over all things. O Lord, I ask You for the good of this day and the good of what follows it. I seek refuge with You from the evil of this day and the evil of what follows it. O Lord, I seek refuge with You from laziness and the evil of old age. O Lord, I seek refuge with You from the torment of the Fire and the punishment of the grave.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Muslim no. 2723 (75), Abu Dawud no. 5071, and At-Tirmidhi 3390, sahih, from Abdullah ibn Mas’ud."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 7,
+    "title": "Dhikr 7",
+    "arabicText": "اَللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوْتُ وَإِلَيْكَ النُّشُوْرُ",
+    "translation": "O Allah, by Your mercy and help we have entered the morning, and by Your mercy and help we have entered the evening. By Your mercy and help we live, and by Your will we die. And to You is the resurrection (of all creatures).",
+    "pronounceText": "Allahumma bika ash-bahnaa wa bika amsaynaa wa bika nahyaa wa bika namuutu wa ilaikan nusyuur.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Al-Bukhari in Al-Adab Al-Mufrad no. 1199, this wording is from Al-Bukhari, At-Tirmidhi no. 3391, Abu Dawud no. 5068, Ahmad 11/354, Ibn Majah no. 3868, from Abu Hurairah (may Allah be pleased with him). Sahih Al-Adab Al-Mufrad no. 911, sahih. See also Silsilah Al-Ahaadith As-Sahihah no. 262."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 8,
+    "title": "Dhikr 8 (Sayyidul Istighfar)",
+    "arabicText": "اَللَّهُمَّ أَنْتَ رَبِّيْ لاَ إِلَـهَ إِلاَّ أَنْتَ، خَلَقْتَنِيْ وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوْبَ إِلاَّ أَنْتَ.",
+    "translation": "O Allah, You are my Lord, there is no deity worthy of worship except You. You created me and I am Your servant. I will remain faithful to my covenant and promise to You as best as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me, and I acknowledge my sin. So forgive me, for none forgives sins except You.",
+    "pronounceText": "Allahumma anta robbii laa ilaha illa anta, kholaqtanii wa anaa ‘abduka wa anaa ‘ala ‘ahdika wa wa’dika mas-tatho’tu. A’udzu bika min syarri maa shona’tu. Abu-u laka bi ni’matika ‘alayya wa abu-u bi dzambii. Fagh-firlii fainnahu laa yagh-firudz dzunuuba illa anta.",
+    "isShowBismillah": false,
+    "references": [
+      "\"Whoever recites it with certainty in the morning and dies before evening will enter Paradise. And whoever recites it with certainty in the evening and dies before morning will enter Paradise.\" (Narrated by Al-Bukhari no. 6306, 6323, Ahmad IV/122-125, An-Nasa’i VIII/279-280) from Shaddad bin Aus (may Allah be pleased with him)."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 9,
+    "title": "Dhikr 9",
+    "arabicText": "اَللَّهُمَّ عَافِنِيْ فِيْ بَدَنِيْ، اَللَّهُمَّ عَافِنِيْ فِيْ سَمْعِيْ، اَللَّهُمَّ عَافِنِيْ فِيْ بَصَرِيْ، لاَ إِلَـهَ إِلاَّ أَنْتَ.اَللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لاَ إِلَـهَ إِلاَّ أَنْتَ",
+    "translation": "O Allah, grant my body health (protect it from disease and from what I do not wish). O Allah, grant health to my hearing (protect it from disease and sin or from what I do not wish). O Allah, grant health to my eyesight, there is no deity worthy of worship except You. O Allah, I seek refuge with You from disbelief and poverty. I seek refuge with You from the punishment of the grave, there is no deity worthy of worship except You.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Al-Bukhari in Sahih Al-Adab Al-Mufrad no. 701, Abu Dawud no. 5090, Ahmad V/42, hasan. See Sahih Al-Adab Al-Mufrad no. 539."
+    ],
+    "readTime": 3
+  },
+  {
+    "id": 10,
+    "title": "Dhikr 10",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَاْلآخِرَةِ، اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِيْنِيْ وَدُنْيَايَ وَأَهْلِيْ وَمَالِيْ اللَّهُمَّ اسْتُرْ عَوْرَاتِى وَآمِنْ رَوْعَاتِى.اَللَّهُمَّ احْفَظْنِيْ مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِيْ، وَعَنْ يَمِيْنِيْ وَعَنْ شِمَالِيْ، وَمِنْ فَوْقِيْ، وَأَعُوْذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِيْ",
+    "translation": "O Allah, truly I ask You for pardon and well-being in this world and the Hereafter. O Allah, truly I ask You for pardon and well-being in my religion, my worldly affairs, my family, and my wealth. O Allah, conceal my faults and calm my fears. O Allah, protect me from in front of me, behind me, on my right, on my left, and from above me. I seek refuge in Your greatness lest I be swallowed from beneath me (I seek protection from being buried into the earth).",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Al-Bukhari in Al-Adab Al-Mufrad no. 1200, Abu Dawud no. 5074, An-Nasa'i VIII / 282, Ibn Majah no. 3871, Al-Hakim 1/517-518, and others from Ibn Umar (may Allah be pleased with them both). See Sahih Al-Adab Al-Mufrad no. 912, authentic."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 11,
+    "title": "Dhikr 11",
+    "arabicText": "اَللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَاْلأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيْكَهُ، أَشْهَدُ أَنْ لاَ إِلَـهَ إِلاَّ أَنْتَ، أَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِيْ سُوْءًا أَوْ أَجُرُّهُ إِلَى مُسْلِمٍ",
+    "translation": "O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of everything. I bear witness that there is no deity worthy of worship except You. I seek refuge in You from the evil of myself, from the evil of Satan and his association (with You), and from committing wrong against myself or dragging it onto a Muslim.",
+    "isShowBismillah": false,
+    "references": [
+      "The Prophet ﷺ said to Abu Bakr As-Siddiq (may Allah be pleased with him): \"Say it in the morning, evening, and when you go to bed.\" Narrated by Al-Bukhari in Al-Adab Al-Mufrad 1202, At-Tirmidhi no. 3392, and Abu Dawud no. 5067. See Sahih At-Tirmidhi no. 2798, Sahih Al-Adab Al-Mufrad no. 914, authentic. See Silsilah Al-Ahadith As-Sahihah no. 2753."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 12,
+    "title": "Dhikr 12",
+    "arabicText": "بِسْمِ اللهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي اْلأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيْعُ الْعَلِيْم",
+    "translation": "In the name of Allah, with whose name nothing in the earth or heavens can cause harm, and He is the All-Hearing, the All-Knowing.",
+    "isShowBismillah": false,
+    "references": [
+      "\"Whoever recites it three times in the morning and evening, nothing will harm him.\" Narrated by At-Tirmidhi no. 3388, Abu Dawud no. 5088, Ibn Majah no. 3869, Al-Hakim 1/514, and Ahmad no. 446 and 474, verified by Ahmad Shakir. From Uthman bin Affan (may Allah be pleased with him). See Sahih Ibn Majah no. 3120, Al-Hakim 1/513, Sahih Al-Adab Al-Mufrad no. 513, Sahih At-Targhib wa At-Tarhib 1/413 no. 655, chain is authentic."
+    ],
+    "readTime": 3
+  },
+  {
+    "id": 13,
+    "title": "Dhikr 13",
+    "arabicText": "رَضِيْتُ بِاللهِ رَبًّا، وَبِاْلإِسْلاَمِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا",
+    "translation": "I am pleased with Allah as my Lord, Islam as my religion, and Muhammad ﷺ as my Prophet.",
+    "isShowBismillah": false,
+    "references": [
+      "\"Whoever says it three times in the morning and evening, Allah will grant him His pleasure on the Day of Resurrection.\" Narrated by Ahmad IV/337, Abu Dawud no. 5072, At-Tirmidhi no. 3389, Ibn Majah no. 3870, An-Nasa'i in Amal Al-Yaum wal-Lailah no. 4, and Ibnus Sunni no. 68, authenticated by Imam Al-Hakim in Al-Mustadrak 1/518 and agreed upon by Imam Adh-Dhahabi, good. See Sahih At-Targhib wa At-Tarhib I/415 no. 657, Sahih At-Targhib wa At-Tarhib Al-Wabil As-Sayyib p. 170, Zad Al-Ma'ad II/372, Silsilah Al-Ahadith As-Sahihah no. 2686."
+    ],
+    "readTime": 3
+  },
+  {
+    "id": 14,
+    "title": "Dhikr 14",
+    "arabicText": "يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْثُ، أَصْلِحْ لِيْ شَأْنِيْ كُلَّهُ وَلاَ تَكِلْنِيْ إِلَى نَفْسِيْ طَرْفَةَ عَيْنٍ",
+    "translation": "O Ever-Living, O Sustainer, by Your mercy I seek help; rectify for me all of my affairs and do not leave me to myself even for the blink of an eye.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by An-Nasa'i in Amal Al-Yaum wal-Lailah no. 575, and Al-Hakim 1/545. See Sahih At-Targhib wa At-Tarhib 1/417 no. 661, As-Sahihah no. 227, authentic, from Anas (may Allah be pleased with him)."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 15,
+    "title": "Dhikr 15",
+    "arabicText": "أَصْبَحْنَا عَلَى فِطْرَةِ اْلإِسْلاَمِ وَعَلَى كَلِمَةِ اْلإِخْلاَصِ، وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ، حَنِيْفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
+    "translation": "In the morning we rise upon the natural religion of Islam, the word of sincerity, the religion of our Prophet Muhammad ﷺ, and the faith of our forefather Abraham, upright and a Muslim, and he was not among the polytheists.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Ahmad III/406, 407, Ad-Darimi II/292, and Ibnus Sunni in Amal Al-Yaum wal-Lailah no. 34, Mishkat Al-Masabih no. 2415, Sahih Al-Jami' As-Saghir no. 4674, authentic."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 16,
+    "title": "Dhikr 16",
+    "arabicText": "لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ",
+    "translation": "There is no deity truly worthy of worship except Allah, the One without any partner. His is the dominion and to Him belongs all praise. And He is capable of all things.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 and 114, Sahih at-Targhib wat Tarhib 1/416 no. 660, authentic.",
+      "Narrated by Abu Dawud no. 5077, Ibn Majah no. 3867, from Ab ‘Ayyasy Azzurraqy (may Allah be pleased with him), Sahih Jami’ish Saghir no. 6418, Mishkatul Masabih no. 2395, Sahih at-Targhib 1/414 no. 656, authentic."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 17,
+    "title": "Dhikr 17",
+    "arabicText": "لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ",
+    "translation": "There is no deity truly worthy of worship except Allah, the One without any partner. His is the dominion and to Him belongs all praise. And He is capable of all things.",
+    "isShowBismillah": false,
+    "references": [
+      "\"Whoever recites it 100 times a day will have a reward equivalent to freeing ten slaves, one hundred good deeds will be written for him, one hundred sins will be erased from him, and he will be protected from Satan that day until evening. No one can bring anything better than what he has done except one who does even more.\" Narrated by Al-Bukhari no. 3293 and 6403, Muslim IV/2071 no. 2691 (28), at-Tirmidhi no. 3468, Ibn Majah no. 3798, from the companion Abu Hurairah (may Allah be pleased with him). Explanation: In the narration of An-Nasa’i (‘Amalul Yaum wal Lailah no. 580) and Ibnus Sunni no. 75 from ‘Amr bin Shu’aib from his father from his grandfather with the wording: \"Whoever recites it 100 times in the morning and 100 times in the evening.\" Thus, this dhikr should be recited 100 times in the morning and 100 times in the evening. See Silsilah al-Ahaadiits ash-Shahiihah no. 2762."
+    ],
+    "readTime": 100
+  },
+  {
+    "id": 18,
+    "title": "Dhikr 18",
+    "arabicText": "سُبْحَانَ اللهِ وَبِحَمْدِهِ : عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+    "translation": "Glory is to Allah and praise is to Him, as numerous as His creation, as much as He is pleased with, as heavy as His Throne, and as much as the ink used in recording His words.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Muslim no. 2726. Sharh Muslim XVII/44. From Juwayriyyah bint Al-Harith (may Allah be pleased with her)."
+    ],
+    "readTime": 3
+  },
+  {
+    "id": 19,
+    "title": "Dhikr 19",
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً",
+    "translation": "O Allah, I ask You for beneficial knowledge, lawful provision, and accepted deeds.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Ibn Majah no. 925, Sahih Ibn Majah 1/152 no. 753, Ibnus Sunni in ‘Amalul Yaum wal Lailah no. 54, 110, and Ahmad VI / 294, 305, 318, 322. From Umm Salamah, authentic."
+    ],
+    "readTime": 1
+  },
+  {
+    "id": 20,
+    "title": "Dhikr 20",
+    "arabicText": "سُبْحَانَ اللهِ وَبِحَمْدِهِ",
+    "translation": "Glory is to Allah and praise is to Him.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Muslim no. 2691 and no. 2692, from Abu Hurairah (may Allah be pleased with him), Sharh Muslim XVII / 17-18, Sahih at-Targhib wat Tarhib 1/413 no. 653. The Prophet’s most frequent practice was reciting 100 times in the morning and 100 times in the evening. As for the narration mentioning up to one thousand, it is munkar (denounced), because the hadith is weak. (Silsilah al-Ahaadiits adh-Dha’ifah no. 5296)."
+    ],
+    "readTime": 100
+  },
+  {
+    "id": 21,
+    "title": "Dhikr 21",
+    "arabicText": "أَسْتَغْفِرُ اللهَ وَأَتُوْبُ إِلَيْهِ",
+    "translation": "I seek forgiveness from Allah and repent to Him.",
+    "isShowBismillah": false,
+    "references": [
+      "Narrated by Al-Bukhari / Fath al-Bari XI/101 and Muslim no. 2702 from Ibn Umar who said: The Messenger of Allah (peace and blessings be upon him) said: 'O people, repent to Allah. Verily, I repent to Him one hundred times in a day.' [Narrated by Muslim no. 2702 (42)].",
+      "In another narration from Agharr Al-Muzani, the Messenger of Allah (peace and blessings be upon him) said: [إِنَّهُ لَيُغَانُ عَلَى قَلْبِيْ وَإِنِّيْ لأَسْتَغْفِرُ اللهَ فِي الْيَوْمِ مِائَةَ مَرَّةٍ] 'Indeed, my heart sometimes becomes covered, and indeed I seek forgiveness from Allah one hundred times a day.' [Narrated by Muslim no. 2702 (41)].",
+      "The Prophet (peace and blessings be upon him) said: 'Whoever says: أَسْتَغْفِرُ اللهَ الْعَظِيْمَ الَّذِيْ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ (I seek forgiveness from Allah, the Almighty, besides whom there is no deity, the Ever-Living, the Sustainer, and I repent to Him), Allah will forgive his sins even if he had fled from the battlefield.' Narrated by Abu Dawud no. 1517, at-Tirmidhi no. 3577 and Al-Hakim I/511. See Sahih at-Tirmidhi III/282 no. 2381.",
+      "Verses encouraging seeking forgiveness and repentance include: (Surah Hud: 3), (Surah An-Nur: 31), (Surah At-Tahrim: 8), and others."
+    ],
+    "readTime": 100
   }
 ]
