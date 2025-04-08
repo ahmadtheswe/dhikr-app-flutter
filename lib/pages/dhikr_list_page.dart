@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../shared/title/page_title.dart';
 
 class DhikrListPage extends StatefulWidget {
   final String dhikrTime;
@@ -49,7 +50,7 @@ class _DhikrListPage extends State<DhikrListPage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(languageService.getText(widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening')),
+          title: PageTitle(text: languageService.getText(widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening')),
           actions: [
             IconButton(
               icon: const Icon(Icons.more_vert),
@@ -73,6 +74,7 @@ class _DhikrListPage extends State<DhikrListPage> {
                         builder: (context) => DhikrPage(
                               dhikrList: dhikr,
                               initialIndex: index,
+                              isMorningDhikr: widget.dhikrTime == DhikrTime.MORNING,
                             )));
                 // loadDhikr(); // Reload data after returning from settings
               },
@@ -93,7 +95,11 @@ class _DhikrListPage extends State<DhikrListPage> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       dhikr[index].title,
-                      style: const TextStyle(fontSize: 18),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueGrey,
+                      ),
                     ),
                   ),
                 ),

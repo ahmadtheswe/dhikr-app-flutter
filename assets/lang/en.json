@@ -3,6 +3,7 @@
   "settings": "Settings",
   "changeLanguage": "Change Language",
   "darkMode": "Dark Mode",
+  "selectDhikrTime": "Select Dhikr Time",
   "listPageTitle": "List of Dhikrs",
   "morning": "Morning Dhikr",
   "evening": "Evening Dhikr",
@@ -16,5 +17,6 @@
   "aboutTheDeveloper": "This application is developed by Ahmad The SWE, a software developer committed to creating useful and user-friendly applications. If you have any questions or suggestions, feel free to contact us.",
   "readTime": "Read {count} time(s)",
   "readTimeOr": "Read {count1} time(s) or {count2} time(s)",
-  "inADayText": "in a day"
+  "inADayText": "in a day",
+  "privacyPolicy": "Privacy Policy"
 }

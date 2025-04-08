@@ -1,4 +1,7 @@
 import 'package:dhikr_app/pages/dhikr_list_page.dart';
+import 'package:dhikr_app/pages/settings_page.dart';
+import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
+import 'package:dhikr_app/shared/title/menu_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,31 +26,54 @@ class _SelectDhikrTimePage extends State<SelectDhikrTimePage> {
     final languageService = Provider.of<LanguageService>(context);
 
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _createElevatedButton(DhikrTime.MORNING, languageService),// Add some space between the buttons
+            MenuTitle(text: languageService.getText('selectDhikrTime')),
             const SizedBox(height: 20),
-            _createElevatedButton(DhikrTime.EVENING, languageService),// Add some space between the buttons
+            StandardElevatedButton(
+              text: languageService.getText(DhikrTime.MORNING),
+              onPressed: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DhikrListPage(
+                            dhikrTime: DhikrTime.MORNING,
+                          )),
+                );
+              },
+            ),
+            const SizedBox(height: 20),
+            StandardElevatedButton(
+              text: languageService.getText(DhikrTime.EVENING),
+              onPressed: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DhikrListPage(
+                            dhikrTime: DhikrTime.EVENING,
+                          )),
+                );
+              },
+            ),
           ],
         ),
       ),
     );
-  }
-
-  Widget _createElevatedButton(String dhikrTime, LanguageService languageService) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
-        onPressed: () async {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => DhikrListPage(
-                      dhikrTime: dhikrTime,
-                    )),
-          );
-        },
-        child: Text(languageService.getText(dhikrTime)));
   }
 }

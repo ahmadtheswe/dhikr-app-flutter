@@ -1,3 +1,5 @@
+import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
+import 'package:dhikr_app/shared/title/page_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,53 +18,40 @@ class _AboutAppPage extends State<AboutAppPage> {
     final languageService = Provider.of<LanguageService>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(languageService.getText('aboutTheApp')),
-      ),
-      body: ListView(
-        children: [
-          const SizedBox(
-            height: 20,
+        appBar: AppBar(
+          title: PageTitle(
+            text: languageService.getText('aboutTheApp'),
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(languageService.getText('aboutUsText'),
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                  fontSize: 17,
-                )),
+        ),
+        body: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20),
+          child: ListView(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Text(languageService.getText('aboutUsText'),
+                  textAlign: TextAlign.justify,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(languageService.getText('aboutTheDeveloper'),
+                  textAlign: TextAlign.justify,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+              const SizedBox(
+                height: 20,
+              ),
+              StandardElevatedButton(
+                text: languageService.getText('privacyPolicy'),
+                onPressed: () {},
+              ),
+            ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(languageService.getText('aboutTheDeveloper'),
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                  fontSize: 17,
-                )),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
-              onPressed: () async {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AboutAppPage()),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(languageService.getText('aboutTheApp')),
-                  const SizedBox(width: 10),
-                ],
-              ))
-        ],
-      ),
-    );
+        ));
   }
 }

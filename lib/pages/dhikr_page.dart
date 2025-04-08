@@ -1,15 +1,18 @@
 import 'package:dhikr_app/models/dhikr_model.dart';
+import 'package:dhikr_app/shared/title/page_subtitle.dart';
 import 'package:dhikr_app/static/bismillah.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../shared/title/page_title.dart';
 
 class DhikrPage extends StatefulWidget {
-  const DhikrPage({super.key, required this.dhikrList, required this.initialIndex});
+  const DhikrPage({super.key, required this.dhikrList, required this.initialIndex, required this.isMorningDhikr});
 
   final List<Dhikr> dhikrList;
   final int initialIndex;
+  final bool isMorningDhikr;
 
   @override
   State<DhikrPage> createState() => _DhikrPage();
@@ -51,7 +54,13 @@ class _DhikrPage extends State<DhikrPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(dhikr.title),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            PageSubTitle(text: widget.isMorningDhikr ? languageService.getText('morning') : languageService.getText('evening')),
+            PageTitle(text: dhikr.title),
+          ],
+        ),
       ),
       body: GestureDetector(
         onHorizontalDragEnd: (details) {

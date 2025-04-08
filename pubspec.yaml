@@ -23,6 +23,7 @@ dev_dependencies:
   mockito: ^5.0.0
   flutter_lints: ^2.0.0
   flutter_launcher_icons: ^0.13.1
+  package_rename: ^1.9.0
 
 flutter:
   uses-material-design: true

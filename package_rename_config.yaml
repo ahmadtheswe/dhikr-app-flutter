@@ -1,0 +1,10 @@
+package_rename_config:
+  android:
+    app_name: "Dhikr App"
+    package_name: "com.ahmadtheswe.dhikr_app"
+    override_old_package: true
+
+  ios:
+    app_name: "Dhikr App"
+    bundle_id: "com.ahmadtheswe.dhikr_app"
+    override_old_bundle_id: true

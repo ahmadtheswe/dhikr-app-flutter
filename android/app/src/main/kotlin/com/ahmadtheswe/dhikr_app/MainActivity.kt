@@ -1,4 +1,4 @@
-package com.amsoftdev.dhikr_app
+package com.ahmadtheswe.dhikr_app
 
 import io.flutter.embedding.android.FlutterActivity
 
