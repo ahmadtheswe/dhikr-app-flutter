@@ -81,13 +81,30 @@ class _DhikrListPage extends State<DhikrListPage> {
               child: Container(
                 height: 65,
                 margin: const EdgeInsets.all(10),
+                // decoration: BoxDecoration(
+                //   border: Border.all(
+                //     color: Colors.black,
+                //     style: BorderStyle.solid,
+                //     width: 1,
+                //   ),
+                //   borderRadius: BorderRadius.circular(20.0),
+                // ),
                 decoration: BoxDecoration(
+                  color: Colors.white.withAlpha((0.9 * 255).toInt()),
+                  borderRadius: BorderRadius.circular(15.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withAlpha((0.5 * 255).toInt()),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
                   border: Border.all(
-                    color: Colors.black,
+                    color: Colors.grey.withAlpha((0.5 * 255).toInt()),
                     style: BorderStyle.solid,
-                    width: 1,
+                    width: 0.5,
                   ),
-                  borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
