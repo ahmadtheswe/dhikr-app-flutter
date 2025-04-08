@@ -6,7 +6,8 @@
     "translation": "I seek refuge with Allah from the accursed devil.",
     "pronounceText": "A'uudzu billaahi minasy-syaithoonir-rojiim.",
     "isShowBismillah": false,
-    "references": []
+    "references": [],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 2,
@@ -17,7 +18,10 @@
     "references": [
       "Whoever recites this verse in the morning will be protected from the (disturbance of) jinn until the evening. And whoever recites it in the evening will be protected from the (disturbance of) jinn until the morning.\" (Reported by Al-Hakim 1/562. Al-Albani considered the hadith authentic in Sahih At-Targhib wa At-Tarhib 1/273, and attributed it to An-Nasa'i and At-Tabarani. He said the isnad (chain of narration) of At-Tabarani is good)."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 3,
@@ -28,7 +32,10 @@
     "references": [
       "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 4,
@@ -39,7 +46,10 @@
     "references": [
       "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 5,
@@ -50,7 +60,10 @@
     "references": [
       "Whoever recites these three surahs every morning and evening, they will suffice him against everything (meaning protecting him from all kinds of harm). (Narrated by Abu Dawud no. 5082, Sahih Abu Dawud no. 4241, An-Nasa’i VIII 250, At-Tirmidhi no. 3575. At-Tirmidhi said: 'This hadith is hasan sahih.' Also narrated by Ahmad V/312, from Abdullah bin Khubaib (may Allah be pleased with him). Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, hasan sahih)."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 6,
@@ -61,7 +74,10 @@
     "references": [
       "Narrated by Muslim no. 2723 (75), Abu Dawud no. 5071, and At-Tirmidhi 3390, sahih, from Abdullah ibn Mas’ud."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 7,
@@ -73,7 +89,10 @@
     "references": [
       "Narrated by Al-Bukhari in Al-Adab Al-Mufrad no. 1199, this wording is from Al-Bukhari, At-Tirmidhi no. 3391, Abu Dawud no. 5068, Ahmad 11/354, Ibn Majah no. 3868, from Abu Hurairah (may Allah be pleased with him). Sahih Al-Adab Al-Mufrad no. 911, sahih. See also Silsilah Al-Ahaadith As-Sahihah no. 262."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 8,
@@ -85,7 +104,10 @@
     "references": [
       "\"Whoever recites it with certainty in the morning and dies before evening will enter Paradise. And whoever recites it with certainty in the evening and dies before morning will enter Paradise.\" (Narrated by Al-Bukhari no. 6306, 6323, Ahmad IV/122-125, An-Nasa’i VIII/279-280) from Shaddad bin Aus (may Allah be pleased with him)."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 9,
@@ -96,7 +118,10 @@
     "references": [
       "Narrated by Al-Bukhari in Sahih Al-Adab Al-Mufrad no. 701, Abu Dawud no. 5090, Ahmad V/42, hasan. See Sahih Al-Adab Al-Mufrad no. 539."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 10,
@@ -107,7 +132,10 @@
     "references": [
       "Narrated by Al-Bukhari in Al-Adab Al-Mufrad no. 1200, Abu Dawud no. 5074, An-Nasa'i VIII / 282, Ibn Majah no. 3871, Al-Hakim 1/517-518, and others from Ibn Umar (may Allah be pleased with them both). See Sahih Al-Adab Al-Mufrad no. 912, authentic."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 11,
@@ -118,7 +146,10 @@
     "references": [
       "The Prophet ﷺ said to Abu Bakr As-Siddiq (may Allah be pleased with him): \"Say it in the morning, evening, and when you go to bed.\" Narrated by Al-Bukhari in Al-Adab Al-Mufrad 1202, At-Tirmidhi no. 3392, and Abu Dawud no. 5067. See Sahih At-Tirmidhi no. 2798, Sahih Al-Adab Al-Mufrad no. 914, authentic. See Silsilah Al-Ahadith As-Sahihah no. 2753."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 12,
@@ -129,7 +160,10 @@
     "references": [
       "\"Whoever recites it three times in the morning and evening, nothing will harm him.\" Narrated by At-Tirmidhi no. 3388, Abu Dawud no. 5088, Ibn Majah no. 3869, Al-Hakim 1/514, and Ahmad no. 446 and 474, verified by Ahmad Shakir. From Uthman bin Affan (may Allah be pleased with him). See Sahih Ibn Majah no. 3120, Al-Hakim 1/513, Sahih Al-Adab Al-Mufrad no. 513, Sahih At-Targhib wa At-Tarhib 1/413 no. 655, chain is authentic."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 13,
@@ -140,7 +174,10 @@
     "references": [
       "\"Whoever says it three times in the morning and evening, Allah will grant him His pleasure on the Day of Resurrection.\" Narrated by Ahmad IV/337, Abu Dawud no. 5072, At-Tirmidhi no. 3389, Ibn Majah no. 3870, An-Nasa'i in Amal Al-Yaum wal-Lailah no. 4, and Ibnus Sunni no. 68, authenticated by Imam Al-Hakim in Al-Mustadrak 1/518 and agreed upon by Imam Adh-Dhahabi, good. See Sahih At-Targhib wa At-Tarhib I/415 no. 657, Sahih At-Targhib wa At-Tarhib Al-Wabil As-Sayyib p. 170, Zad Al-Ma'ad II/372, Silsilah Al-Ahadith As-Sahihah no. 2686."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 14,
@@ -151,7 +188,10 @@
     "references": [
       "Narrated by An-Nasa'i in Amal Al-Yaum wal-Lailah no. 575, and Al-Hakim 1/545. See Sahih At-Targhib wa At-Tarhib 1/417 no. 661, As-Sahihah no. 227, authentic, from Anas (may Allah be pleased with him)."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 15,
@@ -162,7 +202,10 @@
     "references": [
       "Narrated by Ahmad III/406, 407, Ad-Darimi II/292, and Ibnus Sunni in Amal Al-Yaum wal-Lailah no. 34, Mishkat Al-Masabih no. 2415, Sahih Al-Jami' As-Saghir no. 4674, authentic."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 16,
@@ -174,7 +217,11 @@
       "Narrated by Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 and 114, Sahih at-Targhib wat Tarhib 1/416 no. 660, authentic.",
       "Narrated by Abu Dawud no. 5077, Ibn Majah no. 3867, from Ab ‘Ayyasy Azzurraqy (may Allah be pleased with him), Sahih Jami’ish Saghir no. 6418, Mishkatul Masabih no. 2395, Sahih at-Targhib 1/414 no. 656, authentic."
     ],
-    "readTime": 1
+    "readTime": [
+      10,
+      1
+    ],
+    "isReadTimeForWholeDay": true
   },
   {
     "id": 17,
@@ -185,7 +232,10 @@
     "references": [
       "\"Whoever recites it 100 times a day will have a reward equivalent to freeing ten slaves, one hundred good deeds will be written for him, one hundred sins will be erased from him, and he will be protected from Satan that day until evening. No one can bring anything better than what he has done except one who does even more.\" Narrated by Al-Bukhari no. 3293 and 6403, Muslim IV/2071 no. 2691 (28), at-Tirmidhi no. 3468, Ibn Majah no. 3798, from the companion Abu Hurairah (may Allah be pleased with him). Explanation: In the narration of An-Nasa’i (‘Amalul Yaum wal Lailah no. 580) and Ibnus Sunni no. 75 from ‘Amr bin Shu’aib from his father from his grandfather with the wording: \"Whoever recites it 100 times in the morning and 100 times in the evening.\" Thus, this dhikr should be recited 100 times in the morning and 100 times in the evening. See Silsilah al-Ahaadiits ash-Shahiihah no. 2762."
     ],
-    "readTime": 100
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": true
   },
   {
     "id": 18,
@@ -196,7 +246,10 @@
     "references": [
       "Narrated by Muslim no. 2726. Sharh Muslim XVII/44. From Juwayriyyah bint Al-Harith (may Allah be pleased with her)."
     ],
-    "readTime": 3
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 19,
@@ -207,7 +260,10 @@
     "references": [
       "Narrated by Ibn Majah no. 925, Sahih Ibn Majah 1/152 no. 753, Ibnus Sunni in ‘Amalul Yaum wal Lailah no. 54, 110, and Ahmad VI / 294, 305, 318, 322. From Umm Salamah, authentic."
     ],
-    "readTime": 1
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 20,
@@ -218,7 +274,10 @@
     "references": [
       "Narrated by Muslim no. 2691 and no. 2692, from Abu Hurairah (may Allah be pleased with him), Sharh Muslim XVII / 17-18, Sahih at-Targhib wat Tarhib 1/413 no. 653. The Prophet’s most frequent practice was reciting 100 times in the morning and 100 times in the evening. As for the narration mentioning up to one thousand, it is munkar (denounced), because the hadith is weak. (Silsilah al-Ahaadiits adh-Dha’ifah no. 5296)."
     ],
-    "readTime": 100
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": false
   },
   {
     "id": 21,
@@ -232,6 +291,9 @@
       "The Prophet (peace and blessings be upon him) said: 'Whoever says: أَسْتَغْفِرُ اللهَ الْعَظِيْمَ الَّذِيْ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ (I seek forgiveness from Allah, the Almighty, besides whom there is no deity, the Ever-Living, the Sustainer, and I repent to Him), Allah will forgive his sins even if he had fled from the battlefield.' Narrated by Abu Dawud no. 1517, at-Tirmidhi no. 3577 and Al-Hakim I/511. See Sahih at-Tirmidhi III/282 no. 2381.",
       "Verses encouraging seeking forgiveness and repentance include: (Surah Hud: 3), (Surah An-Nur: 31), (Surah At-Tahrim: 8), and others."
     ],
-    "readTime": 100
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": true
   }
 ]

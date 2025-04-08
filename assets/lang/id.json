@@ -9,5 +9,12 @@
   "previous": "Sebelumnya",
   "next": "Selanjutnya",
   "first": "Pertama",
-  "last": "Terakhir"
+  "last": "Terakhir",
+  "aboutTheApp": "Tentang Aplikasi",
+  "aboutUs": "Tentang Kami",
+  "aboutUsText": "Aplikasi ini adalah aplikasi dzikr sederhana yang menyediakan kumpulan dzikr untuk pagi dan petang. Ini dirancang untuk membantu pengguna mengingat dan melafalkan dzikr dengan mudah.",
+  "aboutTheDeveloper": "Aplikasi ini dikembangkan oleh Ahmad The SWE, seorang pengembang perangkat lunak yang berkomitmen untuk membuat aplikasi yang bermanfaat dan mudah digunakan. Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi kami.",
+  "readTime": "Dibaca {count} kali",
+  "readTimeOr": "Dibaca {count1} kali atau {count2} kali",
+  "inADayText": "dalam sehari"
 }

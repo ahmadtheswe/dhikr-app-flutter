@@ -6,7 +6,8 @@ class Dhikr {
   String translation;
   bool isShowBismillah;
   List<String> references;
-  int? readTime;
+  List<int>? readTime;
+  bool isReadTimeForWholeDay;
 
   Dhikr({
     required this.id,
@@ -17,6 +18,7 @@ class Dhikr {
     required this.isShowBismillah,
     required this.references,
     this.readTime,
+    required this.isReadTimeForWholeDay
   });
 
   factory Dhikr.fromJson(Map<String, dynamic> json) {
@@ -27,7 +29,8 @@ class Dhikr {
       translation: json['translation'],
       isShowBismillah: json['isShowBismillah'],
       references: List<String>.from(json['references']),
-      readTime: json['readTime'],
+      readTime: json['readTime'] != null ? List<int>.from(json['readTime']) : null,
+      isReadTimeForWholeDay: json['isReadTimeForWholeDay'],
     );
   }
 }

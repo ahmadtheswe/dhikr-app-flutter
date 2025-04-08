@@ -1,3 +1,4 @@
+import 'package:dhikr_app/pages/about_app_page.dart';
 import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,22 +19,39 @@ class SettingsPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(bottom: 20),
-              child: Text(languageService.getText('changeLanguage'), style: const TextStyle(fontSize: 20,)),
-            ),
-            _createElevatedButton(Languages.INDONESIAN_TITLE, Languages.INDONESIAN_CODE, context, languageService, 'icons/flags/png100px/id.png'),
             const SizedBox(
               height: 20,
             ),
-            _createElevatedButton(Languages.ENGLISH_TITLE, Languages.ENGLISH_CODE, context, languageService, 'icons/flags/png100px/gb.png'),
+            Container(
+              margin: const EdgeInsets.only(bottom: 20),
+              child: Text(languageService.getText('changeLanguage'),
+                  style: const TextStyle(
+                    fontSize: 20,
+                  )),
+            ),
+            _createLanguageSelectElevatedButton(Languages.INDONESIAN_TITLE, Languages.INDONESIAN_CODE, context, languageService, 'icons/flags/png100px/id.png'),
+            const SizedBox(
+              height: 20,
+            ),
+            _createLanguageSelectElevatedButton(Languages.ENGLISH_TITLE, Languages.ENGLISH_CODE, context, languageService, 'icons/flags/png100px/gb.png'),
+            const SizedBox(
+              height: 40,
+            ),
+            Container(
+              margin: const EdgeInsets.only(bottom: 20),
+              child: Text(languageService.getText('aboutUs'),
+                  style: const TextStyle(
+                    fontSize: 20,
+                  )),
+            ),
+            _createAboutTheAppElevatedButton(context, languageService),
           ],
         ),
       ),
     );
   }
 
-  Widget _createElevatedButton(String languageTitle, String languageCode, BuildContext context, LanguageService languageService, String icon) {
+  Widget _createLanguageSelectElevatedButton(String languageTitle, String languageCode, BuildContext context, LanguageService languageService, String icon) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
         onPressed: () async {
@@ -53,6 +71,24 @@ class SettingsPage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             )
+          ],
+        ));
+  }
+
+  Widget _createAboutTheAppElevatedButton(BuildContext context, LanguageService languageService) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
+        onPressed: () async {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AboutAppPage()),
+          );
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(languageService.getText('aboutTheApp')),
+            const SizedBox(width: 10),
           ],
         ));
   }

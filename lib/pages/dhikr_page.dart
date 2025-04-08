@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
-import '../static/languages.dart';
 
 class DhikrPage extends StatefulWidget {
   const DhikrPage({super.key, required this.dhikrList, required this.initialIndex});
@@ -68,13 +67,13 @@ class _DhikrPage extends State<DhikrPage> {
               _bismillahText(Bismillah.BISMILAH),
             ],
             _arabicText(dhikr.arabicText),
+            if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService)],
             const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
             if (dhikr.pronounceText != null) ...[
               _latinText(dhikr.pronounceText!),
               const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
             ],
             _latinText(dhikr.translation),
-            if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, languageService)],
             if (dhikr.references.isNotEmpty) ...[
               const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
               _referenceText(dhikr.references),
@@ -136,14 +135,22 @@ class _DhikrPage extends State<DhikrPage> {
         ));
   }
 
-  _readTimeText(int readTime, LanguageService languageService) {
+  _readTimeText(List<int> readTime, bool isReadTimeForWholeDay, LanguageService languageService) {
+    var readTimeString = readTime.length > 1
+        ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{count2}', readTime[1].toString())
+        : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString());
+
+    if (isReadTimeForWholeDay) {
+      readTimeString += ' ${languageService.getText('inADayText')}';
+    }
+
     return Container(
-        padding: const EdgeInsets.symmetric( horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: Text(
-            languageService.currentLanguage == Languages.ENGLISH_CODE ? 'Read $readTime time(s)' : 'Dibaca $readTime kali',
+            readTimeString,
             textAlign: TextAlign.justify,
             style: const TextStyle(fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
           ),
