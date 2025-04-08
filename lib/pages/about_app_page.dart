@@ -2,6 +2,7 @@ import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
 import 'package:dhikr_app/shared/title/page_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../service/language_service.dart';
 
@@ -48,10 +49,24 @@ class _AboutAppPage extends State<AboutAppPage> {
               ),
               StandardElevatedButton(
                 text: languageService.getText('privacyPolicy'),
-                onPressed: () {},
+                onPressed: _launchURL,
               ),
             ],
           ),
         ));
+  }
+
+  _launchURL() async {
+    try {
+      final Uri url = Uri.parse('https://ahmadtheswe.github.io/privacy-policy');
+      if (!await launchUrl(
+        url,
+        mode: LaunchMode.externalApplication,
+      )) {
+        throw Exception('Could not launch $url');
+      }
+    } catch (e) {
+      debugPrint('Error launching URL: $e');
+    }
   }
 }
