@@ -76,26 +76,16 @@ class _DhikrListPage extends State<DhikrListPage> {
                               initialIndex: index,
                               isMorningDhikr: widget.dhikrTime == DhikrTime.MORNING,
                             )));
-                // loadDhikr(); // Reload data after returning from settings
               },
               child: Container(
                 height: 65,
-                margin: const EdgeInsets.all(10),
-                // decoration: BoxDecoration(
-                //   border: Border.all(
-                //     color: Colors.black,
-                //     style: BorderStyle.solid,
-                //     width: 1,
-                //   ),
-                //   borderRadius: BorderRadius.circular(20.0),
-                // ),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
-                  color: Colors.white.withAlpha((0.9 * 255).toInt()),
-                  borderRadius: BorderRadius.circular(15.0),
+                  color: Colors.white,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withAlpha((0.5 * 255).toInt()),
-                      spreadRadius: 2,
+                      spreadRadius: 1,
                       blurRadius: 5,
                       offset: const Offset(0, 3), // changes position of shadow
                     ),
@@ -111,7 +101,7 @@ class _DhikrListPage extends State<DhikrListPage> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      dhikr[index].title,
+                      '${index + 1}. ${dhikr[index].title}',
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

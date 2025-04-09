@@ -18,5 +18,7 @@
   "readTime": "Read {count} time(s)",
   "readTimeOr": "Read {count1} time(s) or {count2} time(s)",
   "inADayText": "in a day",
-  "privacyPolicy": "Privacy Policy"
+  "privacyPolicy": "Privacy Policy",
+  "morningAlarm": "Morning Alarm",
+  "eveningAlarm": "Evening Alarm"
 }

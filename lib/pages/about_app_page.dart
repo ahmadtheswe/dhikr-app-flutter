@@ -1,4 +1,5 @@
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
+import 'package:dhikr_app/shared/text/application_version.dart';
 import 'package:dhikr_app/shared/title/page_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -51,6 +52,10 @@ class _AboutAppPage extends State<AboutAppPage> {
                 text: languageService.getText('privacyPolicy'),
                 onPressed: _launchURL,
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              const ApplicationVersion(),
             ],
           ),
         ));

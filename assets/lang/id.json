@@ -18,5 +18,7 @@
   "readTime": "Dibaca {count} kali",
   "readTimeOr": "Dibaca {count1} kali atau {count2} kali",
   "inADayText": "dalam sehari",
-  "privacyPolicy": "Kebijakan Privasi"
+  "privacyPolicy": "Kebijakan Privasi",
+  "morningAlarm": "Alarm Pagi",
+  "eveningAlarm": "Alarm Petang"
 }

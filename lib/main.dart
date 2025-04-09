@@ -1,5 +1,6 @@
 import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
+import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,18 +11,20 @@ void main() async {
   final languageService = LanguageService();
   await languageService.loadLanguage();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => languageService,
-    child: MyApp(
-      languageService: languageService,
-    ),
+  final alarmService = AlarmService();
+  await alarmService.loadAlarms();
+
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider<LanguageService>.value(value: languageService),
+      ChangeNotifierProvider<AlarmService>.value(value: alarmService),
+    ],
+    child: const MyApp(),
   ));
 }
 
 class MyApp extends StatelessWidget {
-  final LanguageService languageService;
-
-  const MyApp({super.key, required this.languageService});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
