@@ -24,12 +24,14 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.ahmadtheswe.dhikr_app"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 35
     ndkVersion flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_21
         targetCompatibility JavaVersion.VERSION_21
+
+        coreLibraryDesugaringEnabled true
     }
 
     kotlinOptions {
@@ -42,7 +44,7 @@ android {
 
     defaultConfig {
         applicationId "com.ahmadtheswe.dhikr_app"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -64,4 +66,5 @@ flutter {
 
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
 }

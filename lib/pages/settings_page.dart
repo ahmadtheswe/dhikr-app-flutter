@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../service/notification_service.dart';
 import '../shared/title/page_title.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -71,6 +72,14 @@ class _SettingsPage extends State<SettingsPage> {
                 onTimeChanged: (newTime) async {
                   final formattedTime = newTime.format(context);
                   await alarmService.setAlarm(DhikrTime.MORNING, formattedTime);
+
+                  await NotificationService().cancelNotification(1);
+                  await NotificationService().scheduleNotification(
+                    id: 1,
+                    title: "Assalamu'alaykum!",
+                    body: "Start your day with morning dhikr 🌞",
+                    timeOfDay: newTime,
+                  );
                 }),
             const SizedBox(
               height: 20,
@@ -81,6 +90,14 @@ class _SettingsPage extends State<SettingsPage> {
                 onTimeChanged: (newTime) async {
                   final formattedTime = newTime.format(context);
                   await alarmService.setAlarm(DhikrTime.EVENING, formattedTime);
+
+                  await NotificationService().cancelNotification(2);
+                  await NotificationService().scheduleNotification(
+                    id: 2,
+                    title: "Assalamu'alaykum!",
+                    body: "Don't forget your evening dhikr 🌙",
+                    timeOfDay: newTime,
+                  );
                 }),
             const SizedBox(
               height: 20,

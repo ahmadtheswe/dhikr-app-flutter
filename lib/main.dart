@@ -2,6 +2,7 @@ import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
+import 'package:dhikr_app/service/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +14,8 @@ void main() async {
 
   final alarmService = AlarmService();
   await alarmService.loadAlarms();
+
+  await NotificationService().init();
 
   runApp(MultiProvider(
     providers: [
