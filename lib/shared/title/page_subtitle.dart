@@ -7,9 +7,10 @@ class PageSubTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.greenAccent : Colors.blue;
     return Text(
       text,
-      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.blueGrey),
+      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: textColor),
     );
   }
 }

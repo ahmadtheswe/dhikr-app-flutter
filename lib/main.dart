@@ -2,11 +2,12 @@ import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
+import 'package:dhikr_app/service/theme_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Ensure async calls are ready
+  WidgetsFlutterBinding.ensureInitialized();
 
   final languageService = LanguageService();
   await languageService.loadLanguage();
@@ -14,10 +15,13 @@ void main() async {
   final alarmService = AlarmService();
   await alarmService.loadAlarms();
 
+  final themeService = ThemeService();
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider<LanguageService>.value(value: languageService),
       ChangeNotifierProvider<AlarmService>.value(value: alarmService),
+      ChangeNotifierProvider<ThemeService>.value(value: themeService),
     ],
     child: const MyApp(),
   ));
@@ -26,10 +30,10 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
+    final themeService = Provider.of<ThemeService>(context);
 
     return MaterialApp(
       title: 'Dzikr App',
@@ -37,6 +41,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.white,
+          brightness: Brightness.dark,
+        ),
+      ),
+      themeMode: themeService.themeMode,
       debugShowCheckedModeBanner: false,
       home: languageService.currentLanguage != null ? const SelectDhikrTimePage() : const SelectLanguagePage(),
     );
