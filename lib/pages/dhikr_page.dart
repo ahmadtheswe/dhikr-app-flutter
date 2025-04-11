@@ -105,7 +105,7 @@ class _DhikrPage extends State<DhikrPage> {
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 25,
-              fontFamily: 'Amiri',
+              fontFamily: 'AmiriQuran',
               height: 2,
             ),
           ),
@@ -122,9 +122,9 @@ class _DhikrPage extends State<DhikrPage> {
             text,
             textAlign: TextAlign.justify,
             style: const TextStyle(
-              fontSize: 25,
-              fontFamily: 'Amiri',
-              height: 2,
+              fontSize: 23,
+              fontFamily: 'AmiriQuran',
+              height: 2.5,
             ),
           ),
         ));

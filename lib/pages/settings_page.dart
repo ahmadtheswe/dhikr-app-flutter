@@ -1,15 +1,14 @@
 import 'package:dhikr_app/pages/about_app_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
-import 'package:dhikr_app/shared/button/alarm_elevated_button.dart';
 import 'package:dhikr_app/shared/button/language_elevated_button.dart';
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
 import 'package:dhikr_app/shared/title/menu_title.dart';
-import 'package:dhikr_app/static/dhikr_time.dart';
 import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../service/theme_service.dart';
 import '../shared/title/page_title.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -37,10 +36,7 @@ class _SettingsPage extends State<SettingsPage> {
             const SizedBox(
               height: 20,
             ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 20),
-              child: MenuTitle(text: languageService.getText('changeLanguage')),
-            ),
+            MenuTitle(text: languageService.getText('changeLanguage')),
             LanguageElevatedButton(
               languageTitle: Languages.INDONESIAN_TITLE,
               icon: Languages.INDONESIAN_ICON,
@@ -61,34 +57,41 @@ class _SettingsPage extends State<SettingsPage> {
             const SizedBox(
               height: 40,
             ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 20),
-              child: const MenuTitle(text: 'Alarm'),
+            MenuTitle(text: languageService.getText('darkMode')),
+            Switch(
+              value: Provider.of<ThemeService>(context).themeMode == ThemeMode.dark,
+              onChanged: (isDark) {
+                Provider.of<ThemeService>(context, listen: false).toggleTheme(isDark);
+              },
             ),
-            AlarmElevatedButton(
-                selectedTime: alarmService.getAlarmValue(DhikrTime.MORNING),
-                dhikrTime: DhikrTime.MORNING,
-                onTimeChanged: (newTime) async {
-                  final formattedTime = newTime.format(context);
-                  await alarmService.setAlarm(DhikrTime.MORNING, formattedTime);
-                }),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
-            AlarmElevatedButton(
-                selectedTime: alarmService.getAlarmValue(DhikrTime.EVENING),
-                dhikrTime: DhikrTime.EVENING,
-                onTimeChanged: (newTime) async {
-                  final formattedTime = newTime.format(context);
-                  await alarmService.setAlarm(DhikrTime.EVENING, formattedTime);
-                }),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 20),
-              child: MenuTitle(text: languageService.getText('aboutUs')),
-            ),
+            // Container(
+            //   margin: const EdgeInsets.only(bottom: 20),
+            //   child: const MenuTitle(text: 'Alarm'),
+            // ),
+            // AlarmElevatedButton(
+            //     selectedTime: alarmService.getAlarmValue(DhikrTime.MORNING),
+            //     dhikrTime: DhikrTime.MORNING,
+            //     onTimeChanged: (newTime) async {
+            //       final formattedTime = newTime.format(context);
+            //       await alarmService.setAlarm(DhikrTime.MORNING, formattedTime);
+            //     }),
+            // const SizedBox(
+            //   height: 20,
+            // ),
+            // AlarmElevatedButton(
+            //     selectedTime: alarmService.getAlarmValue(DhikrTime.EVENING),
+            //     dhikrTime: DhikrTime.EVENING,
+            //     onTimeChanged: (newTime) async {
+            //       final formattedTime = newTime.format(context);
+            //       await alarmService.setAlarm(DhikrTime.EVENING, formattedTime);
+            //     }),
+            // const SizedBox(
+            //   height: 20,
+            // ),
+            MenuTitle(text: languageService.getText('aboutUs')),
             StandardElevatedButton(
               text: languageService.getText('aboutTheApp'),
               onPressed: () async {

@@ -1,6 +1,7 @@
 import 'package:dhikr_app/main.dart';
 import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
+import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
@@ -11,12 +12,16 @@ void main() {
     final languageService = LanguageService();
     await languageService.setLanguage('en');
 
+    final alarmService = AlarmService();
+    await alarmService.loadAlarms();
+
     // Act
-    await tester.pumpWidget(ChangeNotifierProvider<LanguageService>(
-      create: (context) => languageService,
-      child: MyApp(
-        languageService: languageService,
-      ),
+    await tester.pumpWidget(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<LanguageService>.value(value: languageService),
+        ChangeNotifierProvider<AlarmService>.value(value: alarmService),
+      ],
+      child: const MyApp(),
     ));
 
     // Assert
@@ -28,12 +33,16 @@ void main() {
     // Arrange
     final languageService = LanguageService();
 
+    final alarmService = AlarmService();
+    await alarmService.loadAlarms();
+
     // Act
-    await tester.pumpWidget(ChangeNotifierProvider<LanguageService>(
-      create: (context) => languageService,
-      child: MyApp(
-        languageService: languageService,
-      ),
+    await tester.pumpWidget(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<LanguageService>.value(value: languageService),
+        ChangeNotifierProvider<AlarmService>.value(value: alarmService),
+      ],
+      child: const MyApp(),
     ));
 
     // Assert

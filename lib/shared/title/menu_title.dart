@@ -7,11 +7,17 @@ class MenuTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
-          color: Colors.grey,
-        ));
+
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.grey : Colors.blueGrey;
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 20),
+      child: Text(text,
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: textColor,
+          ))
+    );
   }
 }

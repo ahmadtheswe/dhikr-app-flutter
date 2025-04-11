@@ -39,7 +39,10 @@ flutter:
     - assets/logo/dhikr-app-logo-foreground.png
 
   fonts:
-    - family: Amiri
+    - family: AmiriRegular
+      fonts:
+        - asset: assets/fonts/Amiri-Regular.ttf
+    - family: AmiriQuran
       fonts:
         - asset: assets/fonts/AmiriQuran-Regular.ttf
 
@@ -48,4 +51,4 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/logo/dhikr-app-logo.png"
   adaptive_icon_foreground: "assets/logo/dhikr-app-logo-foreground.png"
-  adaptive_icon_background: "#008000"
+  adaptive_icon_background: "#ffffff"

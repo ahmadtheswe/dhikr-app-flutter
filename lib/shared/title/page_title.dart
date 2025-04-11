@@ -7,12 +7,13 @@ class PageTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.grey : Colors.blueGrey;
     return Text(
       text,
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.bold,
-        color: Colors.grey,
+        color: textColor,
       ),
     );
   }
