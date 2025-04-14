@@ -4,6 +4,7 @@ import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
 import 'package:dhikr_app/service/theme_service.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -16,6 +17,8 @@ void main() async {
   await alarmService.loadAlarms();
 
   final themeService = ThemeService();
+
+  MobileAds.instance.initialize();
 
   runApp(MultiProvider(
     providers: [
