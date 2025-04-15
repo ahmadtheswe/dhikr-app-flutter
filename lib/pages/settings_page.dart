@@ -38,20 +38,20 @@ class _SettingsPage extends State<SettingsPage> {
             ),
             MenuTitle(text: languageService.getText('changeLanguage')),
             LanguageElevatedButton(
-              languageTitle: Languages.INDONESIAN_TITLE,
-              icon: Languages.INDONESIAN_ICON,
+              languageTitle: Languages.ENGLISH_TITLE,
+              icon: Languages.ENGLISH_ICON,
               onPressed: () async {
-                await languageService.setLanguage(Languages.INDONESIAN_CODE);
+                await languageService.setLanguage(Languages.ENGLISH_CODE);
               },
             ),
             const SizedBox(
               height: 20,
             ),
             LanguageElevatedButton(
-              languageTitle: Languages.ENGLISH_TITLE,
-              icon: Languages.ENGLISH_ICON,
+              languageTitle: Languages.INDONESIAN_TITLE,
+              icon: Languages.INDONESIAN_ICON,
               onPressed: () async {
-                await languageService.setLanguage(Languages.ENGLISH_CODE);
+                await languageService.setLanguage(Languages.INDONESIAN_CODE);
               },
             ),
             const SizedBox(

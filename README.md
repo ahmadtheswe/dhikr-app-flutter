@@ -61,3 +61,62 @@ flutter build apk --release
 
 Useful Links:
 - [Flutter Build Setup](https://docs.flutter.dev/deployment/android)
+
+## Google AdMob Integration
+- Create an AdMob account and set up your app in the AdMob console [here](https://admob.google.com/home/).
+- Create a new app in the AdMob console and get your App ID, here is the [documentation](https://docs.flutter.dev/cookbook/plugins/google-mobile-ads).
+- Install the `google_mobile_ads`
+```bash
+flutter pub add google_mobile_ads
+```
+- Add the App ID to your `main/AndroidManifest.xml` file:
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="Dhikr App"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxx~xxxxxxxxx" />
+    </application>
+</manifest>
+```
+- Create AdHelper class to manage UnitID check it [here](lib/helpers/ad_helper.dart).
+- Remember, here is the important setup for UnitID :
+  - For local testing, use this unit ID: `ca-app-pub-3940256099942544/9214589741'`
+  - For production, use your own unit ID from AdMob.
+- Use this method to call the UnitID in your widget:
+```dart
+void _loadBannerAd() async {
+    final ad = BannerAd(
+      adUnitId: await AdHelper.bannerAdUnitId,
+      size: AdSize.banner,
+      request: const AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (_) => setState(() {}),
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          print('Ad failed to load: $error');
+        },
+      ),
+    );
+    ad.load();
+
+    setState(() {
+      bannerAd = ad;
+    });
+  }
+```
+- Example of using the banner ad in your widget:
+```dart
+...
+    if (bannerAd != null)
+        SizedBox(
+        height: bannerAd!.size.height.toDouble(),
+        width: bannerAd!.size.width.toDouble(),
+        child: AdWidget(ad: bannerAd!),
+    ),
+...
+```

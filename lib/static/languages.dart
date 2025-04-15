@@ -6,5 +6,5 @@ class Languages {
   static const String INDONESIAN_CODE = 'id';
   static const String INDONESIAN_ICON = 'icons/flags/png100px/id.png';
 
-  static const String COMMON_SELECT_LANGUAGE = 'Pilih bahasa / Select language';
+  static const String COMMON_SELECT_LANGUAGE = 'Select language / Pilih bahasa';
 }
