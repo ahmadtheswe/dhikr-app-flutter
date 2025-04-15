@@ -125,7 +125,7 @@ class _DhikrPage extends State<DhikrPage> {
         children: [
           _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
           if (bannerAd != null)
-            Container(
+            SizedBox(
               height: bannerAd!.size.height.toDouble(),
               width: bannerAd!.size.width.toDouble(),
               child: AdWidget(ad: bannerAd!),
