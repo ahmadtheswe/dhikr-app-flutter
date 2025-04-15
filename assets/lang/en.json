@@ -19,6 +19,11 @@
   "readTimeOr": "Read {count1} time(s) or {count2} time(s)",
   "inADayText": "in a day",
   "privacyPolicy": "Privacy Policy",
+  "alarmTitle": "Alarm",
   "morningAlarm": "Morning Alarm",
-  "eveningAlarm": "Evening Alarm"
+  "eveningAlarm": "Evening Alarm",
+  "morningAlarmNotificationTitle": "Morning Dhikr Alarm",
+  "morningAlarmNotificationBody": "It's time to read the morning dhikr!",
+  "eveningAlarmNotificationTitle": "Evening Dhikr Alarm",
+  "eveningAlarmNotificationBody": "It's time to read the evening dhikr!"
 }

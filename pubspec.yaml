@@ -19,6 +19,10 @@ dependencies:
   package_info_plus: ^8.3.0
   google_mobile_ads: ^6.0.0
   device_info_plus: ^11.3.3
+  flutter_local_notifications: ^19.1.0
+  timezone: ^0.10.0
+  permission_handler: ^12.0.0+1
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

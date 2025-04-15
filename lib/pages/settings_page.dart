@@ -8,8 +8,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../service/notification_service.dart';
 import '../service/theme_service.dart';
+import '../shared/button/alarm_elevated_button.dart';
 import '../shared/title/page_title.dart';
+import '../static/dhikr_time.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -42,6 +45,8 @@ class _SettingsPage extends State<SettingsPage> {
               icon: Languages.ENGLISH_ICON,
               onPressed: () async {
                 await languageService.setLanguage(Languages.ENGLISH_CODE);
+                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
+                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
               },
             ),
             const SizedBox(
@@ -52,6 +57,8 @@ class _SettingsPage extends State<SettingsPage> {
               icon: Languages.INDONESIAN_ICON,
               onPressed: () async {
                 await languageService.setLanguage(Languages.INDONESIAN_CODE);
+                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
+                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
               },
             ),
             const SizedBox(
@@ -67,30 +74,25 @@ class _SettingsPage extends State<SettingsPage> {
             const SizedBox(
               height: 40,
             ),
-            // Container(
-            //   margin: const EdgeInsets.only(bottom: 20),
-            //   child: const MenuTitle(text: 'Alarm'),
-            // ),
-            // AlarmElevatedButton(
-            //     selectedTime: alarmService.getAlarmValue(DhikrTime.MORNING),
-            //     dhikrTime: DhikrTime.MORNING,
-            //     onTimeChanged: (newTime) async {
-            //       final formattedTime = newTime.format(context);
-            //       await alarmService.setAlarm(DhikrTime.MORNING, formattedTime);
-            //     }),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // AlarmElevatedButton(
-            //     selectedTime: alarmService.getAlarmValue(DhikrTime.EVENING),
-            //     dhikrTime: DhikrTime.EVENING,
-            //     onTimeChanged: (newTime) async {
-            //       final formattedTime = newTime.format(context);
-            //       await alarmService.setAlarm(DhikrTime.EVENING, formattedTime);
-            //     }),
-            // const SizedBox(
-            //   height: 20,
-            // ),
+            MenuTitle(text: languageService.getText('alarmTitle')),
+            AlarmElevatedButton(
+                selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.MORNING),
+                dhikrTime: DhikrTime.MORNING,
+                onTimeChanged: (newTime) async {
+                  setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.MORNING, 1);
+                }),
+            const SizedBox(
+              height: 20,
+            ),
+            AlarmElevatedButton(
+                selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.EVENING),
+                dhikrTime: DhikrTime.EVENING,
+                onTimeChanged: (newTime) async {
+                  setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.EVENING, 2);
+                }),
+            const SizedBox(
+              height: 40,
+            ),
             MenuTitle(text: languageService.getText('aboutUs')),
             StandardElevatedButton(
               text: languageService.getText('aboutTheApp'),
@@ -105,5 +107,29 @@ class _SettingsPage extends State<SettingsPage> {
         ),
       ),
     );
+  }
+
+  void setDhikrAlarmTime(TimeOfDay newTime, AlarmService alarmService, LanguageService languageService, String dhikrTime, int id) async {
+    final formattedTime = '${newTime.hour.toString().padLeft(2, '0')}:${newTime.minute.toString().padLeft(2, '0')}';
+    await alarmService.setAlarm(dhikrTime, formattedTime);
+    var dateTime = alarmService.getAlarmValueDateTime(dhikrTime);
+    NotificationService().cancelScheduledAlarm(id: id);
+    NotificationService().scheduleNotification(
+        id: id,
+        title: languageService.getText(dhikrTime == DhikrTime.MORNING ? 'morningAlarmNotificationTitle' : 'eveningAlarmNotificationTitle'),
+        body: languageService.getText(dhikrTime == DhikrTime.MORNING ? 'morningAlarmNotificationBody' : 'eveningAlarmNotificationBody'),
+        scheduledTime: dateTime!,
+        payload: dhikrTime);
+  }
+
+  void setDhikrAlarmTimeFromCache(AlarmService alarmService, LanguageService languageService, String dhikrTime, int id) async {
+    var dateTime = alarmService.getAlarmValueDateTime(dhikrTime);
+    NotificationService().cancelScheduledAlarm(id: id);
+    NotificationService().scheduleNotification(
+        id: id,
+        title: languageService.getText(dhikrTime == DhikrTime.MORNING ? 'morningAlarmNotificationTitle' : 'eveningAlarmNotificationTitle'),
+        body: languageService.getText(dhikrTime == DhikrTime.MORNING ? 'morningAlarmNotificationBody' : 'eveningAlarmNotificationBody'),
+        scheduledTime: dateTime!,
+        payload: dhikrTime);
   }
 }
