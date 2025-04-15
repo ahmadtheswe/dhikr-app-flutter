@@ -1,7 +1,9 @@
+import 'package:dhikr_app/helpers/ad_helper.dart';
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/shared/title/page_subtitle.dart';
 import 'package:dhikr_app/static/bismillah.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
@@ -20,11 +22,39 @@ class DhikrPage extends StatefulWidget {
 
 class _DhikrPage extends State<DhikrPage> {
   late int currentIndex;
+  BannerAd? bannerAd;
 
   @override
   void initState() {
     super.initState();
     currentIndex = widget.initialIndex;
+    _loadBannerAd();
+  }
+
+  void _loadBannerAd() async {
+    final ad = BannerAd(
+      adUnitId: await AdHelper.bannerAdUnitId,
+      size: AdSize.banner,
+      request: const AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (_) => setState(() {}),
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          print('Ad failed to load: $error');
+        },
+      ),
+    );
+    ad.load();
+
+    setState(() {
+      bannerAd = ad;
+    });
+  }
+
+  @override
+  void dispose() {
+    bannerAd?.dispose();
+    super.dispose();
   }
 
   void _goToFirst() {
@@ -72,11 +102,11 @@ class _DhikrPage extends State<DhikrPage> {
         },
         child: ListView(
           children: [
+            if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService)],
             if (dhikr.isShowBismillah) ...[
               _bismillahText(Bismillah.BISMILAH),
             ],
             _arabicText(dhikr.arabicText),
-            if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService)],
             const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
             if (dhikr.pronounceText != null) ...[
               _latinText(dhikr.pronounceText!),
@@ -90,7 +120,18 @@ class _DhikrPage extends State<DhikrPage> {
           ],
         ),
       ),
-      bottomNavigationBar: _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
+          if (bannerAd != null)
+            Container(
+              height: bannerAd!.size.height.toDouble(),
+              width: bannerAd!.size.width.toDouble(),
+              child: AdWidget(ad: bannerAd!),
+            ),
+        ],
+      ),
     );
   }
 
@@ -161,7 +202,10 @@ class _DhikrPage extends State<DhikrPage> {
           child: Text(
             readTimeString,
             textAlign: TextAlign.justify,
-            style: const TextStyle(fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Theme.of(context).brightness == Brightness.dark ? Colors.greenAccent : Colors.blue,
+                fontSize: 15,
+                fontWeight: FontWeight.bold),
           ),
         ));
   }
