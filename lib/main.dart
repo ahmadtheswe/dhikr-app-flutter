@@ -2,10 +2,13 @@ import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
+import 'package:dhikr_app/service/notification_service.dart';
 import 'package:dhikr_app/service/theme_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
+
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +22,8 @@ void main() async {
   final themeService = ThemeService();
 
   MobileAds.instance.initialize();
+
+  await NotificationService().init();
 
   runApp(MultiProvider(
     providers: [
@@ -55,6 +60,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeService.themeMode,
       debugShowCheckedModeBanner: false,
       home: languageService.currentLanguage != null ? const SelectDhikrTimePage() : const SelectLanguagePage(),
+      navigatorKey: navigatorKey,
     );
   }
 }

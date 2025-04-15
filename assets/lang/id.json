@@ -19,6 +19,11 @@
   "readTimeOr": "Dibaca {count1} kali atau {count2} kali",
   "inADayText": "dalam sehari",
   "privacyPolicy": "Kebijakan Privasi",
+  "alarmTitle": "Alarm",
   "morningAlarm": "Alarm Pagi",
-  "eveningAlarm": "Alarm Petang"
+  "eveningAlarm": "Alarm Petang",
+  "morningAlarmNotificationTitle": "Alarm Dzikr Pagi",
+  "morningAlarmNotificationBody": "Saatnya membaca dzikr pagi!",
+  "eveningAlarmNotificationTitle": "Alarm Dzikr Petang",
+  "eveningAlarmNotificationBody": "Saatnya membaca dzikr petang!"
 }
