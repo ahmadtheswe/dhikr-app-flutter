@@ -43,6 +43,12 @@ flutter:
     - assets/lang/id.json
     - assets/logo/dhikr-app-logo.png
     - assets/logo/dhikr-app-logo-foreground.png
+    - assets/icons/icons8/evening-office-l/icons8-evening-50.png
+    - assets/icons/icons8/morning-office-l/icons8-morning-80.png
+    - assets/icons/icons8/morning-office-l/icons8-morning-100.png
+    - assets/icons/icons8/evening-office-l/icons8-evening-50.png
+    - assets/icons/icons8/evening-office-l/icons8-evening-80.png
+    - assets/icons/icons8/evening-office-l/icons8-evening-100.png
 
   fonts:
     - family: AmiriRegular

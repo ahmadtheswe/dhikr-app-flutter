@@ -32,7 +32,6 @@ class NotificationService {
       initializationSettings,
       onDidReceiveNotificationResponse: (NotificationResponse response) async {
         if (response.payload != null) {
-          print('Notification tapped: ${response.payload}');
           navigatorKey.currentState?.push(
             MaterialPageRoute(
               builder: (context) => DhikrListPage(

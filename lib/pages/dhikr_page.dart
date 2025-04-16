@@ -40,7 +40,6 @@ class _DhikrPage extends State<DhikrPage> {
         onAdLoaded: (_) => setState(() {}),
         onAdFailedToLoad: (ad, error) {
           ad.dispose();
-          print('Ad failed to load: $error');
         },
       ),
     );

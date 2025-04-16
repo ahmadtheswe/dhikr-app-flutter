@@ -1,4 +1,5 @@
 import 'package:dhikr_app/pages/about_app_page.dart';
+import 'package:dhikr_app/pages/external_resources_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/shared/button/language_elevated_button.dart';
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
@@ -33,79 +34,95 @@ class _SettingsPage extends State<SettingsPage> {
           text: languageService.getText('settings'),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
+      body: ListView(
+        children: [
+          Center(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                MenuTitle(text: languageService.getText('changeLanguage')),
+                LanguageElevatedButton(
+                  languageTitle: Languages.ENGLISH_TITLE,
+                  icon: Languages.ENGLISH_ICON,
+                  onPressed: () async {
+                    await languageService.setLanguage(Languages.ENGLISH_CODE);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                LanguageElevatedButton(
+                  languageTitle: Languages.INDONESIAN_TITLE,
+                  icon: Languages.INDONESIAN_ICON,
+                  onPressed: () async {
+                    await languageService.setLanguage(Languages.INDONESIAN_CODE);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
+                  },
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                MenuTitle(text: languageService.getText('darkMode')),
+                Switch(
+                  value: Provider.of<ThemeService>(context).themeMode == ThemeMode.dark,
+                  onChanged: (isDark) {
+                    Provider.of<ThemeService>(context, listen: false).toggleTheme(isDark);
+                  },
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                MenuTitle(text: languageService.getText('alarmTitle')),
+                AlarmElevatedButton(
+                    selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.MORNING),
+                    dhikrTime: DhikrTime.MORNING,
+                    onTimeChanged: (newTime) async {
+                      setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.MORNING, 1);
+                    }),
+                const SizedBox(
+                  height: 20,
+                ),
+                AlarmElevatedButton(
+                    selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.EVENING),
+                    dhikrTime: DhikrTime.EVENING,
+                    onTimeChanged: (newTime) async {
+                      setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.EVENING, 2);
+                    }),
+                const SizedBox(
+                  height: 40,
+                ),
+                MenuTitle(text: languageService.getText('aboutUs')),
+                StandardElevatedButton(
+                  text: languageService.getText('aboutTheApp'),
+                  onPressed: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AboutAppPage()),
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                StandardElevatedButton(
+                  text: languageService.getText('externalResources'),
+                  onPressed: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ExternalResourcesPage()),
+                    );
+                  },
+                )
+              ],
             ),
-            MenuTitle(text: languageService.getText('changeLanguage')),
-            LanguageElevatedButton(
-              languageTitle: Languages.ENGLISH_TITLE,
-              icon: Languages.ENGLISH_ICON,
-              onPressed: () async {
-                await languageService.setLanguage(Languages.ENGLISH_CODE);
-                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
-                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
-              },
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            LanguageElevatedButton(
-              languageTitle: Languages.INDONESIAN_TITLE,
-              icon: Languages.INDONESIAN_ICON,
-              onPressed: () async {
-                await languageService.setLanguage(Languages.INDONESIAN_CODE);
-                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
-                setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
-              },
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            MenuTitle(text: languageService.getText('darkMode')),
-            Switch(
-              value: Provider.of<ThemeService>(context).themeMode == ThemeMode.dark,
-              onChanged: (isDark) {
-                Provider.of<ThemeService>(context, listen: false).toggleTheme(isDark);
-              },
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            MenuTitle(text: languageService.getText('alarmTitle')),
-            AlarmElevatedButton(
-                selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.MORNING),
-                dhikrTime: DhikrTime.MORNING,
-                onTimeChanged: (newTime) async {
-                  setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.MORNING, 1);
-                }),
-            const SizedBox(
-              height: 20,
-            ),
-            AlarmElevatedButton(
-                selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.EVENING),
-                dhikrTime: DhikrTime.EVENING,
-                onTimeChanged: (newTime) async {
-                  setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.EVENING, 2);
-                }),
-            const SizedBox(
-              height: 40,
-            ),
-            MenuTitle(text: languageService.getText('aboutUs')),
-            StandardElevatedButton(
-              text: languageService.getText('aboutTheApp'),
-              onPressed: () async {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AboutAppPage()),
-                );
-              },
-            )
-          ],
-        ),
-      ),
+          ),
+        ],
+      )
     );
   }
 

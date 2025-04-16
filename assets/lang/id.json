@@ -25,5 +25,6 @@
   "morningAlarmNotificationTitle": "Alarm Dzikr Pagi",
   "morningAlarmNotificationBody": "Saatnya membaca dzikr pagi!",
   "eveningAlarmNotificationTitle": "Alarm Dzikr Petang",
-  "eveningAlarmNotificationBody": "Saatnya membaca dzikr petang!"
+  "eveningAlarmNotificationBody": "Saatnya membaca dzikr petang!",
+  "externalResources": "Sumber Eksternal"
 }

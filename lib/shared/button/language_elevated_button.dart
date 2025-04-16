@@ -4,18 +4,22 @@ class LanguageElevatedButton extends StatelessWidget {
   final String languageTitle;
   final String icon;
   final VoidCallback? onPressed;
+  final double? width;
+  final double? height;
 
   const LanguageElevatedButton({
     super.key,
     required this.languageTitle,
     required this.icon,
     this.onPressed,
+    this.width,
+    this.height,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60)),
+        style: ElevatedButton.styleFrom(fixedSize: Size(width != null? width!: 250, height != null? height!: 60)),
         onPressed: onPressed,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
