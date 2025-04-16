@@ -8,16 +8,17 @@ class AlarmElevatedButton extends StatelessWidget {
   final String dhikrTime;
   final ValueChanged<TimeOfDay> onTimeChanged;
   final TimeOfDay? selectedTime;
+  final double? width;
+  final double? height;
 
-  const AlarmElevatedButton({super.key, required this.onTimeChanged, required this.dhikrTime, this.selectedTime});
-
+  const AlarmElevatedButton({super.key, required this.onTimeChanged, required this.dhikrTime, this.selectedTime, this.width, this.height});
 
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
 
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: const Size(250, 60), textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+        style: ElevatedButton.styleFrom(fixedSize: Size(width != null ? width! : 250, height != null ? height! : 60), textStyle: const TextStyle(fontWeight: FontWeight.bold)),
         onPressed: () async {
           final TimeOfDay? pickedTime = await showTimePicker(
             context: context,

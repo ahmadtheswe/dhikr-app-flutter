@@ -25,5 +25,6 @@
   "morningAlarmNotificationTitle": "Morning Dhikr Alarm",
   "morningAlarmNotificationBody": "It's time to read the morning dhikr!",
   "eveningAlarmNotificationTitle": "Evening Dhikr Alarm",
-  "eveningAlarmNotificationBody": "It's time to read the evening dhikr!"
+  "eveningAlarmNotificationBody": "It's time to read the evening dhikr!",
+  "externalResources": "External Resources"
 }
