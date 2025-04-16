@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
 import 'package:dhikr_app/pages/settings_page.dart';
+import 'package:dhikr_app/shared/list_tile/dhikr_list_tile.dart';
 import 'package:dhikr_app/static/dhikr_time.dart';
 import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
@@ -48,8 +49,6 @@ class _DhikrListPage extends State<DhikrListPage> {
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
 
-    final listTextColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
-
     return Scaffold(
         appBar: AppBar(
           title: PageTitle(text: languageService.getText(widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening')),
@@ -68,52 +67,21 @@ class _DhikrListPage extends State<DhikrListPage> {
         body: ListView.builder(
           itemCount: dhikr.length,
           itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DhikrPage(
-                              dhikrList: dhikr,
-                              initialIndex: index,
-                              isMorningDhikr: widget.dhikrTime == DhikrTime.MORNING,
-                            )));
-              },
-              child: Container(
-                height: 50,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.surface,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Theme.of(context).shadowColor.withAlpha((0.5 * 255).toInt()),
-                      spreadRadius: 1,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  border: Border.all(
-                    color: Theme.of(context).dividerColor.withAlpha((0.5 * 255).toInt()),
-                    style: BorderStyle.solid,
-                    width: 0.5,
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      '${index + 1}. ${dhikr[index].title}',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: listTextColor,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            );
+            return DhikrListTile(
+                index: index,
+                dhikr: dhikr[index],
+                dhikrList: dhikr,
+                dhikrTime: widget.dhikrTime,
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DhikrPage(
+                                dhikrList: dhikr,
+                                initialIndex: index,
+                                isMorningDhikr: widget.dhikrTime == DhikrTime.MORNING,
+                              )));
+                });
           },
         ));
   }
