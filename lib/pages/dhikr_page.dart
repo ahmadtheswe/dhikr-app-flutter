@@ -119,17 +119,19 @@ class _DhikrPage extends State<DhikrPage> {
           ],
         ),
       ),
-      bottomNavigationBar: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
-          if (bannerAd != null)
-            SizedBox(
-              height: bannerAd!.size.height.toDouble(),
-              width: bannerAd!.size.width.toDouble(),
-              child: AdWidget(ad: bannerAd!),
-            ),
-        ],
+      bottomNavigationBar: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _buttonAppBar(languageService, currentIndex + 1, widget.dhikrList.length),
+            if (bannerAd != null)
+              SizedBox(
+                height: bannerAd!.size.height.toDouble(),
+                width: bannerAd!.size.width.toDouble(),
+                child: AdWidget(ad: bannerAd!),
+              ),
+          ],
+        ),
       ),
     );
   }
