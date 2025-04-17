@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.1.1] - 2025-04-10
+## [1.1.2] - 2025-04-17
+### Fixed
+- Ads position on dhikr list and dhikr page.
+
+## [1.1.1] - 2025-04-16
 ### Added
 - Alarms feature for daily reminders.
 - External resources links.
