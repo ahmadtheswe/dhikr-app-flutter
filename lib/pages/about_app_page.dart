@@ -1,3 +1,4 @@
+import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
 import 'package:dhikr_app/shared/text/application_version.dart';
 import 'package:dhikr_app/shared/title/page_title.dart';
@@ -21,6 +22,7 @@ class _AboutAppPage extends State<AboutAppPage> {
 
     return Scaffold(
         appBar: AppBar(
+          leading: const LeadingBackButton(),
           title: PageTitle(
             text: languageService.getText('aboutTheApp'),
           ),

@@ -19,7 +19,7 @@ void main() async {
   final alarmService = AlarmService();
   await alarmService.loadAlarms();
 
-  final themeService = ThemeService();
+  await ThemeService().init();
 
   MobileAds.instance.initialize();
 
@@ -29,7 +29,7 @@ void main() async {
     providers: [
       ChangeNotifierProvider<LanguageService>.value(value: languageService),
       ChangeNotifierProvider<AlarmService>.value(value: alarmService),
-      ChangeNotifierProvider<ThemeService>.value(value: themeService),
+      ChangeNotifierProvider<ThemeService>.value(value: ThemeService()),
     ],
     child: const MyApp(),
   ));

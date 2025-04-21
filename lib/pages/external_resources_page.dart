@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../service/language_service.dart';
+import '../shared/button/leading_back_button.dart';
 import '../shared/title/page_title.dart';
 
 class ExternalResourcesPage extends StatelessWidget {
@@ -13,12 +14,19 @@ class ExternalResourcesPage extends StatelessWidget {
     final languageService = Provider.of<LanguageService>(context);
     return Scaffold(
       appBar: AppBar(
+        leading: const LeadingBackButton(),
         title: PageTitle(
           text: languageService.getText('externalResources'),
         ),
       ),
       body: ListView(
         children: [
+          ListTile(
+            title: const Text('Dzikir Pagi Dan Petang - almanhaj.com'),
+            onTap: () {
+              launchUrl(Uri.parse('https://almanhaj.or.id/11518-dzikir-pagi-dan-petang.html'));
+            },
+          ),
           ListTile(
             title: const Text('icons8.com - Morning Icon'),
             onTap: () {

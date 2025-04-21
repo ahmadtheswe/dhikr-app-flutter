@@ -2,6 +2,7 @@ import 'package:dhikr_app/pages/about_app_page.dart';
 import 'package:dhikr_app/pages/external_resources_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/shared/button/language_elevated_button.dart';
+import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
 import 'package:dhikr_app/shared/title/menu_title.dart';
 import 'package:dhikr_app/static/languages.dart';
@@ -27,9 +28,11 @@ class _SettingsPage extends State<SettingsPage> {
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
     final alarmService = Provider.of<AlarmService>(context);
+    final themeService = Provider.of<ThemeService>(context);
 
     return Scaffold(
       appBar: AppBar(
+        leading: const LeadingBackButton(),
         title: PageTitle(
           text: languageService.getText('settings'),
         ),
@@ -69,9 +72,9 @@ class _SettingsPage extends State<SettingsPage> {
                 ),
                 MenuTitle(text: languageService.getText('darkMode')),
                 Switch(
-                  value: Provider.of<ThemeService>(context).themeMode == ThemeMode.dark,
+                  value: themeService.isDarkMode(context),
                   onChanged: (isDark) {
-                    Provider.of<ThemeService>(context, listen: false).toggleTheme(isDark);
+                    themeService.toggleTheme(isDark);
                   },
                 ),
                 const SizedBox(

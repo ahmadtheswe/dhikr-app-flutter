@@ -7,6 +7,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../shared/button/leading_back_button.dart';
 import '../shared/title/page_title.dart';
 
 class DhikrPage extends StatefulWidget {
@@ -83,6 +84,7 @@ class _DhikrPage extends State<DhikrPage> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: const LeadingBackButton(),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -263,13 +265,13 @@ class _DhikrPage extends State<DhikrPage> {
               tooltip: languageService.getText('first'),
             ),
             IconButton(
-              icon: const Icon(Icons.arrow_back),
+              icon: const Icon(Icons.chevron_left),
               onPressed: currentIndex > 1 ? _goToPrevious : null,
               tooltip: languageService.getText('previous'),
             ),
             Text('$currentIndex/$length'),
             IconButton(
-              icon: const Icon(Icons.arrow_forward),
+              icon: const Icon(Icons.chevron_right),
               onPressed: currentIndex < widget.dhikrList.length ? _goToNext : null,
               tooltip: languageService.getText('next'),
             ),

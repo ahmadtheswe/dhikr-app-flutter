@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
+import '../service/theme_service.dart';
 import '../static/languages.dart';
 
 class SelectLanguagePage extends StatelessWidget {
@@ -13,6 +14,8 @@ class SelectLanguagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context, listen: false);
+    final themeService = Provider.of<ThemeService>(context);
+
 
     return Scaffold(
       body: Center(
@@ -20,7 +23,7 @@ class SelectLanguagePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const MenuTitle(text: Languages.COMMON_SELECT_LANGUAGE),
-            const SizedBox(height: 20), // Add some space between the buttons
+            const SizedBox(height: 20),
             LanguageElevatedButton(
               languageTitle: Languages.ENGLISH_TITLE,
               icon: Languages.ENGLISH_ICON,
@@ -32,7 +35,7 @@ class SelectLanguagePage extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(height: 20), // Add some space between the buttons
+            const SizedBox(height: 20),
             LanguageElevatedButton(
               languageTitle: Languages.INDONESIAN_TITLE,
               icon: Languages.INDONESIAN_ICON,
@@ -42,6 +45,16 @@ class SelectLanguagePage extends StatelessWidget {
                 navigator.push(
                   MaterialPageRoute(builder: (context) => const SelectDhikrTimePage()),
                 );
+              },
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const MenuTitle(text: Languages.COMMON_SELECT_DARK_MODE),
+            Switch(
+              value: themeService.isDarkMode(context),
+              onChanged: (isDark) {
+                themeService.toggleTheme(isDark);
               },
             ),
           ],
