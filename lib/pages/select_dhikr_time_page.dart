@@ -1,6 +1,7 @@
 import 'package:dhikr_app/pages/dhikr_list_page.dart';
 import 'package:dhikr_app/pages/settings_page.dart';
 import 'package:dhikr_app/shared/button/select_dhikr_elevated_button.dart';
+import 'package:dhikr_app/shared/button/setting_button.dart';
 import 'package:dhikr_app/shared/title/menu_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,16 +29,8 @@ class _SelectDhikrTimePage extends State<SelectDhikrTimePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SettingsPage()),
-              );
-            },
-          ),
+        actions: const [
+          SettingButton(),
         ],
       ),
       body: Center(

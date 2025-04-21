@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.3] - 2025-04-18
+### Changed
+- Updated the UI for leading and setting buttons.
+
 ## [1.1.2] - 2025-04-17
 ### Fixed
 - Ads position on dhikr list and dhikr page.
