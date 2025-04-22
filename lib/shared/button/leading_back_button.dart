@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LeadingBackButton extends StatelessWidget {
+  final Widget? direction;
   const LeadingBackButton({
     super.key,
+    this.direction,
   });
 
   @override
@@ -30,7 +32,16 @@ class LeadingBackButton extends StatelessWidget {
             maxHeight: 35,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            if (direction != null) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => direction!,
+                ),
+              );
+            } else {
+              Navigator.pop(context);
+            }
           },
         ),
       ),

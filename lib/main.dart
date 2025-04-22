@@ -1,9 +1,11 @@
+import 'package:dhikr_app/pages/dhikr_list_page.dart';
 import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/pages/select_language_page.dart';
 import 'package:dhikr_app/service/alarm_service.dart';
 import 'package:dhikr_app/service/language_service.dart';
 import 'package:dhikr_app/service/notification_service.dart';
 import 'package:dhikr_app/service/theme_service.dart';
+import 'package:dhikr_app/service/update_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
@@ -25,26 +27,52 @@ void main() async {
 
   await NotificationService().init();
 
+  final notificationAppLaunchDetails =
+      await NotificationService().flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+
+  String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider<LanguageService>.value(value: languageService),
       ChangeNotifierProvider<AlarmService>.value(value: alarmService),
       ChangeNotifierProvider<ThemeService>.value(value: ThemeService()),
     ],
-    child: const MyApp(),
+    child: MyApp(initialPayload: payload,),
   ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  final String? initialPayload;
+
+  const MyApp({super.key, this.initialPayload});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  @override
+  void initState() {
+    super.initState();
+    UpdateService().checkForUpdate();
+  }
 
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
     final themeService = Provider.of<ThemeService>(context);
 
+    Widget initialPage;
+    if (widget.initialPayload != null) {
+      initialPage = DhikrListPage(dhikrTime: widget.initialPayload!);
+    } else {
+      initialPage = languageService.currentLanguage != null ? const SelectDhikrTimePage() : const SelectLanguagePage();
+    }
+
     return MaterialApp(
-      title: 'Dzikr App',
+      title: 'Dzikr App : Morning and Evening',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
@@ -59,7 +87,7 @@ class MyApp extends StatelessWidget {
       ),
       themeMode: themeService.themeMode,
       debugShowCheckedModeBanner: false,
-      home: languageService.currentLanguage != null ? const SelectDhikrTimePage() : const SelectLanguagePage(),
+      home: initialPage,
       navigatorKey: navigatorKey,
     );
   }
