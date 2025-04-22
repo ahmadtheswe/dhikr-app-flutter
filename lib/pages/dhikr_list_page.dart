@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/pages/dhikr_page.dart';
+import 'package:dhikr_app/pages/select_dhikr_time_page.dart';
 import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/setting_button.dart';
 import 'package:dhikr_app/shared/list_tile/dhikr_list_tile.dart';
@@ -76,7 +77,7 @@ class _DhikrListPage extends State<DhikrListPage> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const LeadingBackButton(),
+        leading: const LeadingBackButton(direction: SelectDhikrTimePage(),),
         title: PageTitle(text: languageService.getText(widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening')),
         actions: const [
           SettingButton()
