@@ -81,6 +81,7 @@ class _DhikrPage extends State<DhikrPage> {
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
     final Dhikr dhikr = widget.dhikrList[currentIndex];
+    final arabicTextColor = Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black;
 
     return Scaffold(
       appBar: AppBar(
@@ -105,9 +106,9 @@ class _DhikrPage extends State<DhikrPage> {
           children: [
             if (dhikr.readTime != null) ...[_readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService)],
             if (dhikr.isShowBismillah) ...[
-              _bismillahText(Bismillah.BISMILAH),
+              _bismillahText(Bismillah.BISMILAH, arabicTextColor),
             ],
-            _arabicText(dhikr.arabicText),
+            _arabicText(dhikr.arabicText, arabicTextColor),
             const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
             if (dhikr.pronounceText != null) ...[
               _latinText(dhikr.pronounceText!),
@@ -138,37 +139,43 @@ class _DhikrPage extends State<DhikrPage> {
     );
   }
 
-  _bismillahText(String text) {
+  _bismillahText(String text, Color arabicTextColor) {
     return Container(
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
-        child: Directionality(
-          textDirection: TextDirection.rtl,
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 25,
-              fontFamily: 'AmiriQuran',
-              height: 2,
+        child: ColorFiltered(
+          colorFilter: ColorFilter.mode(arabicTextColor, BlendMode.srcIn),
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 25,
+                fontFamily: 'AmiriQuran',
+                height: 2,
+              ),
             ),
           ),
         ));
   }
 
-  _arabicText(String text) {
+  _arabicText(String text, Color arabicTextColor) {
     return Container(
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
-        child: Directionality(
-          textDirection: TextDirection.rtl,
-          child: Text(
-            text,
-            textAlign: TextAlign.justify,
-            style: const TextStyle(
-              fontSize: 23,
-              fontFamily: 'AmiriQuran',
-              height: 2.5,
+        child: ColorFiltered(
+          colorFilter: ColorFilter.mode(arabicTextColor, BlendMode.srcIn),
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(
+              text,
+              textAlign: TextAlign.justify,
+              style: const TextStyle(
+                fontSize: 23,
+                fontFamily: 'AmiriQuran',
+                height: 2.5,
+              ),
             ),
           ),
         ));
@@ -205,10 +212,7 @@ class _DhikrPage extends State<DhikrPage> {
           child: Text(
             readTimeString,
             textAlign: TextAlign.justify,
-            style: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark ? Colors.greenAccent : Colors.blue,
-                fontSize: 15,
-                fontWeight: FontWeight.bold),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.dark ? Colors.greenAccent : Colors.blue, fontSize: 15, fontWeight: FontWeight.bold),
           ),
         ));
   }

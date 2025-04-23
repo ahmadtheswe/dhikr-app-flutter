@@ -16,9 +16,16 @@ class AlarmElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context);
+    final backgroundColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.black87 : Colors.white;
 
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: Size(width != null ? width! : 250, height != null ? height! : 60), textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+        style: ElevatedButton.styleFrom(
+          fixedSize: Size(width != null ? width! : 270, height != null ? height! : 60),
+          textStyle: const TextStyle(fontWeight: FontWeight.bold),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+          backgroundColor: backgroundColor,
+        ),
         onPressed: () async {
           final TimeOfDay? pickedTime = await showTimePicker(
             context: context,
@@ -30,10 +37,23 @@ class AlarmElevatedButton extends StatelessWidget {
           }
         },
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            IconButton(
+              icon: Icon(
+                dhikrTime == DhikrTime.MORNING ? Icons.sunny : Icons.wb_twilight,
+                color: textColor,
+                size: 20,
+              ),
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(
+                maxWidth: 20,
+                maxHeight: 20,
+              ), onPressed: () {  },
+            ),
             Text(
-                '${dhikrTime == DhikrTime.MORNING ? languageService.getText('morningAlarm') : languageService.getText('eveningAlarm')}: ${selectedTime?.format(context) ?? '--:-- ---'}'),
+                '${dhikrTime == DhikrTime.MORNING ? languageService.getText('morningAlarm') : languageService.getText('eveningAlarm')}: ${selectedTime?.format(context) ?? '--:-- ---'}',
+                style: TextStyle(color: textColor)),
             const SizedBox(width: 10),
           ],
         ));

@@ -19,11 +19,15 @@ class SelectDhikrElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.black87 : Colors.white;
+
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             textStyle: const TextStyle(fontWeight: FontWeight.bold),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+            backgroundColor: backgroundColor),
         onPressed: onPressed,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +37,7 @@ class SelectDhikrElevatedButton extends StatelessWidget {
               width: 100,
               height: 100,
             ),
-            Text(text),
+            Text(text, style: TextStyle(color: textColor)),
           ],
         ));
   }

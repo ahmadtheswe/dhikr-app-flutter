@@ -6,13 +6,13 @@ import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/standard_elevated_button.dart';
 import 'package:dhikr_app/shared/title/menu_title.dart';
 import 'package:dhikr_app/static/languages.dart';
+import 'package:dhikr_app/widget/alarm_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
 import '../service/notification_service.dart';
 import '../service/theme_service.dart';
-import '../shared/button/alarm_elevated_button.dart';
 import '../shared/title/page_title.dart';
 import '../static/dhikr_time.dart';
 
@@ -45,7 +45,7 @@ class _SettingsPage extends State<SettingsPage> {
                 const SizedBox(
                   height: 20,
                 ),
-                MenuTitle(text: languageService.getText('changeLanguage')),
+                MenuTitle(text: languageService.getText('changeLanguage'), icon: Icons.language),
                 LanguageElevatedButton(
                   languageTitle: Languages.ENGLISH_TITLE,
                   icon: Languages.ENGLISH_ICON,
@@ -70,7 +70,7 @@ class _SettingsPage extends State<SettingsPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                MenuTitle(text: languageService.getText('darkMode')),
+                MenuTitle(text: languageService.getText('darkMode') , icon: Icons.dark_mode),
                 Switch(
                   value: themeService.isDarkMode(context),
                   onChanged: (isDark) {
@@ -80,26 +80,22 @@ class _SettingsPage extends State<SettingsPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                MenuTitle(text: languageService.getText('alarmTitle')),
-                AlarmElevatedButton(
-                    selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.MORNING),
-                    dhikrTime: DhikrTime.MORNING,
-                    onTimeChanged: (newTime) async {
-                      setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.MORNING, 1);
-                    }),
-                const SizedBox(
-                  height: 20,
+                MenuTitle(text: languageService.getText('alarmTitle') , icon: Icons.alarm),
+                AlarmWidget(
+                  morningTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.MORNING),
+                  eveningTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.EVENING),
+                  onMorningTimeChanged: (newTime) async {
+                    setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.MORNING, 1);
+                  },
+                  onEveningTimeChanged: (newTime) async {
+                    setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.EVENING, 2);
+                  },
                 ),
-                AlarmElevatedButton(
-                    selectedTime: alarmService.getAlarmValueTimeOfDay(DhikrTime.EVENING),
-                    dhikrTime: DhikrTime.EVENING,
-                    onTimeChanged: (newTime) async {
-                      setDhikrAlarmTime(newTime, alarmService, languageService, DhikrTime.EVENING, 2);
-                    }),
+
                 const SizedBox(
                   height: 40,
                 ),
-                MenuTitle(text: languageService.getText('aboutUs')),
+                MenuTitle(text: languageService.getText('aboutUs') , icon: Icons.info),
                 StandardElevatedButton(
                   text: languageService.getText('aboutTheApp'),
                   onPressed: () async {
@@ -120,7 +116,8 @@ class _SettingsPage extends State<SettingsPage> {
                       MaterialPageRoute(builder: (context) => const ExternalResourcesPage()),
                     );
                   },
-                )
+                ),
+                const SizedBox(height: 40),
               ],
             ),
           ),
