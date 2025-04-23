@@ -18,15 +18,22 @@ class LanguageElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
+    final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.black87 : Colors.white;
+
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: Size(width != null? width!: 250, height != null? height!: 60)),
+        style: ElevatedButton.styleFrom(
+          fixedSize: Size(width != null ? width! : 270, height != null ? height! : 60),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+          backgroundColor: backgroundColor,
+        ),
         onPressed: onPressed,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               languageTitle,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
             ),
             const SizedBox(width: 10),
             ClipOval(

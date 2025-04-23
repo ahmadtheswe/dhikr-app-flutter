@@ -28,6 +28,12 @@ class ExternalResourcesPage extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('Amiri Quran Font'),
+            onTap: () {
+              launchUrl(Uri.parse('https://fonts.google.com/specimen/Amiri+Quran'));
+            },
+          ),
+          ListTile(
             title: const Text('icons8.com - Morning Icon'),
             onTap: () {
               launchUrl(Uri.parse('https://icons8.com/icon/qs7i2xsN6JHA/morning'));
