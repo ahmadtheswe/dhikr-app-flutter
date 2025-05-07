@@ -33,7 +33,7 @@ class DhikrListTile extends StatelessWidget {
           backgroundColor: listTextColor,
           child: Text('${index + 1}', style: TextStyle(color: numberingTextColor, fontWeight: FontWeight.bold)),
         ),
-        title: Text(dhikr.title, style: TextStyle(color: listTextColor, fontWeight: FontWeight.bold)),
+        title: Text(dhikr.title[languageService.currentLanguage] ?? '', style: TextStyle(color: listTextColor, fontWeight: FontWeight.bold)),
         subtitle: dhikr.readTime != null
             ? Text(
                 _readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService),

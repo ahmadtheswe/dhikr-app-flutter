@@ -90,7 +90,7 @@ class _DhikrPage extends State<DhikrPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             PageSubTitle(text: widget.isMorningDhikr ? languageService.getText('morning') : languageService.getText('evening')),
-            PageTitle(text: dhikr.title),
+            PageTitle(text: dhikr.title[languageService.currentLanguage] ?? ''),
           ],
         ),
       ),
@@ -114,10 +114,10 @@ class _DhikrPage extends State<DhikrPage> {
               _latinText(dhikr.pronounceText!),
               const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
             ],
-            _latinText(dhikr.translation),
+            _latinText(dhikr.translation[languageService.currentLanguage] ?? ''),
             if (dhikr.references.isNotEmpty) ...[
               const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20, color: Colors.grey),
-              _referenceText(dhikr.references),
+              _referenceText(dhikr.references[languageService.currentLanguage] ?? []),
             ]
           ],
         ),

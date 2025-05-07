@@ -1,11 +1,11 @@
 class Dhikr {
   int? id;
-  String title;
+  Map<String, String> title;
   String arabicText;
   String? pronounceText;
-  String translation;
+  Map<String, String> translation;
   bool isShowBismillah;
-  List<String> references;
+  Map<String, List<String>> references;
   List<int>? readTime;
   bool isReadTimeForWholeDay;
 
@@ -18,17 +18,19 @@ class Dhikr {
     required this.isShowBismillah,
     required this.references,
     this.readTime,
-    required this.isReadTimeForWholeDay
+    required this.isReadTimeForWholeDay,
   });
 
   factory Dhikr.fromJson(Map<String, dynamic> json) {
     return Dhikr(
       id: json['id'],
-      title: json['title'],
+      title: Map<String, String>.from(json['title']),
       arabicText: json['arabicText'],
-      translation: json['translation'],
+      pronounceText: json['pronounceText'],
+      translation: Map<String, String>.from(json['translation']),
       isShowBismillah: json['isShowBismillah'],
-      references: List<String>.from(json['references']),
+      references: Map<String, List<String>>.from(json['references']
+          .map((key, value) => MapEntry(key, List<String>.from(value)))),
       readTime: json['readTime'] != null ? List<int>.from(json['readTime']) : null,
       isReadTimeForWholeDay: json['isReadTimeForWholeDay'],
     );
