@@ -11,4 +11,5 @@ class Languages {
 
   static const String COMMON_SELECT_LANGUAGE = 'Select language / Pilih bahasa';
   static const String COMMON_SELECT_DARK_MODE = 'Dark mode / Mode gelap';
+  static const String COMMON_WAKE_UP_MODE = 'Keep screen on / Jaga layar tetap menyala';
 }

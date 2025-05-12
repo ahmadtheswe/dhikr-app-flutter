@@ -6,6 +6,7 @@ import 'package:dhikr_app/service/language_service.dart';
 import 'package:dhikr_app/service/notification_service.dart';
 import 'package:dhikr_app/service/theme_service.dart';
 import 'package:dhikr_app/service/update_service.dart';
+import 'package:dhikr_app/service/wake_lock_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
@@ -23,6 +24,8 @@ void main() async {
 
   await ThemeService().init();
 
+  await WakeLockService().init();
+
   MobileAds.instance.initialize();
 
   await NotificationService().init();
@@ -37,6 +40,7 @@ void main() async {
       ChangeNotifierProvider<LanguageService>.value(value: languageService),
       ChangeNotifierProvider<AlarmService>.value(value: alarmService),
       ChangeNotifierProvider<ThemeService>.value(value: ThemeService()),
+      ChangeNotifierProvider<WakeLockService>.value(value: WakeLockService()),
     ],
     child: MyApp(initialPayload: payload,),
   ));

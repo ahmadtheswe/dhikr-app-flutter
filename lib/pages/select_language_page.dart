@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../service/language_service.dart';
 import '../service/theme_service.dart';
+import '../service/wake_lock_service.dart';
 import '../static/languages.dart';
 
 class SelectLanguagePage extends StatelessWidget {
@@ -15,7 +16,7 @@ class SelectLanguagePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final languageService = Provider.of<LanguageService>(context, listen: false);
     final themeService = Provider.of<ThemeService>(context);
-
+    final wakeUpService = Provider.of<WakeLockService>(context);
 
     return Scaffold(
       body: Center(
@@ -50,11 +51,31 @@ class SelectLanguagePage extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const MenuTitle(text: Languages.COMMON_SELECT_DARK_MODE),
+            const MenuTitle(
+              text: Languages.COMMON_SELECT_DARK_MODE,
+              icon: Icons.dark_mode,
+              margin: EdgeInsets.only(bottom: 20, left: 20, right: 20),
+              isIconOnTop: true,
+            ),
             Switch(
               value: themeService.isDarkMode(context),
               onChanged: (isDark) {
                 themeService.toggleTheme(isDark);
+              },
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const MenuTitle(
+              text: Languages.COMMON_WAKE_UP_MODE,
+              icon: Icons.lightbulb_circle,
+              margin: EdgeInsets.only(bottom: 20, left: 20, right: 20),
+              isIconOnTop: true,
+            ),
+            Switch(
+              value: wakeUpService.isWakeUpEnabled,
+              onChanged: (isWakeUp) {
+                wakeUpService.toggleWakeUp(isWakeUp);
               },
             ),
           ],

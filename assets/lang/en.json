@@ -29,5 +29,6 @@
   "morningAlarmNotificationBody": "It's time to read the morning dhikr!",
   "eveningAlarmNotificationTitle": "Evening Dhikr Alarm",
   "eveningAlarmNotificationBody": "It's time to read the evening dhikr!",
-  "externalResources": "External Resources"
+  "externalResources": "External Resources",
+  "wakeLockMode": "Keep Screen On"
 }

@@ -13,6 +13,7 @@ import 'package:provider/provider.dart';
 import '../service/language_service.dart';
 import '../service/notification_service.dart';
 import '../service/theme_service.dart';
+import '../service/wake_lock_service.dart';
 import '../shared/title/page_title.dart';
 import '../static/dhikr_time.dart';
 
@@ -29,6 +30,7 @@ class _SettingsPage extends State<SettingsPage> {
     final languageService = Provider.of<LanguageService>(context);
     final alarmService = Provider.of<AlarmService>(context);
     final themeService = Provider.of<ThemeService>(context);
+    final wakeUpService = Provider.of<WakeLockService>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -70,11 +72,21 @@ class _SettingsPage extends State<SettingsPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                MenuTitle(text: languageService.getText('darkMode') , icon: Icons.dark_mode),
+                MenuTitle(text: languageService.getText('darkMode'), icon: Icons.dark_mode),
                 Switch(
                   value: themeService.isDarkMode(context),
                   onChanged: (isDark) {
                     themeService.toggleTheme(isDark);
+                  },
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                MenuTitle(text: languageService.getText('wakeLockMode'), icon: Icons.lightbulb_circle),
+                Switch(
+                  value: wakeUpService.isWakeUpEnabled,
+                  onChanged: (isWakeUp) {
+                    wakeUpService.toggleWakeUp(isWakeUp);
                   },
                 ),
                 const SizedBox(
