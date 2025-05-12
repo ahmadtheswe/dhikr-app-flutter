@@ -2,6 +2,7 @@ import 'package:dhikr_app/helpers/ad_helper.dart';
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/shared/title/page_subtitle.dart';
 import 'package:dhikr_app/static/bismillah.dart';
+import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
@@ -197,8 +198,8 @@ class _DhikrPage extends State<DhikrPage> {
 
   _readTimeText(List<int> readTime, bool isReadTimeForWholeDay, LanguageService languageService) {
     var readTimeString = readTime.length > 1
-        ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{count2}', readTime[1].toString())
-        : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString());
+        ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR).replaceAll('{count2}', readTime[1].toString()).replaceAll('{time2}', readTime[1] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR)
+        : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR);
 
     if (isReadTimeForWholeDay) {
       readTimeString += ' ${languageService.getText('inADayText')}';

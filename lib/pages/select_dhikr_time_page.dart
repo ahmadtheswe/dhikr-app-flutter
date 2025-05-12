@@ -1,6 +1,5 @@
 import 'package:dhikr_app/pages/dhikr_list_page.dart';
 import 'package:dhikr_app/pages/set_alarm_page.dart';
-import 'package:dhikr_app/pages/settings_page.dart';
 import 'package:dhikr_app/shared/button/select_dhikr_elevated_button.dart';
 import 'package:dhikr_app/shared/button/setting_button.dart';
 import 'package:dhikr_app/shared/title/menu_title.dart';
