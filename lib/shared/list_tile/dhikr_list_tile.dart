@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../../pages/dhikr_page.dart';
 import '../../service/language_service.dart';
 import '../../static/dhikr_time.dart';
+import '../../static/languages.dart';
 
 class DhikrListTile extends StatelessWidget {
   final int index;
@@ -33,7 +34,7 @@ class DhikrListTile extends StatelessWidget {
           backgroundColor: listTextColor,
           child: Text('${index + 1}', style: TextStyle(color: numberingTextColor, fontWeight: FontWeight.bold)),
         ),
-        title: Text(dhikr.title, style: TextStyle(color: listTextColor, fontWeight: FontWeight.bold)),
+        title: Text(dhikr.title[languageService.currentLanguage] ?? '', style: TextStyle(color: listTextColor, fontWeight: FontWeight.bold)),
         subtitle: dhikr.readTime != null
             ? Text(
                 _readTimeText(dhikr.readTime!, dhikr.isReadTimeForWholeDay, languageService),
@@ -56,8 +57,8 @@ class DhikrListTile extends StatelessWidget {
 
   _readTimeText(List<int> readTime, bool isReadTimeForWholeDay, LanguageService languageService) {
     var readTimeString = readTime.length > 1
-        ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{count2}', readTime[1].toString())
-        : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString());
+        ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR).replaceAll('{count2}', readTime[1].toString()).replaceAll('{time2}', readTime[1] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR)
+        : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR);
 
     if (isReadTimeForWholeDay) {
       readTimeString += ' ${languageService.getText('inADayText')}';

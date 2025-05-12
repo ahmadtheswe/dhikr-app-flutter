@@ -37,10 +37,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/dhikr/morning/dhikr_morning_id.json
-    - assets/dhikr/evening/dhikr_evening_id.json
-    - assets/dhikr/morning/dhikr_morning_en.json
-    - assets/dhikr/evening/dhikr_evening_en.json
+    - assets/dhikr/evening/dhikr_evening.json
+    - assets/dhikr/morning/dhikr_morning.json
     - assets/lang/en.json
     - assets/lang/id.json
     - assets/logo/dhikr-app-logo.png

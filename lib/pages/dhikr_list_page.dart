@@ -7,7 +7,6 @@ import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/setting_button.dart';
 import 'package:dhikr_app/shared/list_tile/dhikr_list_tile.dart';
 import 'package:dhikr_app/static/dhikr_time.dart';
-import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -58,10 +57,8 @@ class _DhikrListPage extends State<DhikrListPage> {
   }
 
   Future<void> loadDhikr() async {
-    final languageService = context.watch<LanguageService>(); // Listen for language changes
-    String? language = languageService.currentLanguage;
     String jsonString = await rootBundle.loadString(
-        'assets/dhikr/${widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening'}/dhikr_${widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening'}_${language == Languages.ENGLISH_CODE ? 'en' : 'id'}.json');
+        'assets/dhikr/${widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening'}/dhikr_${widget.dhikrTime == DhikrTime.MORNING ? 'morning' : 'evening'}.json');
 
     final jsonResponse = json.decode(jsonString);
     List<Dhikr> dhikrs = (jsonResponse as List<dynamic>).map((item) => Dhikr.fromJson(item)).toList();

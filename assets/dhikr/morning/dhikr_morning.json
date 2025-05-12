@@ -1,0 +1,534 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Dhikr 1 (Ta'awuz)",
+      "id": "Dzikr 1 (Ta'awwudz)"
+    },
+    "arabicText": "أَعُوْذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ",
+    "translation": {
+      "en": "I seek refuge with Allah from the accursed devil.",
+      "id": "Aku berlindung kepada Allah dari godaan syaitan yang terkutuk."
+    },
+    "pronounceText": "A'uudzu billaahi minasy-syaithoonir-rojiim.",
+    "isShowBismillah": false,
+    "references": {
+      "en": [],
+      "id": []
+    },
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Dhikr 2 (Ayat Al-Kursi)",
+      "id": "Dzikr 2 (Ayat Kursi)"
+    },
+    "arabicText": "اللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ الْحَىُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى السَّمَاوَاتِ وَمَا فِى الْأَرْضِ ۗ مَن ذَا الَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُۥ حِفْظُهُمَا ۚ وَهُوَ الْعَلِىُّ الْعَظِيمُ ﴿٢٥٥﴾",
+    "translation": {
+      "en": "Allah – there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great. (Al-Baqarah [2]: 255)",
+      "id": "Allah, tidak ada sesembahan yang berhak disembah kecuali Dia Yang Hidup Kekal lagi terus-menerus mengurus (makhluk-Nya). Tidak mengantuk dan tidak tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Siapakah yang dapat memberi syafa'at di sisi Allah tanpa izin-Nya? Allah mengetahui apa-apa yang di hadapan dan di belakang mereka, dan mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah meliputi langit dan bumi, dan Allah tidak merasa berat memelihara keduanya. Dan Allah Maha Tinggi lagi Maha Besar. (Al-Baqarah [2]: 255)."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Whoever recites this verse in the morning will be protected from the (disturbance of) jinn until the evening. And whoever recites it in the evening will be protected from the (disturbance of) jinn until the morning.\" (Reported by Al-Hakim 1/562. Al-Albani considered the hadith authentic in Sahih At-Targhib wa At-Tarhib 1/273, and attributed it to An-Nasa'i and At-Tabarani. He said the isnad (chain of narration) of At-Tabarani is good)."
+      ],
+      "id": [
+        "Barangsiapa membaca kalimat ini ketika pagi hari, maka ia dijaga dari (ganguan) jin hingga sore hari. Dan barangsiapa mengucapkannya ketika sore hari, maka ia dijaga dari (ganguan) jin hingga pagi hari.\" (HR. Al-Hakim 1/562. Al-Albani berpendapat hadits tersebut shahih dalam Shahih At-Targhib wat Tarhib 1/273 dan beliau menisbatkan hadits tersebut kepada An-Nasa'i dan Ath-Thabrani, beliau berkata, isnad Ath-Thabrani jayyid)."
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Dhikr 3 (Al-Ikhlas)",
+      "id": "Dzikr 3 (Al-Ikhlas)"
+    },
+    "arabicText": "قُلْ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ ﴿٤﴾",
+    "translation": {
+      "en": "(1) Say: \"He is Allah, the One and Only; (2) Allah, the Eternal, Absolute; (3) He neither begets nor is born, (4) And there is none comparable to Him.\" (Al-Ikhlas [112])",
+      "id": "(1) Katakanlah: \"Dialah Allah, Yang Maha Esa. (2) Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu. (3) Dia tiada beranak dan tidak pula diperanakkan, (4) dan tidak ada seorangpun yang setara dengan Dia\". (Al-Ikhlas [112])"
+    },
+    "isShowBismillah": true,
+    "references": {
+      "en": [
+        "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
+      ],
+      "id": [
+        "HR. Abu Dawud no. 5082, an-Nasa-i VIII/250 dan at-Tirmidzi no. 3575, Ahmad V/312, Shahiih at-Tirmidzi no. 2829, Tuhfatul Ahwadzi no. 3646, Shahiih at-Targhiib wat Tarhiib 1/411 no. 649, hasan shahih"
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Dhikr 4 (Al-Falaq)",
+      "id": "Dzikr 4 (Al-Falaq)"
+    },
+    "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾",
+    "translation": {
+      "en": "(1) Say: \"I seek refuge with (Allah), the Lord of daybreak, (2) from the evil of what He has created, (3) and from the evil of darkness when it settles, (4) and from the evil of those who blow on knots (witchcraft), (5) and from the evil of an envier when he envies.\" (Al-Falaq [113])",
+      "id": "(1) Katakanlah: \"Aku berlindung kepada Tuhan Yang Menguasai subuh, (2) dari kejahatan makhluk-Nya, (3) dan dari kejahatan malam apabila telah gelap gulita, (4) dan dari kejahatan wanita-wanita tukang sihir yang menghembus pada buhul-buhul, (5) dan dari kejahatan pendengki bila ia dengki\". (Al-Falaq [113])"
+    },
+    "isShowBismillah": true,
+    "references": {
+      "en": [
+        "Reported by Abu Dawud no. 5082, An-Nasa'i VIII/250, and At-Tirmidhi no. 3575, Ahmad V/312, Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, classified as hasan sahih."
+      ],
+      "id": [
+        "HR. Abu Dawud no. 5082, an-Nasa-i VIII/250 dan at-Tirmidzi no. 3575, Ahmad V/312, Shahiih at-Tirmidzi no. 2829, Tuhfatul Ahwadzi no. 3646, Shahiih at-Targhiib wat Tarhiib 1/411 no. 649, hasan shahih"
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Dhikr 5 (Al-Nas)",
+      "id": "Dzikr 5 (Al-Naas)"
+    },
+    "arabicText": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَـٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿٤﴾ الَّذِىۡ يُوَسۡوِسُ فِىۡ صُدُوۡرِ النَّاسِ ﴿٥﴾ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ﴿٦﴾",
+    "translation": {
+      "en": "(1) Say: \"I seek refuge with (Allah), the Lord of mankind, (2) The King of mankind, (3) The God of mankind, (4) From the evil of the whisperer who withdraws, (5) Who whispers in the breasts of mankind, (6) Among jinn and among mankind.\" (Al-Naas [114])",
+      "id": "(1) Katakanlah: \"Aku berlindung kepada Tuhan (yang memelihara dan menguasai) manusia. (2) Raja manusia. (3) Sembahan manusia. (4) Dari kejahatan (bisikan) syaitan yang biasa bersembunyi, (5) yang membisikkan (kejahatan) ke dalam dada manusia, (6) dari (golongan) jin dan manusia.\". (Al-Naas [114])"
+    },
+    "isShowBismillah": true,
+    "references": {
+      "en": [
+        "Whoever recites these three surahs every morning and evening, they will suffice him against everything (meaning protecting him from all kinds of harm). (Narrated by Abu Dawud no. 5082, Sahih Abu Dawud no. 4241, An-Nasa’i VIII 250, At-Tirmidhi no. 3575. At-Tirmidhi said: 'This hadith is hasan sahih.' Also narrated by Ahmad V/312, from Abdullah bin Khubaib (may Allah be pleased with him). Sahih At-Tirmidhi no. 2829, Tuhfatul Ahwadzi no. 3646, Sahih At-Targhib wa At-Tarhib 1/411 no. 649, hasan sahih)."
+      ],
+      "id": [
+        "Barangsiapa membaca tiga surat tersebut setiap pagi dan sore hari, maka (tiga surat tersebut) cukup baginya dari segala sesuatu”. Yakni mencegahnya dari berbagai kejahatan. ( HR. Abu Dawud no. 5082, Shahiih Abu Dawud no. 4241, Annasa-i VIII 250 dan At-Tirmizi no. 3575 , At-Tarmidzi berkata “Hadits ini hasan shahih” Ahmad V/312, dari Abdullah bin Khubaib radhiyallahu ‘anhu. Shahiih at-Tirmidzi no. 2829, Tuhfatul Ahwadzi no. 3646, Shahiih at-Targhiib wat Tarhiib 1/411 no. 649, hasan shahih)."
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "Dhikr 6",
+      "id": "Dzikr 6"
+    },
+    "arabicText": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَـهَ إِلاَّ اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ.رَبِّ أَسْأَلُكَ خَيْرَ مَا فِيْ هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوْذُ بِكَ مِنْ شَرِّ مَا فِيْ هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوْذُ بِكَ مِنَ الْكَسَلِ وَسُوْءِ الْكِبَرِ، رَبِّ أَعُوْذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ.",
+    "translation": {
+      "en": "We have entered the morning, and the dominion belongs to Allah. All praise is due to Allah. There is no god worthy of worship except Allah alone, without any partner. To Him belongs the dominion and to Him belongs all praise, and He has power over all things. O Lord, I ask You for the good of this day and the good of what follows it. I seek refuge with You from the evil of this day and the evil of what follows it. O Lord, I seek refuge with You from laziness and the evil of old age. O Lord, I seek refuge with You from the torment of the Fire and the punishment of the grave.",
+      "id": "Kami telah memasuki waktu pagi dan kerajaan hanya milik Allah, segala puji hanya milik Allah. Tidak ada ilah yang berhak diibadahi dengan benar kecuali Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia-lah Yang Mahakuasa atas segala sesuatu. Wahai Rabb, aku mohon kepada-Mu kebaikan di hari ini dan kebaikan sesudahnya. Aku berlindung kepada-Mu dari kejahatan hari ini dan kejahatan sesudahnya. Wahai Rabb, aku berlindung kepada-Mu dari kemalasan dan kejelekan di hari tua. Wahai Rabb, aku berlindung kepada-Mu dari siksaan di Neraka dan siksaan di kubur."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Muslim no. 2723 (75), Abu Dawud no. 5071, and At-Tirmidhi 3390, sahih, from Abdullah ibn Mas’ud."
+      ],
+      "id": [
+        "HR. Muslim no. 2723 (75), Abu Dawud no. 5071, dan at-Tirmidzi 3390, shahih dari Abdullah Ibnu Mas’ud."
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 7,
+    "title": {
+      "en": "Dhikr 7",
+      "id": "Dzikr 7"
+    },
+    "arabicText": "اَللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوْتُ وَإِلَيْكَ النُّشُوْرُ",
+    "translation": {
+      "en": "O Allah, by Your mercy and help we have entered the morning, and by Your mercy and help we have entered the evening. By Your mercy and help we live, and by Your will we die. And to You is the resurrection (of all creatures).",
+      "id": "Ya Allah, dengan rahmat dan pertolongan-Mu kami memasuki waktu pagi, dan dengan rahmat dan pertolongan-Mu kami memasuki waktu petang. Dengan rahmat dan pertolongan-Mu kami hidup dan dengan kehendak-Mu kami mati. Dan kepada-Mu kebangkitan (bagi semua makhluk)."
+    },
+    "pronounceText": "Allahumma bika amsaynaa wa bika ash-bahnaa wa bika nahyaa wa bika namuutu wa ilaikal mashiir.",
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Al-Bukhari in Al-Adab Al-Mufrad no. 1199, this wording is from Al-Bukhari, At-Tirmidhi no. 3391, Abu Dawud no. 5068, Ahmad 11/354, Ibn Majah no. 3868, from Abu Hurairah (may Allah be pleased with him). Sahih Al-Adab Al-Mufrad no. 911, sahih. See also Silsilah Al-Ahaadith As-Sahihah no. 262."
+      ],
+      "id": [
+        "HR. Al-Bukhari dalam al-Adabul Mufrad no. 1199, lafazh ini adalah lafazh al-Bukhari, at-Tirmidzi no. 3391, Abu Dawud no. 5068, Ahmad 11/354, Ibnu Majah no. 3868, Dari Abu Hurairah Radhiyallahu ‘anhu. Shahiih al-Adabil Mufrad no. 911, shahih. Lihat pula Silsilah al-Ahaadiits ash-Shahiihah no. 262."
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 8,
+    "title": {
+      "en": "Dhikr 8 (Sayyidul Istighfar)",
+      "id": "Dzikr 8 (Sayyidul Istighfar)"
+    },
+    "arabicText": "اَللَّهُمَّ أَنْتَ رَبِّيْ لَا إِلَـهَ إِلاَّ أَنْتَ، خَلَقْتَنِيْ وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ فَإِنَّهُ لَا يَغْفِرُ الذُّنُوْبَ إِلاَّ أَنْتَ.",
+    "translation": {
+      "en": "O Allah, You are my Lord, there is no deity worthy of worship except You. You created me and I am Your servant. I abide by Your covenant and promise as best as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me, and I acknowledge my sin. So forgive me, for verily none can forgive sins except You.",
+      "id": "Ya Allah, Engkau adalah Rabbku, tidak ada ilah yang berhak disembah kecuali Engkau, Engkaulah yang menciptakanku. Aku adalah hamba-Mu. Aku akan setia pada perjanjianku pada-Mu (yaitu aku akan mentauhidkan-Mu) semampuku dan aku yakin akan janji-Mu (berupa surga untukku). Aku berlindung kepada-Mu dari kejelekan yang kuperbuat. Aku mengakui nikmat-Mu kepadaku dan aku mengakui dosaku. Oleh karena itu, ampunilah aku. Sesungguhnya tiada yang mengampuni dosa kecuali Engkau."
+    },
+    "pronounceText": "Allahumma anta robbii laa ilaha illa anta, kholaqtanii wa anaa ‘abduka wa anaa ‘ala ‘ahdika wa wa’dika mas-tatho’tu. A’udzu bika min syarri maa shona’tu. Abu-u laka bi ni’matika ‘alayya wa abu-u bi dzambii. Fagh-firlii fainnahu laa yagh-firudz dzunuuba illa anta.",
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "\"Whoever recites it with certainty in the morning and dies before the evening, he will be among the people of Paradise. And whoever recites it with certainty in the evening and dies before the morning, he will be among the people of Paradise.\" (Narrated by al-Bukhari no. 6306, 6323, Ahmad IV/122-125, an-Nasa'i VIII/279-280) from Shaddad bin Aus (may Allah be pleased with him)."
+      ],
+      "id": [
+        "\"Barangsiapa membacanya dengan yakin di waktu pagi lalu ia meninggal sebelum masuk waktu sore, maka ia termasuk ahli Surga. Dan barangsiapa membacanya dengan yakin di waktu sore lalu ia meninggal sebelum masuk waktu pagi, maka ia termasuk ahli Surga.\" (HR. Al-Bukhari no. 6306, 6323, Ahmad IV/122-125, an-Nasa-i VIII/279-280) dari Syaddad bin Aus Radhiyallahu ‘anhu."
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 9,
+    "title": {
+      "en": "Dhikr 9",
+      "id": "Dzikr 9"
+    },
+    "arabicText": "اَللَّهُمَّ عَافِنِيْ فِيْ بَدَنِيْ، اَللَّهُمَّ عَافِنِيْ فِيْ سَمْعِيْ، اَللَّهُمَّ عَافِنِيْ فِيْ بَصَرِيْ، لَا إِلَـهَ إِلاَّ أَنْتَ.اَللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَـهَ إِلاَّ أَنْتَ",
+    "translation": {
+      "en": "O Allah, grant health to my body. O Allah, grant health to my hearing. O Allah, grant health to my sight. There is no deity worthy of worship except You. O Allah, I seek refuge in You from disbelief and poverty, and I seek refuge in You from the punishment of the grave. There is no deity worthy of worship except You.",
+      "id": "Ya Allah, selamatkanlah tubuhku (dari penyakit dan dari apa yang tidak aku inginkan). Ya Allah, selamatkanlah pendengaranku (dari penyakit dan maksiat atau dari apa yang tidak aku inginkan). Ya Allah, selamatkanlah penglihatanku, tidak ada Ilah yang berhak diibadahi dengan benar kecuali Engkau. Ya Allah, sesungguhnya aku berlindung kepada-Mu dari kekufuran dan kefakiran. Aku berlindung kepada-Mu dari siksa kubur, tidak ada Ilah yang berhak diibadahi dengan benar kecuali Engkau."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by al-Bukhari in Sahih al-Adabul Mufrad no. 701, Abu Dawud no. 5090, Ahmad V/42, graded hasan. See Sahih al-Adabul Mufrad no. 539."
+      ],
+      "id": [
+        "HR. Al-Bukhari dalam Shahiib al-Adabil Mufrad no. 701, Abu Dawud no. 5090, Ahmad V/42, hasan. Lihat Shahiih Al-Adabil Mufrad no.539"
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 10,
+    "title": {
+      "en": "Dhikr 10",
+      "id": "Dzikr 10"
+    },
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَاْلآخِرَةِ، اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِيْنِيْ وَدُنْيَايَ وَأَهْلِيْ وَمَالِيْ اللَّهُمَّ اسْتُرْ عَوْرَاتِى وَآمِنْ رَوْعَاتِى.اَللَّهُمَّ احْفَظْنِيْ مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِيْ، وَعَنْ يَمِيْنِيْ وَعَنْ شِمَالِيْ، وَمِنْ فَوْقِيْ، وَأَعُوْذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِيْ",
+    "translation": {
+      "en": "O Allah, I ask You for forgiveness and well-being in this world and the Hereafter. O Allah, I ask You for forgiveness and well-being in my religious and worldly affairs, my family and my wealth. O Allah, conceal my faults and grant me safety from my fears. O Allah, protect me from in front of me, from behind me, on my right, on my left, and from above me. I seek refuge in Your greatness from being taken unaware from beneath me (i.e., being swallowed by the earth).",
+      "id": "Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya Allah, tutupilah auratku (aib dan sesuatu yang tidak layak dilihat orang) dan tentramkan-lah aku dari rasa takut. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri dan dari atasku. Aku berlindung dengan kebesaran-Mu, agar aku tidak disambar dari bawahku (aku berlindung dari dibenamkan ke dalam bumi)."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by al-Bukhari in al-Adabul Mufrad no. 1200, Abu Dawud no. 5074, an-Nasa'i VIII/282, Ibn Majah no. 3871, al-Hakim 1/517-518, and others from Ibn Umar (may Allah be pleased with them both). See Sahih al-Adabul Mufrad no. 912, authentic."
+      ],
+      "id": [
+        "HR. Al-Bukhari dalam al-Adabul Mufrad no. 1200, Abu Dawud no. 5074, An-Nasa-i VIII / 282, Ibnu Majah no. 3871, al-Hakim 1/517-518, dan lainnya dari Ibnu Umar radhiyallahu ‘anhumaa. Lihat Shahiih al-Adabul Mufrad no. 912, shahih"
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 11,
+    "title": {
+      "en": "Dhikr 11",
+      "id": "Dzikr 11"
+    },
+    "arabicText": "اَللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَاْلأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيْكَهُ، أَشْهَدُ أَنْ لاَ إِلَـهَ إِلاَّ أَنْتَ، أَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِيْ سُوْءًا أَوْ أَجُرُّهُ إِلَى مُسْلِمٍ",
+    "translation": {
+      "en": "O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of everything. I bear witness that there is no deity worthy of worship except You. I seek refuge in You from the evil of myself and from the evil of Satan and his association (with You). I seek refuge in You lest I harm myself or drag it upon a Muslim.",
+      "id": "Ya Allah Yang Mahamengetahui yang ghaib dan yang nyata, wahai Rabb Pencipta langit dan bumi, Rabb atas segala sesuatu dan Yang Merajainya. Aku bersaksi bahwa tidak ada Ilah yang berhak diibadahi dengan benar kecuali Engkau. Aku berlindung kepada-Mu dari kejahatan diriku, syaitan dan ajakannya menyekutukan Allah (aku berlindung kepada-Mu) dari berbuat kejelekan atas diriku atau mendorong seorang muslim kepadanya."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "The Prophet (صلى الله عليه وسلم) said to Abu Bakr As-Siddiq (رضي الله عنه): \"Say it in the morning and in the evening, and when you go to bed.\" Narrated by Al-Bukhari in Al-Adab Al-Mufrad 1202, At-Tirmidhi no. 3392, and Abu Dawud no. 5067. See Sahih At-Tirmidhi no. 2798, Sahih Al-Adab Al-Mufrad no. 914, authentic. Also see Silsilah Al-Ahadith As-Sahihah no. 2753."
+      ],
+      "id": [
+        "Nabi صلي الله عليه وسلم bersabda kepada Abu Bakar ash-Shiddiq رضي الله عنه \"Ucapkanlah pagi dan petang dan apabila engkau hendak tidur.\" HR. Al-Bukhari dalam Al-Adabul Mufrad 1202, at-Tirmidzi no.3392 dan Abu Daud no. 5067,Lihat Shahih At- Tirmidzi no. 2798, Shahiih al-Adabil Mufrad no. 914, shahih. Lihat Silsilah al-Ahaadiits ash-Shahiihah no. 2753"
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 12,
+    "title": {
+      "en": "Dhikr 12",
+      "id": "Dzikr 12"
+    },
+    "arabicText": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي اْلأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيْعُ الْعَلِيْم",
+    "translation": {
+      "en": "In the Name of Allah, with whose Name nothing on earth or in the heavens can cause harm, and He is the All-Hearing, All-Knowing.",
+      "id": "Dengan Menyebut Nama Allah, yang dengan Nama-Nya tidak ada satupun yang membahayakan, baik di bumi maupun dilangit. Dia-lah Yang Mahamendengar dan Maha mengetahui."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "\"Whoever recites it three times in the morning and evening, nothing will harm him.\" Narrated by At-Tirmidhi no. 3388, Abu Dawud no. 5088, Ibn Majah no. 3869, Al-Hakim 1/514, and Ahmad no. 446 and 474, verified by Ahmad Shakir. From Uthman bin Affan (رضي الله عنه), see Sahih Ibn Majah no. 3120, Al-Hakim 1/513, Sahih Al-Adab Al-Mufrad no. 513, Sahih At-Targhib wat-Tarhib 1/413 no. 655, authentic chain."
+      ],
+      "id": [
+        "\"Barangsiapa membacanya sebanyak tiga kali ketika pagi dan sore hari, maka tidak ada sesuatu pun yang membahayakan dirinya.\" HR. At-Tirmidzi no. 3388, Abu Dawud no. 5088,Ibnu Majah no. 3869, al-Hakim 1/514, Dan Ahmad no. 446 dan 474, Tahqiq Ahmad Syakir. Dari ‘Utsman bin ‘Affan radhiyallahu ‘anhu, lihat Shahiih Ibni Majah no. 3120, al-Hakim 1/513, Shahiih al-Adabil Mufrad no. 513, Shahiih at-Targhiib wat Tarhiib 1/413 no. 655, sanad-nya shahih."
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 13,
+    "title": {
+      "en": "Dhikr 13",
+      "id": "Dzikr 13"
+    },
+    "arabicText": "رَضِيْتُ بِاللَّهِ رَبًّا، وَبِاْلإِسْلاَمِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا",
+    "translation": {
+      "en": "I am pleased with Allah as my Lord, with Islam as my religion, and with Muhammad (صلى الله عليه وسلم) as my Prophet.",
+      "id": "Aku rela (ridha) Allah sebagai Rabb-ku (untukku dan orang lain), Islam sebagai agamaku dan Muhammad صلي الله عليه وسلم sebagai Nabiku (yang diutus oleh Allah)."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "\"Whoever recites it three times in the morning and evening, Allah will grant him His pleasure on the Day of Judgment.\" Narrated by Ahmad IV/337, Abu Dawud no. 5072, At-Tirmidhi no. 3389, Ibn Majah no. 3870, An-Nasa'i in 'Amal Al-Yawm wal-Lailah no. 4, and Ibnus Sunni no. 68. Authenticated by Imam Al-Hakim in Al-Mustadrak 1/518 and agreed upon by Imam Adh-Dhahabi, classified as hasan. See Sahih At-Targhib wat-Tarhib I/415 no. 657, Sahih At-Targhib wat-Tarhib, Al-Wabil As-Sayyib p. 170, Zad Al-Ma'ad II/372, Silsilah Al-Ahadith As-Sahihah no. 2686."
+      ],
+      "id": [
+        "\"Barangsiapa membacanya sebanyak tiga kali ketika pagi dan sore, maka Allah memberikan keridhaan-Nya kepadanya pada hari Kiamat.\" HR. Ahmad IV/337, Abu Dawud no. 5072, at-Tirmidzi no. 3389, Ibnu Majah no. 3870, an-Nasa-i dalam ‘Amalul Yaum wal Lailah no. 4 dan Ibnus Sunni no. 68, dishahihkan oleh Imam al-Hakim dalam al-Mustadrak 1/518 dan disetujui oleh Imam adz-Dzahabi, hasan. Lihat Shahiih At Targhiib wat Tarhiib I/415 no. 657, Shahiih At Targhiib wat Tarhiib al-Waabilish Shayyib hal. 170, Zaadul Ma’aad II/372, Silsilah al-Ahaadiits ash-Shahiihah no. 2686."
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 14,
+    "title": {
+      "en": "Dhikr 14",
+      "id": "Dzikr 14"
+    },
+    "arabicText": "يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْثُ، أَصْلِحْ لِيْ شَأْنِيْ كُلَّهُ وَلَا تَكِلْنِيْ إِلَى نَفْسِيْ طَرْفَةَ عَيْنٍ",
+    "translation": {
+      "en": "O Ever-Living, O Sustainer (Who stands on His own without need of anything), by Your mercy I seek help. Rectify all of my affairs and do not leave me to myself even for the blink of an eye.",
+      "id": "Wahai Rabb Yang Maha hidup, Wahai Rabb Yang Maha berdiri sendiri (tidak butuh segala sesuatu) dengan rahmat-Mu aku meminta pertolongan, perbaikilah segala urusanku dan jangan diserahkan (urusanku) kepada diriku sendiri meskipun hanya sekejap mata (tanpa mendapat pertolongan dari-Mu)."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by An-Nasa'i in 'Amal Al-Yawm wal-Lailah no. 575, and Al-Hakim 1/545. See Sahih At-Targhib wat-Tarhib 1/417 no. 661, As-Sahihah no. 227, classified as hasan, from Anas (رضي الله عنه)."
+      ],
+      "id": [
+        "HR. An-Nasa-i dalam ‘Amalul Yaum wal Lailah no. 575, dan al-Hakim 1/545, lihat Shahiih at-Targhiib wat Tarhiib 1/417 no. 661, Ash-shahiihah no. 227, hasan, dari Anas radhiyallahu ‘anhu"
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 15,
+    "title": {
+      "en": "Dhikr 15",
+      "id": "Dzikr 15"
+    },
+    "arabicText": "أَصْبَحْنَا عَلَى فِطْرَةِ اْلإِسْلَامِ وَعَلَى كَلِمَةِ اْلإِخْلَاصِ، وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ، حَنِيْفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
+    "translation": {
+      "en": "In the morning, we are upon the natural religion of Islam, the word of sincerity (Tawhid), the religion of our Prophet Muhammad (صلى الله عليه وسلم), and the way of our father Ibrahim, inclining towards truth, a Muslim, and not among the polytheists.",
+      "id": "Di waktu pagi kami berada diatas fitrah agama Islam, kalimat ikhlas, agama Nabi kita Muhammad صلي الله عليه وسلم dan agama ayah kami, Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang yang musyrik."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Ahmad III/406, 407, Ad-Darimi II/292, and Ibnus Sunni in 'Amal Al-Yawm wal-Lailah no. 34, Mishkat Al-Masabih no. 2415, Sahih Al-Jami' As-Saghir no. 4674, authentic."
+      ],
+      "id": [
+        "HR. Ahmad III/406, 407, ad-Darimi II/292 dan Ibnus Sunni dalam Amalul Yaum wol Lailah no. 34, Misykaatul Mashaabiih no. 2415, Shahiihal-Jaami’ish Shaghiir no. 4674, shahih"
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 16,
+    "title": {
+      "en": "Dhikr 16",
+      "id": "Dzikr 16"
+    },
+    "arabicText": "لَا إِلَـهَ إِلاَّ اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ",
+    "translation": {
+      "en": "There is no deity worthy of worship in truth except Allah, the One without any partners. To Him belongs the dominion and to Him belongs all praise. And He is capable of all things.",
+      "id": "Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya segala puji. Dan Dia Mahakuasa atas segala sesuatu."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 and 114, Sahih at-Targhib wat Tarhib 1/416 no. 660, authentic.",
+        "Narrated by Abu Dawud no. 5077, Ibn Majah no. 3867, from Abu ‘Ayyasy Azzurraqy (may Allah be pleased with him), Sahih Jaami’ish Shaghir no. 6418, Mishkatul Masabih no. 2395, Sahih at-Targhib 1/414 no. 656, authentic."
+      ],
+      "id": [
+        "HR. Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 dan 114, Shahiih at-Targhiib wat Tarhiib 1/416 no. 660, shaahih.",
+        "HR. Abu Dawud no. 5077, Ibnu Majah no. 3867, dari Ab ‘Ayyasy Azzurraqy radhiyallahu ‘anhu, Shahiih Jaami’ish Shaghiir no. 6418, Misykaatul Mashaabiih no. 2395, Shahiih at-Targhiib 1/414 no. 656, shahih."
+      ]
+    },
+    "readTime": [
+      10,
+      1
+    ],
+    "isReadTimeForWholeDay": true
+  },
+  {
+    "id": 17,
+    "title": {
+      "en": "Dhikr 17",
+      "id": "Dzikr 17"
+    },
+    "arabicText": "لَا إِلَـهَ إِلاَّ اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ",
+    "translation": {
+      "en": "There is no deity worthy of worship in truth except Allah, the One without any partners. To Him belongs the dominion and to Him belongs all praise. And He is capable of all things.",
+      "id": "Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya segala puji. Dan Dia Mahakuasa atas segala sesuatu."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 and 114, Sahih at-Targhib wat Tarhib 1/416 no. 660, authentic.",
+        "Narrated by Abu Dawud no. 5077, Ibn Majah no. 3867, from Abu ‘Ayyasy Azzurraqy (may Allah be pleased with him), Sahih Jaami’ish Shaghir no. 6418, Mishkatul Masabih no. 2395, Sahih at-Targhib 1/414 no. 656, authentic."
+      ],
+      "id": [
+        "HR. Muslim no. 2693, Ahmad V/420, Silsilah al-Ahaadiits ash-Shahiihah no. 113 dan 114, Shahiih at-Targhiib wat Tarhiib 1/416 no. 660, shaahih.",
+        "HR. Abu Dawud no. 5077, Ibnu Majah no. 3867, dari Ab ‘Ayyasy Azzurraqy radhiyallahu ‘anhu, Shahiih Jaami’ish Shaghiir no. 6418, Misykaatul Mashaabiih no. 2395, Shahiih at-Targhiib 1/414 no. 656, shahih."
+      ]
+    },
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": true
+  },
+  {
+    "id": 18,
+    "title": {
+      "en": "Dhikr 18",
+      "id": "Dzikr 18"
+    },
+    "arabicText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ : عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+    "translation": {
+      "en": "Glory is to Allah and praise is to Him, as numerous as His creation, as much as He is pleased with, as heavy as His Throne, and as much as the ink used in recording His words.",
+      "id": "Mahasuci Allah, aku memuji-Nya sebanyak bilangan makhluk-Nya, Mahasuci Allah sesuai ke-ridhaan-Nya, Mahasuci seberat timbangan ‘Arsy-Nya, dan Mahasuci sebanyak tinta (yang menulis) kalimat-Nya."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Muslim no. 2726. Sharh Muslim XVII/44. From Juwayriyyah bint Al-Harith (may Allah be pleased with her)."
+      ],
+      "id": [
+        "HR. Muslim no. 2726. Syarah Muslim XVII/44. Dari Juwairiyah binti al- Harits radhiyallahu ‘anhuma"
+      ]
+    },
+    "readTime": [
+      3
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 19,
+    "title": {
+      "en": "Dhikr 19",
+      "id": "Dzikr 19"
+    },
+    "arabicText": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً",
+    "translation": {
+      "en": "O Allah, I ask You for beneficial knowledge, lawful provision, and accepted deeds.",
+      "id": "Ya Allah, sesungguhnya aku meminta kepada-Mu ilmu yang bermanfaat, rizki yang halal, dan amalan yang diterima."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Ibn Majah no. 925, Sahih Ibn Majah 1/152 no. 753, Ibnus Sunni in ‘Amalul Yaum wal Lailah no. 54, 110, and Ahmad VI / 294, 305, 318, 322. From Umm Salamah, authentic."
+      ],
+      "id": [
+        "HR. Ibnu Majah no. 925, Shahiih Ibni Majah 1/152 no. 753 Ibnus Sunni dalam ‘Amalul Yaum wal Lailah no. 54,110, dan Ahmad VI / 294, 305, 318, 322. Dari Ummu Salamah, shahih."
+      ]
+    },
+    "readTime": [
+      1
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 20,
+    "title": {
+      "en": "Dhikr 20",
+      "id": "Dzikr 20"
+    },
+    "arabicText": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+    "translation": {
+      "en": "Glory be to Allah and with His praise.",
+      "id": "Maha Suci Allah dan dengan pujian-Nya."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Muslim no. 2691 and no. 2692, from Abu Hurairah (may Allah be pleased with him), Commentary on Muslim XVII / 17-18, Sahih at-Targhib wat Tarhib 1/413 no. 653. The maximum number for this dhikr by the Prophet is one hundred times in the morning and one hundred times in the evening. As for the narration mentioning up to a thousand times, it is considered munkar (rejected) because the hadith is weak. (Silsilah al-Ahaadiits adh-Dha’ifah no. 5296)."
+      ],
+      "id": [
+        "HR. Muslim no. 2691 dan no. 2692, dari Abu Hurairah radhiyallahu ‘anhu Syarah Muslim XVII / 17-18, Shahiih at-Targhiib wat Tarhiib 1/413 no. 653. Jumlah yang terbanyak dari dzikir-dzikir Nabi adalah seratus diwaktu pagi dan seratus diwaktu sore. Adapun riwayat yang menyebutkan sampai seribu adalah munkar, karena haditsnya dha’if. (Silsilah al-Ahaadiits adh-Dha-’iifah no. 5296)."
+      ]
+    },
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": false
+  },
+  {
+    "id": 21,
+    "title": {
+      "en": "Dhikr 21",
+      "id": "Dzikr 21"
+    },
+    "arabicText": "أَسْتَغْفِرُ اللَّهَ وَأَتُوْبُ إِلَيْهِ",
+    "translation": {
+      "en": "I seek forgiveness from Allah and repent to Him.",
+      "id": "Aku memohon ampunan kepada Allah dan bertaubat kepada-Nya."
+    },
+    "isShowBismillah": false,
+    "references": {
+      "en": [
+        "Narrated by Al-Bukhari/ Fathul Bari XI/101 and Muslim no. 2702: From Ibn 'Umar who said: \"The Messenger of Allah (peace and blessings be upon him) said: 'O people, repent to Allah. Verily, I repent to Him one hundred times a day.'\" [Narrated by Muslim no. 2702 (42)].",
+        "In another narration from Agharr al-Muzani, the Messenger of Allah (peace and blessings be upon him) said: [Indeed, my heart is sometimes covered (by forgetfulness), and indeed I seek forgiveness from Allah one hundred times a day.] [Narrated by Muslim no. 2702 (41)]",
+        "The Prophet (peace and blessings be upon him) said: \"Whoever says: أَسْتَغْفِرُ اللهَ الْعَظِيْمَ الَّذِيْ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ 'I seek forgiveness from Allah, the Almighty, there is no deity worthy of worship except Him, the Ever-Living, the Sustainer, and I repent to Him,' Allah will forgive his sins even if he fled from the battlefield.\" Narrated by Abu Dawud no. 1517, at-Tirmidhi no. 3577, and al-Hakim I/511. See Sahih at-Tirmidhi III/282 no. 2381.",
+        "Verses recommending seeking forgiveness and repentance include: (Qur'an, Hud: 3), (Qur'an, An-Nur: 31), (Qur'an, At-Tahrim: 8), and others."
+      ],
+      "id": [
+        "HR. Al-Bukhari/ Fat-hul Baari XI/101 dan Muslim no.2702 عَنِ ابْنِ عُمَرَ قَالَ:قَالَ رَسُو لُ اللهِ صلي الله عليه وسلم : يَااَيُّهَا النَّسُ، تُوبُواإِلَيْ اللهِ. فَإِنِّيْ اَتُوبُ فِيْ الْيَومِ إِلَيْهِ مِانَةً مَرَّةٍ Dari Ibnu ‘Umar ia berkata: \"Rasulullah صلي الله عليه وسلم bersabda: 'Wahai manusia, bertaubatlah kalian kepada Allah, sesungguhnya aku bertaubat kepada-Nya dalam sehari seratus kali.'\" [HR. Muslim no. 2702 (42)].",
+        "Dalam riwayat lain dari Agharr al-Muzani, Rasulullah صلي الله عليه وسلم bersabda:[إِنَّهُ لَيُغَانُ عَلَى قَلْبِيْ وَإِنِّيْ لأَسْتَغْفِرُ اللهَ فِي الْيَوْمِ مِائَةَ مَرَّةٍ] \"Sesungguhnya hatiku terkadang lupa, dan sesungguhnya aku istighfar (minta ampun) kepada Allah dalam sehari seratus kali.\" [HR. Muslim no. 2702 (41)]",
+        "Nabi صلي الله عليه وسلم bersabda: \"Barangsiapa yang mengucapkan : أَسْتَغْفِرُ اللهَ الْعَظِيْمَ الَّذِيْ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ 'Aku memohon ampunan kepada Allah Yang Maha Agung, Yang tidak ada Ilah yang berhak diibadahi kecuali Dia, Yang Maha hidup lagi Maha berdiri sendiri dan aku bertaubat kepada-Nya.' Maka Allah akan mengampuni dosanya meskipun ia pernah lari dari medan perang.” HR. Abu Dawud no. 1517, at-Tirmidzi no. 3577 dan al-Hakim I/511. Lihat Shahiih at-Tirmidzi III/282 no. 2381.",
+        "Ayat yang menganjurkan istighfar dan taubat di antaranya: (QS. Huud: 3), (QS. An-Nuur: 31), (QS. At-Tahriim: 8) dan lain-lain."
+      ]
+    },
+    "readTime": [
+      100
+    ],
+    "isReadTimeForWholeDay": true
+  }
+]
