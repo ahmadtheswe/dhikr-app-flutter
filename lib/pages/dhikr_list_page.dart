@@ -7,7 +7,6 @@ import 'package:dhikr_app/shared/button/leading_back_button.dart';
 import 'package:dhikr_app/shared/button/setting_button.dart';
 import 'package:dhikr_app/shared/list_tile/dhikr_list_tile.dart';
 import 'package:dhikr_app/static/dhikr_time.dart';
-import 'package:dhikr_app/static/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
