@@ -29,5 +29,6 @@
   "morningAlarmNotificationBody": "Saatnya membaca dzikr pagi!",
   "eveningAlarmNotificationTitle": "Alarm Dzikr Petang",
   "eveningAlarmNotificationBody": "Saatnya membaca dzikr petang!",
-  "externalResources": "Sumber Eksternal"
+  "externalResources": "Sumber Eksternal",
+  "wakeLockMode": "Layar Selalu Aktif"
 }
