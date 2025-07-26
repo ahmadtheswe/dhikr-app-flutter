@@ -2,6 +2,7 @@ import 'package:dhikr_app/static/dhikr_time.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'notification_service.dart';
 
 class AlarmService extends ChangeNotifier {
   static const String morningAlarmKey = 'morningAlarm';
@@ -14,7 +15,40 @@ class AlarmService extends ChangeNotifier {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     _currentMorningAlarm = prefs.getString(morningAlarmKey);
     _currentEveningAlarm = prefs.getString(eveningAlarmKey);
+
+    await _rescheduleNotifications();
+
     notifyListeners();
+  }
+
+  Future<void> _rescheduleNotifications() async {
+    final notificationService = NotificationService();
+
+    if (_currentMorningAlarm != null) {
+      final morningDateTime = getAlarmValueDateTime(DhikrTime.MORNING);
+      if (morningDateTime != null) {
+        await notificationService.scheduleNotification(
+          id: 1,
+          title: 'Morning Dhikr Time',
+          body: 'Time for your morning dhikr',
+          scheduledTime: morningDateTime,
+          payload: DhikrTime.MORNING,
+        );
+      }
+    }
+
+    if (_currentEveningAlarm != null) {
+      final eveningDateTime = getAlarmValueDateTime(DhikrTime.EVENING);
+      if (eveningDateTime != null) {
+        await notificationService.scheduleNotification(
+          id: 2,
+          title: 'Evening Dhikr Time',
+          body: 'Time for your evening dhikr',
+          scheduledTime: eveningDateTime,
+          payload: DhikrTime.EVENING,
+        );
+      }
+    }
   }
 
   Future<void> setAlarm(String dhikrTime, String formattedTime) async {
@@ -26,6 +60,9 @@ class AlarmService extends ChangeNotifier {
     } else if (dhikrTime == DhikrTime.EVENING) {
       _currentEveningAlarm = formattedTime;
     }
+
+    // Reschedule notifications after setting new alarm
+    await _rescheduleNotifications();
 
     notifyListeners();
   }

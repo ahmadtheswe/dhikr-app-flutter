@@ -2,6 +2,32 @@
 
 A simple and focused dhikr app.
 
+## Pre-requisites
+
+Before you begin, ensure you have the following installed:
+- [Flutter](https://flutter.dev/docs/get-started/install) (3.2.6 or higher)
+- [Dart](https://dart.dev/get-dart) (3.2.6 or higher)
+- [Android Studio](https://developer.android.com/studio) (for Android development)
+- [Xcode](https://developer.apple.com/xcode/) (for iOS development, macOS only)
+- [JDK](https://www.oracle.com/java/technologies/downloads/) (version 21 or higher)
+- [Git](https://git-scm.com/downloads) (for version control)
+- [VS Code](https://code.visualstudio.com/) (recommended editor) with the following extensions:
+  - Flutter extension
+  - Dart extension
+
+### System Requirements
+- Operating System: Windows/macOS/Linux
+- RAM: 8GB minimum (16GB recommended)
+- Storage: At least 5GB of free space
+- Android SDK (for Android development)
+- iOS SDK (for iOS development, macOS only)
+
+### Environment Setup
+1. Add Flutter to your PATH
+2. Run `flutter doctor` to verify installations
+3. Accept Android licenses with `flutter doctor --android-licenses`
+4. Configure your IDE/editor with Flutter/Dart plugins
+
 ## flutter_launcher_icons
 Source : [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
 to run the package, run the following command in the terminal:
@@ -65,9 +91,27 @@ Useful Links:
 ## Google AdMob Integration
 - Create an AdMob account and set up your app in the AdMob console [here](https://admob.google.com/home/).
 - Create a new app in the AdMob console and get your App ID, here is the [documentation](https://docs.flutter.dev/cookbook/plugins/google-mobile-ads).
-- Install the `google_mobile_ads`
+- Install the required packages:
 ```bash
 flutter pub add google_mobile_ads
+flutter pub add flutter_dotenv
+```
+- Create a `.env` file in the root of your project with the following content:
+```properties
+ANDROID_BANNER_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy
+IOS_BANNER_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy
+ANDROID_ADMOB_APP_ID=ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+IOS_ADMOB_APP_ID=ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+```
+- Replace the placeholder values with your actual AdMob IDs
+- Make sure to add `.env` to your `.gitignore` file to keep your AdMob IDs private
+- Create a `.env.example` file with placeholder values to show other developers what environment variables are needed
+- Add the .env file to your assets in pubspec.yaml:
+```yaml
+flutter:
+  assets:
+    - .env
+    # ... other assets
 ```
 - Add the App ID to your `main/AndroidManifest.xml` file:
 ```xml
@@ -120,3 +164,57 @@ void _loadBannerAd() async {
     ),
 ...
 ```
+
+## Project Structure
+
+```
+dhikr_app/
+├── android/                    # Android-specific configuration and code
+├── ios/                       # iOS-specific configuration and code
+├── assets/                    # Static assets used in the app
+│   ├── dhikr/                # JSON files for dhikr content
+│   │   ├── evening/          # Evening dhikr data
+│   │   └── morning/          # Morning dhikr data
+│   ├── fonts/                # Custom fonts (AmiriQuran)
+│   ├── icons/                # App icons
+│   ├── lang/                 # Localization files (en.json, id.json)
+│   └── logo/                 # App logo assets
+├── lib/                      # Main Dart source code
+│   ├── helpers/              # Helper classes and utilities
+│   ├── models/               # Data models and classes
+│   ├── pages/                # Screen/Page widgets
+│   ├── service/              # Business logic and services
+│   ├── shared/               # Shared utilities and constants
+│   ├── static/               # Static data and configurations
+│   ├── widget/               # Reusable UI components
+│   └── main.dart            # Application entry point
+├── test/                    # Test files
+├── .env                     # Environment variables (not in repo)
+├── .env.example            # Example environment variables
+├── pubspec.yaml            # Project dependencies and configuration
+└── README.md              # Project documentation
+```
+
+### Key Directories and Files
+
+- **lib/**: Contains the main Dart source code
+  - `helpers/`: Utility classes like AdHelper for AdMob integration
+  - `models/`: Data models for the application
+  - `pages/`: Main screen implementations
+  - `service/`: Business logic, state management, and external services
+  - `shared/`: Common utilities and constants used across the app
+  - `widget/`: Reusable UI components
+
+- **assets/**: Contains all static resources
+  - `dhikr/`: JSON files containing dhikr content in different languages
+  - `lang/`: Localization files for multiple languages
+  - `fonts/`: Custom fonts used in the app
+  - `logo/`: App logo and branding assets
+
+- **android/ & ios/**: Platform-specific configurations
+  - Contains necessary setup for AdMob, notifications, and other native features
+
+- **Configuration Files**:
+  - `.env`: Contains sensitive configuration (AdMob IDs, API keys)
+  - `pubspec.yaml`: Project dependencies and asset declarations
+  - `analysis_options.yaml`: Dart analyzer settings
