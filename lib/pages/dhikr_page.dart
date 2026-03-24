@@ -140,7 +140,7 @@ class _DhikrPage extends State<DhikrPage> {
     );
   }
 
-  _bismillahText(String text, Color arabicTextColor) {
+  Container _bismillahText(String text, Color arabicTextColor) {
     return Container(
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
@@ -161,7 +161,7 @@ class _DhikrPage extends State<DhikrPage> {
         ));
   }
 
-  _arabicText(String text, Color arabicTextColor) {
+  Container _arabicText(String text, Color arabicTextColor) {
     return Container(
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
@@ -182,7 +182,7 @@ class _DhikrPage extends State<DhikrPage> {
         ));
   }
 
-  _latinText(String text) {
+  Container _latinText(String text) {
     return Container(
         padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(10),
@@ -196,7 +196,7 @@ class _DhikrPage extends State<DhikrPage> {
         ));
   }
 
-  _readTimeText(List<int> readTime, bool isReadTimeForWholeDay, LanguageService languageService) {
+  Container _readTimeText(List<int> readTime, bool isReadTimeForWholeDay, LanguageService languageService) {
     var readTimeString = readTime.length > 1
         ? languageService.getText('readTimeOr').replaceAll('{count1}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR).replaceAll('{count2}', readTime[1].toString()).replaceAll('{time2}', readTime[1] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR)
         : languageService.getText('readTime').replaceAll('{count}', readTime[0].toString()).replaceAll('{time1}', readTime[0] > 1 ? Languages.ENGLISH_TIME_PLURAL : Languages.ENGLISH_TIME_SINGULAR);
@@ -218,7 +218,7 @@ class _DhikrPage extends State<DhikrPage> {
         ));
   }
 
-  _referenceText(List<String> texts) {
+  StatelessWidget _referenceText(List<String> texts) {
     if (texts.length == 1) {
       return Container(
         padding: const EdgeInsets.all(10.0),
@@ -256,7 +256,7 @@ class _DhikrPage extends State<DhikrPage> {
     }
   }
 
-  _buttonAppBar(LanguageService languageService, int currentIndex, int length) {
+  BottomAppBar _buttonAppBar(LanguageService languageService, int currentIndex, int length) {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
       child: Padding(

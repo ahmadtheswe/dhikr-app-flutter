@@ -63,7 +63,7 @@ class _AboutAppPage extends State<AboutAppPage> {
         ));
   }
 
-  _launchURL() async {
+  Future<void> _launchURL() async {
     try {
       final Uri url = Uri.parse('https://ahmadtheswe.github.io/privacy-policy');
       if (!await launchUrl(

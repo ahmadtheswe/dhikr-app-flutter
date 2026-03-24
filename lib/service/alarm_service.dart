@@ -1,20 +1,22 @@
 import 'package:dhikr_app/static/dhikr_time.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'notification_service.dart';
 
 class AlarmService extends ChangeNotifier {
+  static const String _boxName = 'alarmBox';
   static const String morningAlarmKey = 'morningAlarm';
   static const String eveningAlarmKey = 'eveningAlarm';
+  late Box _alarmBox;
 
   String? _currentMorningAlarm;
   String? _currentEveningAlarm;
 
   Future<void> loadAlarms() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _currentMorningAlarm = prefs.getString(morningAlarmKey);
-    _currentEveningAlarm = prefs.getString(eveningAlarmKey);
+    _alarmBox = await Hive.openBox(_boxName);
+    _currentMorningAlarm = _alarmBox.get(morningAlarmKey);
+    _currentEveningAlarm = _alarmBox.get(eveningAlarmKey);
 
     await _rescheduleNotifications();
 
@@ -52,8 +54,7 @@ class AlarmService extends ChangeNotifier {
   }
 
   Future<void> setAlarm(String dhikrTime, String formattedTime) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(dhikrTime == DhikrTime.MORNING ? morningAlarmKey : eveningAlarmKey, formattedTime);
+    await _alarmBox.put(dhikrTime == DhikrTime.MORNING ? morningAlarmKey : eveningAlarmKey, formattedTime);
 
     if (dhikrTime == DhikrTime.MORNING) {
       _currentMorningAlarm = formattedTime;

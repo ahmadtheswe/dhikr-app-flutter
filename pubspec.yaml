@@ -2,7 +2,7 @@ name: dhikr_app
 description: "A simple morning and evening Dhikr App."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.4.5+9
+version: 1.4.5+10
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
@@ -16,24 +16,27 @@ dependencies:
   provider: ^6.1.2
   country_icons: ^3.0.0
   url_launcher: ^6.3.0
-  package_info_plus: ^8.3.0
-  google_mobile_ads: ^6.0.0
-  device_info_plus: ^11.3.3
-  flutter_local_notifications: ^19.1.0
-  timezone: ^0.10.0
+  package_info_plus: ^9.0.0
+  google_mobile_ads: ^7.0.0
+  device_info_plus: ^12.3.0
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+  flutter_timezone: ^5.0.0
   permission_handler: ^12.0.0+1
   intl: ^0.20.2
   in_app_update: ^4.2.3
   screenshot: ^3.0.0
   wakelock_plus: ^1.3.2
-  flutter_dotenv: ^5.2.1
+  flutter_dotenv: ^6.0.0
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mockito: ^5.0.0
-  flutter_lints: ^2.0.0
-  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
   package_rename: ^1.9.0
 
 flutter:

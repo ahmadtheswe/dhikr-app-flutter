@@ -5,11 +5,13 @@ A simple and focused dhikr app.
 ## Pre-requisites
 
 Before you begin, ensure you have the following installed:
-- [Flutter](https://flutter.dev/docs/get-started/install) (3.2.6 or higher)
-- [Dart](https://dart.dev/get-dart) (3.2.6 or higher)
+- [Flutter](https://flutter.dev/docs/get-started/install) (3.41.5 or higher)
+- [Dart](https://dart.dev/get-dart) (3.11.3 or higher)
 - [Android Studio](https://developer.android.com/studio) (for Android development)
 - [Xcode](https://developer.apple.com/xcode/) (for iOS development, macOS only)
 - [JDK](https://www.oracle.com/java/technologies/downloads/) (version 21 or higher)
+- [Gradle](https://gradle.org/) (8.11.1 or higher)
+- [Android Gradle Plugin](https://developer.android.com/build/releases/gradle-plugin) (8.9.1 or higher)
 - [Git](https://git-scm.com/downloads) (for version control)
 - [VS Code](https://code.visualstudio.com/) (recommended editor) with the following extensions:
   - Flutter extension
@@ -27,6 +29,20 @@ Before you begin, ensure you have the following installed:
 2. Run `flutter doctor` to verify installations
 3. Accept Android licenses with `flutter doctor --android-licenses`
 4. Configure your IDE/editor with Flutter/Dart plugins
+
+## Basic Flutter Commands
+
+```bash
+flutter doctor                          # Check Flutter installation
+flutter pub get                         # Install dependencies
+flutter run                             # Run app in debug mode
+flutter devices                         # List connected devices
+flutter clean                           # Clean build files
+flutter build apk --release             # Build release APK
+flutter build appbundle --release       # Build release AAB (for Play Store)
+```
+
+---
 
 ## flutter_launcher_icons
 Source : [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)

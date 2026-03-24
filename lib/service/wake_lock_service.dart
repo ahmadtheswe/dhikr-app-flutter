@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 class WakeLockService extends ChangeNotifier {
@@ -11,14 +11,16 @@ class WakeLockService extends ChangeNotifier {
 
   bool get isWakeUpEnabled => _isWakeUpEnabled ?? true;
 
+  static const String _boxName = 'wakeLockBox';
   static const String wakeUpEnabledKey = 'wakeUpEnabled';
+  late Box _wakeLockBox;
 
   bool? _isWakeUpEnabled;
 
   Future<void> init() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _isWakeUpEnabled = prefs.getBool(wakeUpEnabledKey) ?? true;
-    await prefs.setBool(wakeUpEnabledKey, _isWakeUpEnabled!);
+    _wakeLockBox = await Hive.openBox(_boxName);
+    _isWakeUpEnabled = _wakeLockBox.get(wakeUpEnabledKey) ?? true;
+    await _wakeLockBox.put(wakeUpEnabledKey, _isWakeUpEnabled!);
 
     WakelockPlus.toggle(enable: _isWakeUpEnabled!);
 
@@ -30,9 +32,8 @@ class WakeLockService extends ChangeNotifier {
   }
 
   void _setWakeUp(bool mode) async {
-    final prefs = await SharedPreferences.getInstance();
     _isWakeUpEnabled = mode;
-    await prefs.setBool(wakeUpEnabledKey, mode);
+    await _wakeLockBox.put(wakeUpEnabledKey, mode);
     WakelockPlus.toggle(enable: mode);
     notifyListeners();
   }
