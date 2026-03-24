@@ -9,6 +9,7 @@ import 'package:dhikr_app/service/update_service.dart';
 import 'package:dhikr_app/service/wake_lock_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -16,11 +17,13 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await dotenv.load(fileName: ".env");  // Add this line to load .env file
+  await dotenv.load(fileName: ".env");
+  await Hive.initFlutter();
 
   final languageService = LanguageService();
   await languageService.loadLanguage();
+
+  await NotificationService().init();
 
   final alarmService = AlarmService();
   await alarmService.loadAlarms();
@@ -30,8 +33,6 @@ void main() async {
   await WakeLockService().init();
 
   MobileAds.instance.initialize();
-
-  await NotificationService().init();
 
   final notificationAppLaunchDetails =
       await NotificationService().flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();

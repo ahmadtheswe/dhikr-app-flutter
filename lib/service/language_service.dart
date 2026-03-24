@@ -2,16 +2,18 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class LanguageService extends ChangeNotifier {
+  static const String _boxName = 'languageBox';
   static const String keyLanguage = 'language';
+  late Box _languageBox;
   String? _currentLanguage;
   late Map<String, dynamic> _localizedStrings = {};
 
   Future<void> loadLanguage() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _currentLanguage = prefs.getString(keyLanguage);
+    _languageBox = await Hive.openBox(_boxName);
+    _currentLanguage = _languageBox.get(keyLanguage);
 
     if (_currentLanguage != null) {
       await _loadLocalizedStrings(_currentLanguage!);
@@ -30,8 +32,7 @@ class LanguageService extends ChangeNotifier {
   }
 
   Future<void> setLanguage(String langCode) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(keyLanguage, langCode);
+    await _languageBox.put(keyLanguage, langCode);
     _currentLanguage = langCode;
     await _loadLocalizedStrings(langCode);
     notifyListeners();

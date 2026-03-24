@@ -10,12 +10,12 @@ class AlarmWidget extends StatelessWidget {
   final Function(TimeOfDay) onEveningTimeChanged;
 
   const AlarmWidget({
-    Key? key,
+    super.key,
     this.morningTime,
     this.eveningTime,
     required this.onMorningTimeChanged,
     required this.onEveningTimeChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -36,7 +36,6 @@
 
         <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
         <receiver android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" />
-        <service android:name="com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin" android:exported="false"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
