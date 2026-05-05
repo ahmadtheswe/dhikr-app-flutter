@@ -4,6 +4,8 @@
 *.moved-aside
 *.pbxuser
 *.perspectivev3
+*.xccheckout
+*.xcscmblueprint
 **/*sync/
 .sconsign.dblite
 .tags*
@@ -26,6 +28,11 @@ Flutter/flutter_assets/
 Flutter/flutter_export_environment.sh
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
+
+# Build outputs
+*.ipa
+*.dSYM.zip
+*.dSYM
 
 # Exceptions to above rules.
 !default.mode1v3
