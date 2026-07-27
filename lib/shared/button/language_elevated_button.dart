@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LanguageElevatedButton extends StatelessWidget {
   final String languageTitle;
-  final String icon;
+  final String languageCode;
   final VoidCallback? onPressed;
   final double? width;
   final double? height;
@@ -10,7 +10,7 @@ class LanguageElevatedButton extends StatelessWidget {
   const LanguageElevatedButton({
     super.key,
     required this.languageTitle,
-    required this.icon,
+    required this.languageCode,
     this.onPressed,
     this.width,
     this.height,
@@ -20,10 +20,13 @@ class LanguageElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final backgroundColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
     final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.black87 : Colors.white;
+    final buttonWidth = width ?? 270;
 
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          fixedSize: Size(width != null ? width! : 270, height != null ? height! : 60),
+          minimumSize: Size(buttonWidth, height ?? 60),
+          maximumSize: Size(buttonWidth, double.infinity),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
           backgroundColor: backgroundColor,
         ),
@@ -31,18 +34,20 @@ class LanguageElevatedButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              languageTitle,
-              style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
+            Flexible(
+              child: Text(
+                languageTitle,
+                softWrap: true,
+                style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
+              ),
             ),
             const SizedBox(width: 10),
-            ClipOval(
-              child: Image.asset(
-                icon,
-                package: 'country_icons',
-                width: 40,
-                height: 40,
-                fit: BoxFit.cover,
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: textColor,
+              child: Text(
+                languageCode.toUpperCase(),
+                style: TextStyle(color: backgroundColor, fontWeight: FontWeight.bold, fontSize: 12),
               ),
             )
           ],

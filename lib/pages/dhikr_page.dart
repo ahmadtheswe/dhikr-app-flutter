@@ -1,4 +1,4 @@
-import 'package:dhikr_app/helpers/ad_helper.dart';
+import 'package:dhikr_app/helpers/banner_ad_helper.dart';
 import 'package:dhikr_app/models/dhikr_model.dart';
 import 'package:dhikr_app/shared/title/page_subtitle.dart';
 import 'package:dhikr_app/static/bismillah.dart';
@@ -35,7 +35,7 @@ class _DhikrPage extends State<DhikrPage> {
 
   void _loadBannerAd() async {
     final ad = BannerAd(
-      adUnitId: await AdHelper.bannerAdUnitId,
+      adUnitId: await BannerAdHelper.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(

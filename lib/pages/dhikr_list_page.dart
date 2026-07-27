@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
-import '../helpers/ad_helper.dart';
+import '../helpers/banner_ad_helper.dart';
 import '../service/language_service.dart';
 import '../shared/title/page_title.dart';
 
@@ -39,7 +39,7 @@ class _DhikrListPage extends State<DhikrListPage> {
 
   void _loadBannerAd() async {
     final ad = BannerAd(
-      adUnitId: await AdHelper.bannerAdUnitId,
+      adUnitId: await BannerAdHelper.bannerAdUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(

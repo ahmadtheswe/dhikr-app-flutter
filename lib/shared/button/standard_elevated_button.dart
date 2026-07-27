@@ -20,10 +20,13 @@ class StandardElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final backgroundColor = Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.blueGrey;
     final textColor = Theme.of(context).brightness == Brightness.dark ? Colors.black87 : Colors.white;
+    final buttonWidth = width ?? 270;
 
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          fixedSize: Size(width != null ? width! : 270, height != null ? height! : 60),
+          minimumSize: Size(buttonWidth, height ?? 60),
+          maximumSize: Size(buttonWidth, double.infinity),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           textStyle: const TextStyle(fontWeight: FontWeight.bold),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
           backgroundColor: backgroundColor,
@@ -32,22 +35,18 @@ class StandardElevatedButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: icon != null ? MainAxisAlignment.start : MainAxisAlignment.center,
           children: [
-            if (icon != null)
-              IconButton(
-                icon: Icon(
-                  icon,
-                  color: textColor,
-                  size: 20,
-                ),
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(
-                  maxWidth: 20,
-                  maxHeight: 20,
-                ),
-                onPressed: () {},
+            if (icon != null) ...[
+              Icon(icon, color: textColor, size: 20),
+              const SizedBox(width: 10),
+            ],
+            Flexible(
+              child: Text(
+                text,
+                textAlign: TextAlign.center,
+                softWrap: true,
+                style: TextStyle(color: textColor),
               ),
-            Text(text, style: TextStyle(color: textColor)),
-            const SizedBox(width: 10),
+            ),
           ],
         ));
   }

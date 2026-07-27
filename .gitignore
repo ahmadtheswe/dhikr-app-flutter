@@ -5,9 +5,11 @@
 *.swp
 .DS_Store
 .atom/
+.build/
 .buildlog/
 .history
 .svn/
+.swiftpm/
 migrate_working_dir/
 
 # IntelliJ related
@@ -84,3 +86,6 @@ key.jks
 upload-keystore.jks
 google-services.json
 GoogleService-Info.plist
+
+bugreport*
+*.pem

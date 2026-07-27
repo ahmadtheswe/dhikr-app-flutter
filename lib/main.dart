@@ -28,25 +28,27 @@ void main() async {
   final alarmService = AlarmService();
   await alarmService.loadAlarms();
 
-  await ThemeService().init();
+  final themeService = ThemeService();
+  await themeService.init();
 
-  await WakeLockService().init();
+  final wakeLockService = WakeLockService();
+  await wakeLockService.init();
 
   MobileAds.instance.initialize();
 
   final notificationAppLaunchDetails =
       await NotificationService().flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
 
-  String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
+  final payload = notificationAppLaunchDetails?.notificationResponse?.payload;
 
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider<LanguageService>.value(value: languageService),
       ChangeNotifierProvider<AlarmService>.value(value: alarmService),
-      ChangeNotifierProvider<ThemeService>.value(value: ThemeService()),
-      ChangeNotifierProvider<WakeLockService>.value(value: WakeLockService()),
+      ChangeNotifierProvider<ThemeService>.value(value: themeService),
+      ChangeNotifierProvider<WakeLockService>.value(value: wakeLockService),
     ],
-    child: MyApp(initialPayload: payload,),
+    child: MyApp(initialPayload: payload),
   ));
 }
 

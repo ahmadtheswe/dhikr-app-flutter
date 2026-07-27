@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-class AdHelper {
+class BannerAdHelper {
   static Future<String> get bannerAdUnitId async {
     if (Platform.isAndroid) {
       final deviceInfo = DeviceInfoPlugin();

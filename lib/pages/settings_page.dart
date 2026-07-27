@@ -50,7 +50,7 @@ class _SettingsPage extends State<SettingsPage> {
                 MenuTitle(text: languageService.getText('changeLanguage'), icon: Icons.language),
                 LanguageElevatedButton(
                   languageTitle: Languages.ENGLISH_TITLE,
-                  icon: Languages.ENGLISH_ICON,
+                  languageCode: Languages.ENGLISH_CODE,
                   onPressed: () async {
                     await languageService.setLanguage(Languages.ENGLISH_CODE);
                     setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
@@ -62,9 +62,21 @@ class _SettingsPage extends State<SettingsPage> {
                 ),
                 LanguageElevatedButton(
                   languageTitle: Languages.INDONESIAN_TITLE,
-                  icon: Languages.INDONESIAN_ICON,
+                  languageCode: Languages.INDONESIAN_CODE,
                   onPressed: () async {
                     await languageService.setLanguage(Languages.INDONESIAN_CODE);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
+                    setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                LanguageElevatedButton(
+                  languageTitle: Languages.SUNDANESE_TITLE,
+                  languageCode: Languages.SUNDANESE_CODE,
+                  onPressed: () async {
+                    await languageService.setLanguage(Languages.SUNDANESE_CODE);
                     setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.MORNING, 1);
                     setDhikrAlarmTimeFromCache(alarmService, languageService, DhikrTime.EVENING, 2);
                   },
